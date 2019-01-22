@@ -4,3 +4,15 @@ JamProject/Temp/
 JamProject/Library/
 
 *.meta
+
+*.ide-wal
+
+*.cache
+
+*.ide-shm
+
+*.ide
+
+*.csproj
+
+*.lock
