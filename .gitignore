@@ -16,3 +16,7 @@ JamProject/Library/
 *.csproj
 
 *.lock
+
+JamProject/\.vs/JamProject/DesignTimeBuild/\.dtbcache
+
+JamProject/\.vs/JamProject/v15/\.suo
