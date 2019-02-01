@@ -9,15 +9,18 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float jump_velo; //20
     public float accel; //.45
     public float brake_drag; //10
+    public GameObject sprite;
+    //public GameObject hitbox;
     private bool playerMoving;
     private Vector2 lastMove;
 
     private Animator anim;
     private Rigidbody2D myRigidbody;
-    private CircleCollider2D myCollider;
+    private BoxCollider2D myCollider;
     private bool in_air;
     private bool W_pressed;
     private float orig_drag;
+    private SpriteRenderer sr;
    
 
     // Use this for initialization
@@ -26,9 +29,9 @@ public class Scr_PlayerControl : MonoBehaviour {
         W_pressed = false;
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<CircleCollider2D>();
-
-
+        myCollider = GetComponent<BoxCollider2D>();
+        myRigidbody.freezeRotation = true;
+        sr = sprite.GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
@@ -93,15 +96,23 @@ public class Scr_PlayerControl : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f)
         {
-            orig_drag = myRigidbody.drag;
+            //orig_drag = myRigidbody.drag;
             myRigidbody.drag = brake_drag; 
         }
         if (Input.GetKeyUp(KeyCode.S) && !in_air)
         {
-            myRigidbody.drag = myRigidbody.drag;
+            myRigidbody.drag = 0.0f;
+        }
+        if (myRigidbody.velocity.x < 0.0f)
+        {
+            sr.flipX = true;
+        }
+        if (myRigidbody.velocity.x >= 0.0f)
+        {
+            sr.flipX = false;
         }
 
-        //not sure what S would actually do
+        
 
     }
 }
