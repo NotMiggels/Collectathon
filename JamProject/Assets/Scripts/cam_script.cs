@@ -22,6 +22,9 @@ public class cam_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        /*
+         * discarded code below
+         *
         if (border_l.GetComponent<BoxCollider2D>().
             IsTouchingLayers(LayerMask.GetMask("Player")))
         {
@@ -42,9 +45,14 @@ public class cam_script : MonoBehaviour {
         {
             my_rb.velocity = new Vector2(0.0f, player_rb.velocity.y);
         }
+        */
         if (!(player_collider.IsTouchingLayers(LayerMask.GetMask("Camera Borders"))))
         {
             my_rb.velocity = Vector2.zero;
+        }
+        else
+        {
+            my_rb.velocity = player_rb.velocity;
         }
     }
 }
