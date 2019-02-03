@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4085540715309644}
   - component: {fileID: 212835203527917592}
   - component: {fileID: 50735751752125420}
+  - component: {fileID: 114175312590612774}
   m_Layer: 0
   m_Name: Pre_Jam_Player
   m_TagString: Untagged
@@ -61,6 +62,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114175312590612774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159047805110928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9797c16990e904786ce1586b7339a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
 --- !u!212 &212835203527917592
 SpriteRenderer:
   m_ObjectHideFlags: 1
