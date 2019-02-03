@@ -107,7 +107,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             sr.flipX = true;
         }
-        if (myRigidbody.velocity.x >= 0.0f)
+        if (myRigidbody.velocity.x > 0.0f)
         {
             sr.flipX = false;
         }
