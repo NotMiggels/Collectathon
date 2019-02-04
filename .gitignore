@@ -3,8 +3,6 @@ JamProject/Temp/
 
 JamProject/Library/
 
-*.meta
-
 *.ide-wal
 
 *.cache
