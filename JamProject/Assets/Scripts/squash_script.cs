@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class squash_script : MonoBehaviour {
     public float top_spd; //1.6
@@ -10,6 +11,9 @@ public class squash_script : MonoBehaviour {
     public GameObject sprite;
     public GameObject attack_trigger_l;
     public GameObject attack_trigger_r;
+    public float health_percentage;
+    public GameObject region_trigger;
+    private bool in_air;
     private bool chasing_player;//flag that marks if this enemy is chasing the player
 
     private GameObject player;
@@ -17,8 +21,12 @@ public class squash_script : MonoBehaviour {
     private Rigidbody2D myRigidbody;
     private BoxCollider2D myCollider;
     private SpriteRenderer sr;
+    public float health;
+    private float max_health;
     // Use this for initialization
     void Start () {
+        //health = 100;
+        max_health = health;
         anim = GetComponent<Animator>();
         //anim.trigger
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -50,7 +58,9 @@ public class squash_script : MonoBehaviour {
 		 * 2. chasing_player should be set to false       
          *
          */
-
+        in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) ||
+            myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
+        health_percentage = health / max_health;
         if (chasing_player)
         {
             //locate the player
@@ -64,20 +74,32 @@ public class squash_script : MonoBehaviour {
                 Vector3 triggerpos = attack_trigger_r.transform.position;
                 float Xdiff2 = playerpos.x - triggerpos.x;
                 //right
-                if (Xdiff2 > 0.2f && (myRigidbody.velocity.x) < top_spd)
+                if (Xdiff2 > 0.2f && (myRigidbody.velocity.x) < top_spd && !in_air)
                 {
                     myRigidbody.AddForce(new Vector2(accel, 0.0f));
                 }
                 //left
-                else if(Xdiff2 < -0.2f && (myRigidbody.velocity.x) > top_spd * -1.0f)
+                else if(Xdiff2 < -0.2f && (myRigidbody.velocity.x) > top_spd * -1.0f && !in_air)
                 {
                     myRigidbody.AddForce(new Vector2(accel*-1.0f, 0.0f));
                 }
-                else //attack
+                else if(Xdiff < 0.2f && Xdiff > -0.2f && myRigidbody.velocity.magnitude > top_spd && !in_air){
+                    System.Random random = new System.Random();
+                    int temp = random.Next(2);
+                    if(temp == 0){
+                        myRigidbody.AddForce(new Vector2(accel, 0.0f));
+                    }
+                    else{
+                        myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
+                    }
+                }
+                else if(!in_air) //attack
                 {
-                    /*
-                     * to be finished
-                     */
+                    System.Random random = new System.Random();
+                    int temp = random.Next(101);
+                    if(temp %15 == 0){
+                        myRigidbody.AddForce(new Vector2(80.0f, 80.0f));
+                    }
                 }
             }
 
@@ -87,22 +109,43 @@ public class squash_script : MonoBehaviour {
                 Vector3 triggerpos = attack_trigger_l.transform.position;
                 float Xdiff2 = playerpos.x - triggerpos.x;
                 //right
-                if (Xdiff2 > 0.2f && (myRigidbody.velocity.x) < top_spd)
+                if (Xdiff2 > 0.2f && (myRigidbody.velocity.x) < top_spd && !in_air)
                 {
                     myRigidbody.AddForce(new Vector2(accel, 0.0f));
                 }
                 //left
-                else if (Xdiff2 < -0.2f && (myRigidbody.velocity.x) > top_spd * -1.0f)
+                else if (Xdiff2 < -0.2f && (myRigidbody.velocity.x) > top_spd * -1.0f && !in_air)
                 {
                     myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
                 }
-                else //attack
+                else if (Xdiff < 0.2f && Xdiff > -0.2f && myRigidbody.velocity.magnitude > top_spd && !in_air)
                 {
-                    /*
-                     * to be finished
-                     */
+                    System.Random random = new System.Random();
+                    int temp = random.Next(2);
+                    if (temp == 0)
+                    {
+                        myRigidbody.AddForce(new Vector2(accel, 0.0f));
+                    }
+                    else
+                    {
+                        myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
+                    }
+                }
+                else if(!in_air) //attack
+                {
+                    System.Random random = new System.Random();
+                    int temp = random.Next(101);
+                    if (temp %15 == 0)
+                    {
+                        myRigidbody.AddForce(new Vector2(-80.0f, 80.0f));
+                    }
                 }
             }
+        }
+        if(health <= 0.0f){
+            region_trigger.SendMessage("EnemyDecrement");
+            Destroy(myRigidbody.gameObject);
+
         }
     }
     /*
@@ -126,7 +169,7 @@ public class squash_script : MonoBehaviour {
     }
 
     void TakingDMG(int dmg){
-        
+        health -= dmg;
     }
 
     void Knocked(Vector2 v){

@@ -109,6 +109,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 int temp = trig_l.OverlapCollider(cf, boxColliders);
                 for (int a = 0; a < temp; a++){
                     boxColliders[a].gameObject.SendMessage("Knocked", new Vector2(-100.0f, 100.0f));
+                    boxColliders[a].gameObject.SendMessage("TakingDMG", 25);
                 }
             }
             //facing right
@@ -118,6 +119,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 for (int a = 0; a < temp; a++)
                 {
                     boxColliders[a].gameObject.SendMessage("Knocked", new Vector2(100.0f, 100.0f));
+                    boxColliders[a].gameObject.SendMessage("TakingDMG", 25);
                 }
             }
         }
@@ -157,11 +159,11 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             myRigidbody.drag = 0.0f;
         }
-        if (myRigidbody.velocity.x < 0.0f)
+        if (Input.GetKeyDown(KeyCode.A))
         {
             sr.flipX = true;
         }
-        if (myRigidbody.velocity.x > 0.0f)
+        if (Input.GetKeyDown(KeyCode.D))
         {
             sr.flipX = false;
         }
