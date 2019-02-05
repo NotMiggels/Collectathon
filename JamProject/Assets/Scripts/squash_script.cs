@@ -124,4 +124,13 @@ public class squash_script : MonoBehaviour {
         chasing_player = false;
 
     }
+
+    void TakingDMG(int dmg){
+        
+    }
+
+    void Knocked(Vector2 v){
+        myRigidbody.AddForce(v);
+    }
+
 }
