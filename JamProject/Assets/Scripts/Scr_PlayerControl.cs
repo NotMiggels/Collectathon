@@ -20,6 +20,9 @@ public class Scr_PlayerControl : MonoBehaviour {
     private bool in_air;
     private bool W_pressed;
     private float orig_drag;
+    private bool moving_anim_playing;
+    private bool attack_anim_playing;
+    private bool shielding;
     private SpriteRenderer sr;
    
 
@@ -27,11 +30,14 @@ public class Scr_PlayerControl : MonoBehaviour {
     void Start () {
         in_air = true;
         W_pressed = false;
-        anim = GetComponent<Animator>();
+        anim = sprite.GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();
         myRigidbody.freezeRotation = true;
         sr = sprite.GetComponent<SpriteRenderer>();
+        moving_anim_playing = false;
+        attack_anim_playing = false;
+        shielding = false;
     }
 	
 	// Update is called once per frame
@@ -65,8 +71,8 @@ public class Scr_PlayerControl : MonoBehaviour {
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
         */
-        playerMoving = false;
-        
+        //playerMoving = false;
+
         if(in_air && (myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
             myCollider.IsTouchingLayers(LayerMask.GetMask("Platform"))))
         {
@@ -77,7 +83,7 @@ public class Scr_PlayerControl : MonoBehaviour {
        
         
         //Debug.Log(in_air);
-        if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed)
+        if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed && !shielding)
         {
             W_pressed = true;
             myRigidbody.AddForce(new Vector2(0.0f, jump_velo));
@@ -86,15 +92,15 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             W_pressed = false;
         }
-        if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd*-1.0f)
+        if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd*-1.0f && !shielding)
         {
             myRigidbody.AddForce(new Vector2(accel*-1.0f, 0.0f));
         }
-        if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd)
+        if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd && !shielding)
         {
             myRigidbody.AddForce(new Vector2(accel, 0.0f));
         }
-        if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f)
+        if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f && !shielding)
         {
             //orig_drag = myRigidbody.drag;
             myRigidbody.drag = brake_drag; 
@@ -111,8 +117,34 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             sr.flipX = false;
         }
-
-        
+        if(!moving_anim_playing && myRigidbody.velocity.magnitude > 0.0f && 
+           !attack_anim_playing && !shielding){
+            moving_anim_playing = true;
+            anim.Play("Jelly walking");
+        }
+        if(myRigidbody.velocity.Equals(Vector2.zero) && moving_anim_playing){
+            moving_anim_playing = false;
+            anim.Play("Jelly idle");
+        }
+        if(Input.GetKeyDown(KeyCode.J) && !attack_anim_playing){
+            shielding = false;
+            moving_anim_playing = false;
+            attack_anim_playing = true;
+            anim.Play("Jelly attack");
+        }
+        if(attack_anim_playing && anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly idle")){
+            attack_anim_playing = false;
+        }
+        if (Input.GetKey(KeyCode.K) && !shielding && !attack_anim_playing){
+            shielding = true;
+            moving_anim_playing = false;
+            //attack_anim_playing = false;
+            anim.Play("Jelly shielding");
+        }
+        if(Input.GetKeyUp(KeyCode.K) && shielding){
+            shielding = false;
+            anim.Play("Jelly idle");
+        }
 
     }
 }
