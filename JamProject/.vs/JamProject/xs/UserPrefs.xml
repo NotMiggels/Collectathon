@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/squash_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/trigger_script.cs">
     <Files>
       <File FileName="Assets/Scripts/cam_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/squash_script.cs" Line="53" Column="14" />
-      <File FileName="Assets/Scripts/Scr_PlayerControl.cs" Line="33" Column="43" />
+      <File FileName="Assets/Scripts/squash_script.cs" Line="53" Column="9" />
+      <File FileName="Assets/Scripts/Scr_PlayerControl.cs" Line="137" Column="34" />
+      <File FileName="Assets/Scripts/trigger_script.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

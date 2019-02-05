@@ -9,6 +9,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float jump_velo; //20
     public float accel; //.45
     public float brake_drag; //10
+    public GameObject atk_trigger_l;
+    public GameObject atk_trigger_r;
     public GameObject sprite;
     //public GameObject hitbox;
     private bool playerMoving;
@@ -17,12 +19,16 @@ public class Scr_PlayerControl : MonoBehaviour {
     private Animator anim;
     private Rigidbody2D myRigidbody;
     private BoxCollider2D myCollider;
+    private BoxCollider2D trig_l;
+    private BoxCollider2D trig_r;
     private bool in_air;
     private bool W_pressed;
     private float orig_drag;
     private bool moving_anim_playing;
     private bool attack_anim_playing;
     private bool shielding;
+    private bool attacking;
+    private ContactFilter2D cf = new ContactFilter2D();
     private SpriteRenderer sr;
    
 
@@ -38,6 +44,11 @@ public class Scr_PlayerControl : MonoBehaviour {
         moving_anim_playing = false;
         attack_anim_playing = false;
         shielding = false;
+        trig_l = atk_trigger_l.GetComponent<BoxCollider2D>();
+        trig_r = atk_trigger_r.GetComponent<BoxCollider2D>();
+        cf.SetLayerMask(LayerMask.GetMask("Enemy"));
+        attacking = false;
+
     }
 	
 	// Update is called once per frame
@@ -73,6 +84,43 @@ public class Scr_PlayerControl : MonoBehaviour {
         */
         //playerMoving = false;
 
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack")){
+            attack_anim_playing = true;
+        }
+        else{
+            attack_anim_playing = false;
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly walking"))
+        {
+            moving_anim_playing = true;
+        }
+        else
+        {
+            moving_anim_playing = false;
+        }
+
+        if(attack_anim_playing && !attacking){
+            Debug.Log("attack");
+            attacking = true;
+            //facing left
+            if(sr.flipX){
+                BoxCollider2D[] boxColliders = new BoxCollider2D[10];
+                int temp = trig_l.OverlapCollider(cf, boxColliders);
+                for (int a = 0; a < temp; a++){
+                    boxColliders[a].gameObject.SendMessage("Knocked", new Vector2(-100.0f, 100.0f));
+                }
+            }
+            //facing right
+            else{
+                BoxCollider2D[] boxColliders = new BoxCollider2D[10];
+                int temp = trig_r.OverlapCollider(cf, boxColliders);
+                for (int a = 0; a < temp; a++)
+                {
+                    boxColliders[a].gameObject.SendMessage("Knocked", new Vector2(100.0f, 100.0f));
+                }
+            }
+        }
         if(in_air && (myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
             myCollider.IsTouchingLayers(LayerMask.GetMask("Platform"))))
         {
@@ -119,25 +167,27 @@ public class Scr_PlayerControl : MonoBehaviour {
         }
         if(!moving_anim_playing && myRigidbody.velocity.magnitude > 0.0f && 
            !attack_anim_playing && !shielding){
-            moving_anim_playing = true;
+            //moving_anim_playing = true;
             anim.Play("Jelly walking");
         }
         if(myRigidbody.velocity.Equals(Vector2.zero) && moving_anim_playing){
-            moving_anim_playing = false;
+            //moving_anim_playing = false;
             anim.Play("Jelly idle");
         }
         if(Input.GetKeyDown(KeyCode.J) && !attack_anim_playing){
+            attacking = false;
             shielding = false;
-            moving_anim_playing = false;
-            attack_anim_playing = true;
+            //moving_anim_playing = false;
+            //attack_anim_playing = true;
             anim.Play("Jelly attack");
         }
         if(attack_anim_playing && anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly idle")){
-            attack_anim_playing = false;
+            attacking = false;
+            //attack_anim_playing = false;
         }
         if (Input.GetKey(KeyCode.K) && !shielding && !attack_anim_playing){
             shielding = true;
-            moving_anim_playing = false;
+            //moving_anim_playing = false;
             //attack_anim_playing = false;
             anim.Play("Jelly shielding");
         }
