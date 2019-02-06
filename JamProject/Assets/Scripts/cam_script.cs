@@ -55,4 +55,7 @@ public class cam_script : MonoBehaviour {
             my_rb.velocity = player_rb.velocity;
         }
     }
+    void EndGame(){
+        transform.localPosition = new Vector3(-17.0f, 1.0f, 10.0f);
+    }
 }

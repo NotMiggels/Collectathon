@@ -21,6 +21,7 @@ public class squash_script : MonoBehaviour {
     private Rigidbody2D myRigidbody;
     private BoxCollider2D myCollider;
     private SpriteRenderer sr;
+    private Boolean attacking;
     public float health;
     private float max_health;
     // Use this for initialization
@@ -58,6 +59,13 @@ public class squash_script : MonoBehaviour {
 		 * 2. chasing_player should be set to false       
          *
          */
+
+        if(myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && attacking && player != null){
+            player.SendMessage("TakeDMG", 10);
+            attacking = false;
+            //Debug.Log("player damaged");
+        }
+
         in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) ||
             myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
         health_percentage = health / max_health;
@@ -99,6 +107,7 @@ public class squash_script : MonoBehaviour {
                     int temp = random.Next(101);
                     if(temp %15 == 0){
                         myRigidbody.AddForce(new Vector2(80.0f, 80.0f));
+                        attacking = true;
                     }
                 }
             }
@@ -138,6 +147,7 @@ public class squash_script : MonoBehaviour {
                     if (temp %15 == 0)
                     {
                         myRigidbody.AddForce(new Vector2(-80.0f, 80.0f));
+                        attacking = true;
                     }
                 }
             }
