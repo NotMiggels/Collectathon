@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/health_bar_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/main_menu_script.cs">
     <Files>
-      <File FileName="Assets/Scripts/cam_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/squash_script.cs" Line="131" Column="23" />
-      <File FileName="Assets/Scripts/Scr_PlayerControl.cs" Line="134" Column="47" />
-      <File FileName="Assets/Scripts/trigger_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/health_bar_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/cam_script.cs" Line="61" Column="65" />
+      <File FileName="Assets/Scripts/squash_script.cs" Line="16" Column="28" />
+      <File FileName="Assets/Scripts/Scr_PlayerControl.cs" Line="211" Column="47" />
+      <File FileName="Assets/Scripts/trigger_script.cs" Line="40" Column="18" />
+      <File FileName="Assets/Scripts/health_bar_script.cs" Line="26" Column="24" />
+      <File FileName="Assets/Scripts/main_menu_script.cs" Line="6" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
