@@ -13,6 +13,8 @@ public class squash_script : MonoBehaviour {
     public GameObject attack_trigger_r;
     public float health_percentage;
     public GameObject region_trigger;
+    public float bump_velo;
+    public int attack_chance;
     private bool in_air;
     private bool chasing_player;//flag that marks if this enemy is chasing the player
 
@@ -105,7 +107,7 @@ public class squash_script : MonoBehaviour {
                 {
                     System.Random random = new System.Random();
                     int temp = random.Next(101);
-                    if(temp %15 == 0){
+                    if(temp < attack_chance){
                         myRigidbody.AddForce(new Vector2(80.0f, 80.0f));
                         attacking = true;
                     }
@@ -144,7 +146,7 @@ public class squash_script : MonoBehaviour {
                 {
                     System.Random random = new System.Random();
                     int temp = random.Next(101);
-                    if (temp %15 == 0)
+                    if (temp < attack_chance)
                     {
                         myRigidbody.AddForce(new Vector2(-80.0f, 80.0f));
                         attacking = true;

@@ -13,15 +13,17 @@ public class cam_script : MonoBehaviour {
     private BoxCollider2D player_collider;
     private Rigidbody2D my_rb;
     private Rigidbody2D player_rb;
-	// Use this for initialization
-	void Start () {
+    private Vector3 offset;
+    // Use this for initialization
+    void Start()
+    {
         player_collider = player.GetComponent<BoxCollider2D>();
         player_rb = player.GetComponent<Rigidbody2D>();
         my_rb = GetComponent<Rigidbody2D>();
+        offset = transform.position - player.transform.position;
     }
-	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
         /*
          * discarded code below
          *
@@ -46,16 +48,20 @@ public class cam_script : MonoBehaviour {
             my_rb.velocity = new Vector2(0.0f, player_rb.velocity.y);
         }
         */
+        /*
         if (!(player_collider.IsTouchingLayers(LayerMask.GetMask("Camera Borders"))))
         {
             my_rb.velocity = Vector2.zero;
         }
         else
         {
-            my_rb.velocity = player_rb.velocity;
+            my_rb.velocity = player_rb.velocity; 
         }
+        */
+        transform.position = player.transform.position + offset;
     }
     void EndGame(){
-        transform.localPosition = new Vector3(-17.0f, 1.0f, 10.0f);
+        //transform.parent = orig_trans;
+        transform.position = new Vector3(-17.0f, 1.0f, 10.0f);
     }
 }

@@ -395,6 +395,8 @@ MonoBehaviour:
   attack_trigger_r: {fileID: 1879906893816750}
   health_percentage: 0
   region_trigger: {fileID: 1104482124811882}
+  bump_velo: 65
+  attack_chance: 5
   health: 100
 --- !u!114 &114679708309561832
 MonoBehaviour:
