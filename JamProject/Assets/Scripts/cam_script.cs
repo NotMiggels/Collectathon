@@ -10,6 +10,7 @@ public class cam_script : MonoBehaviour {
     public GameObject border_u;
     public GameObject border_d;
 
+    private bool gameOver;
     private BoxCollider2D player_collider;
     private Rigidbody2D my_rb;
     private Rigidbody2D player_rb;
@@ -17,6 +18,7 @@ public class cam_script : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        gameOver = false;
         player_collider = player.GetComponent<BoxCollider2D>();
         player_rb = player.GetComponent<Rigidbody2D>();
         my_rb = GetComponent<Rigidbody2D>();
@@ -58,10 +60,14 @@ public class cam_script : MonoBehaviour {
             my_rb.velocity = player_rb.velocity; 
         }
         */
-        transform.position = player.transform.position + offset;
+        if (!gameOver) {
+            transform.position = player.transform.position + offset;
+        }
+        
     }
     void EndGame(){
         //transform.parent = orig_trans;
+        gameOver = true;
         transform.position = new Vector3(-17.0f, 1.0f, 10.0f);
     }
 }
