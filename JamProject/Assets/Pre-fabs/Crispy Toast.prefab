@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114375241611339464}
   m_Layer: 0
   m_Name: Crispy Toast
-  m_TagString: LV1CT
+  m_TagString: LV1CT1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114343327429016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59, y: 0.442, z: 3.9594603}
+  m_LocalPosition: {x: 4.7083216, y: 0.4524985, z: 3.9594603}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
