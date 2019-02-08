@@ -32,10 +32,16 @@ public class master_script : MonoBehaviour {
 	void Update () {
         Debug.Log("CT count: " + ct_count);
 	}
+    /*
+     * called by crispy toast scripts to increment the number
+     */ 
     public void AddCT()
     {
         ct_count += 1;
     }
+    /*
+     * you know what this does
+     */ 
     public int getCT()
     {
         return ct_count;

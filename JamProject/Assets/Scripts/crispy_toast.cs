@@ -31,6 +31,9 @@ public class crispy_toast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        /*
+         * if player touches it
+         */
         if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
             ms.AddCT();
@@ -38,6 +41,9 @@ public class crispy_toast : MonoBehaviour {
             this.gameObject.SetActive(false);
         }
 	}
+    /*
+     * tells whatever calls this fuction if this crispy toast has been collected
+     */ 
     public bool Collected()
     {
         return collected;

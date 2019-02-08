@@ -9,6 +9,12 @@ public class testing1 : MonoBehaviour {
     public GameObject portal;
     private bool portal_activate;
     private bool primaryCTsCollected;
+    /*
+     * the following static object and Awake() is used to prevent duplicate objects
+     * being generated when loading a scene
+     * 
+     * the same code would be found in portal and crispy toast scripts as well
+     */ 
     private static testing1 t1;
     void Awake()
     {
@@ -25,7 +31,12 @@ public class testing1 : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        primaryCTsCollected = true;
+        /*
+         * this is the flag that controls whether the portal should be activated
+         * can be modified to be other conditions as well 
+         */
+        primaryCTsCollected = true; 
+                                     
         portal_activate = false;
         portal.SetActive(portal_activate);
         CTs = GameObject.FindGameObjectsWithTag("LV1CT");
@@ -33,6 +44,9 @@ public class testing1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        /*
+         * check for conditions if portal isn't activated
+         */
         if (!portal_activate)
         {
             foreach (GameObject ct in CTs)
@@ -48,6 +62,10 @@ public class testing1 : MonoBehaviour {
                 }
             }
         }
+        /*
+         * if portal isn't activated and conditions are met
+         * activate the portal
+         */
         if (primaryCTsCollected && !portal_activate)
         {
             portal_activate = true;
