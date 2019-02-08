@@ -7,18 +7,22 @@ public class crispy_toast : MonoBehaviour {
     private master_script ms;
     private BoxCollider2D bc;
     private bool collected;
-    private static crispy_toast ct;
+    private int self_count;
+    //private GameObject ct;
     void Awake()
     {
-        DontDestroyOnLoad(this);
-
-        if (ct == null)
+        self_count = 0;
+        crispy_toast[] CTs = Resources.FindObjectsOfTypeAll<crispy_toast>();
+        foreach(crispy_toast CT in CTs)
         {
-            ct = this;
+            if (CT.gameObject.tag.Equals(gameObject.tag))
+            {
+                self_count += 1;
+            }
         }
-        else
+        if(self_count > 1)
         {
-            GameObject.Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
     // Use this for initialization

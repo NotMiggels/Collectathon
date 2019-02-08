@@ -7,8 +7,9 @@ TagManager:
   - Enemy_group1
   - MasterScript
   - Testing1Script
-  - LV1CT
   - LV1PT
+  - LV1CT1
+  - LV1CT2
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61130564513917248}
   - component: {fileID: 114375241611339464}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: Crispy Toast
   m_TagString: LV1CT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

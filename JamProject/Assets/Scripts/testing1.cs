@@ -13,7 +13,7 @@ public class testing1 : MonoBehaviour {
      * the following static object and Awake() is used to prevent duplicate objects
      * being generated when loading a scene
      * 
-     * the same code would be found in portal and crispy toast scripts as well
+     * 
      */ 
     private static testing1 t1;
     void Awake()
@@ -39,7 +39,7 @@ public class testing1 : MonoBehaviour {
                                      
         portal_activate = false;
         portal.SetActive(portal_activate);
-        CTs = GameObject.FindGameObjectsWithTag("LV1CT");
+        CTs = GameObject.FindGameObjectsWithTag("LV1CT1");
 	}
 	
 	// Update is called once per frame
