@@ -30,7 +30,7 @@ public class squash_script : MonoBehaviour {
     void Start () {
         //health = 100;
         max_health = health;
-        anim = GetComponent<Animator>();
+        anim = sprite.GetComponent<Animator>();
         //anim.trigger
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<BoxCollider2D>();
@@ -71,7 +71,7 @@ public class squash_script : MonoBehaviour {
         in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) ||
             myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
         health_percentage = health / max_health;
-        if (chasing_player)
+        if (chasing_player && !anim.GetCurrentAnimatorStateInfo(0).IsName("Squash Shock"))
         {
             //locate the player
             Vector3 playerpos = player.transform.position;
@@ -168,6 +168,10 @@ public class squash_script : MonoBehaviour {
     void ChasePlayer(GameObject p)
     {
         player = p;
+        if (!chasing_player)
+        {
+            anim.Play("Squash Shock");
+        }
         chasing_player = true;
     }
     /*
@@ -176,6 +180,7 @@ public class squash_script : MonoBehaviour {
     void Idle()
     {
         player = null;
+        anim.Play("Squash Idle");
         chasing_player = false;
 
     }
