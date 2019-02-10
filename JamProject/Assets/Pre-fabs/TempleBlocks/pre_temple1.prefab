@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4643718113371774}
   - component: {fileID: 212555422772032934}
   - component: {fileID: 61770276507492316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pre_temple1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

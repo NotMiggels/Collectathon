@@ -22,7 +22,7 @@ public class Scr_PlayerControl : MonoBehaviour {
 
     private Animator anim;
     private Rigidbody2D myRigidbody;
-    private BoxCollider2D myCollider;
+    private CapsuleCollider2D myCollider;
     private BoxCollider2D trig_l;
     private BoxCollider2D trig_r;
     private bool in_air;
@@ -43,7 +43,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         W_pressed = false;
         anim = sprite.GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<BoxCollider2D>();
+        myCollider = GetComponent<CapsuleCollider2D>();
         myRigidbody.freezeRotation = true;
         sr = sprite.GetComponent<SpriteRenderer>();
         moving_anim_playing = false;
