@@ -8,6 +8,7 @@ public class squash_script : MonoBehaviour {
     public float jump_velo; //200
     public float accel; //8
     public float brake_drag; //10
+    public float attack_velo;
     public GameObject sprite;
     public GameObject attack_trigger_l;
     public GameObject attack_trigger_r;
@@ -108,7 +109,7 @@ public class squash_script : MonoBehaviour {
                     System.Random random = new System.Random();
                     int temp = random.Next(101);
                     if(temp < attack_chance){
-                        myRigidbody.AddForce(new Vector2(80.0f, 80.0f));
+                        myRigidbody.AddForce(new Vector2(attack_velo, attack_velo));
                         attacking = true;
                     }
                 }
@@ -148,7 +149,7 @@ public class squash_script : MonoBehaviour {
                     int temp = random.Next(101);
                     if (temp < attack_chance)
                     {
-                        myRigidbody.AddForce(new Vector2(-80.0f, 80.0f));
+                        myRigidbody.AddForce(new Vector2(-1.0f * attack_velo, attack_velo));
                         attacking = true;
                     }
                 }
