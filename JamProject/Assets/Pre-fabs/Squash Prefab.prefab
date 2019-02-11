@@ -385,9 +385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3778d68c8de3efc419910492f89dfcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top_spd: 0.8
+  top_spd: 0.4
   jump_velo: 0
-  accel: 8
+  accel: 5
   brake_drag: 10
   attack_velo: 50
   sprite: {fileID: 1477460632048160}
