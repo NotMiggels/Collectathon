@@ -10,6 +10,11 @@ TagManager:
   - LV1PT
   - LV1CT1
   - LV1CT2
+  - JungleToast1
+  - JungleToast2
+  - JungleToast3
+  - JungleToast4
+  - JungleToast5
   layers:
   - Default
   - TransparentFX

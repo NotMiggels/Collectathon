@@ -19,6 +19,6 @@ public class main_menu_script : MonoBehaviour {
         text.text = "Crispy toasts: " + ms.getCT();
 	}  
     void GoTesting1(){
-        SceneManager.LoadScene("Testing1");
+        SceneManager.LoadScene("JungleScene");
     }
 }
