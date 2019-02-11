@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\Min Young Park\\Desktop\\GameDev2\\Collectathon\\JamProject\\Assembly-CSharp.csproj",
+  "TargetFramework": "v3.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
