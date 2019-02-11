@@ -9,11 +9,15 @@ public class trigger_script : MonoBehaviour {
     private BoxCollider2D bc;
     private bool player_inside;
     private int enemy_count;
+    private float escape_countdown;
+    private bool chasing;
 	// Use this for initialization
 	void Start () {
         //player = GameObject.FindWithTag("Player");
         //enemies = GameObject.FindGameObjectsWithTag(enemy_tag);
         //enemy_count = enemies.Length;
+        chasing = false;
+        escape_countdown = 2.0f;
         bc = GetComponent<BoxCollider2D>();
         player_inside = false;
 	}
@@ -21,15 +25,23 @@ public class trigger_script : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if (bc.IsTouchingLayers(LayerMask.GetMask("Player")) && !chasing)
         {
-            player_inside = true;
+            chasing = true;
+            escape_countdown = 2.0f;
+            //player_inside = true;
             SendMessageUpwards("ChasePlayer", GameObject.FindWithTag("Player"));
         }
         
-        if(player_inside && !(bc.IsTouchingLayers(LayerMask.GetMask("Player"))))
+        if(chasing && !(bc.IsTouchingLayers(LayerMask.GetMask("Player"))))
         {
-            player_inside = false;
+            escape_countdown -= Time.deltaTime;
+            //player_inside = false;
+        }
+        if(escape_countdown < 0)
+        {
+            //player_inside = false;
+            chasing = false;
             SendMessageUpwards("Idle");
         }
     }
