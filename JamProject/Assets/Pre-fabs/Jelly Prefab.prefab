@@ -85,9 +85,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000475617954256}
-  - component: {fileID: 61665707731210254}
   - component: {fileID: 50055781811376666}
   - component: {fileID: 114700549086386820}
+  - component: {fileID: 70942222753434488}
   m_Layer: 11
   m_Name: Jelly Prefab
   m_TagString: Player
@@ -264,31 +264,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!61 &61665707731210254
-BoxCollider2D:
+--- !u!70 &70942222753434488
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1591077065774056}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 66d48ace4e976fb4eacbd6458f6a5aaa, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.041372508}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3}
-    newSize: {x: 3, y: 3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.917255}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.033830017, y: -0.057664864}
+  m_Size: {x: 0.56766003, y: 0.8846703}
+  m_Direction: 0
 --- !u!95 &95883892267629984
 Animator:
   serializedVersion: 3

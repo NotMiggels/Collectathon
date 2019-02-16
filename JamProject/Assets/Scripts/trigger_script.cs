@@ -33,10 +33,14 @@ public class trigger_script : MonoBehaviour {
             SendMessageUpwards("ChasePlayer", GameObject.FindWithTag("Player"));
         }
         
-        if(chasing && !(bc.IsTouchingLayers(LayerMask.GetMask("Player"))))
+        if(chasing && !bc.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
             escape_countdown -= Time.deltaTime;
             //player_inside = false;
+        }
+        else if(chasing && bc.IsTouchingLayers(LayerMask.GetMask("Player")))
+        {
+            escape_countdown = 2.0f;
         }
         if(escape_countdown < 0)
         {

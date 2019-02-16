@@ -14,6 +14,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     public GameObject sprite;
     public float health;
     public float health_percentage;
+    public float swamp_drag;
     private float max_health;
 
     //public GameObject hitbox;
@@ -143,7 +144,16 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
             in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
                 myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
-
+            //jelly would be able to keep jumping in swamp
+            if (myCollider.IsTouchingLayers(LayerMask.GetMask("Swamp")))
+            {
+                in_air = false;
+                myRigidbody.drag = swamp_drag;
+            }
+            else
+            {
+                myRigidbody.drag = 0;
+            }
 
             //Debug.Log(in_air);
             if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed && !shielding)

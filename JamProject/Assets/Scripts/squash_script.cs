@@ -25,11 +25,13 @@ public class squash_script : MonoBehaviour {
     private BoxCollider2D myCollider;
     private SpriteRenderer sr;
     private Boolean attacking;
+    //private Boolean in_air;
     public float health;
     private float max_health;
     // Use this for initialization
     void Start () {
         //health = 100;
+        in_air = false;
         max_health = health;
         anim = sprite.GetComponent<Animator>();
         //anim.trigger
@@ -62,7 +64,14 @@ public class squash_script : MonoBehaviour {
 		 * 2. chasing_player should be set to false       
          *
          */
-
+        if(myRigidbody.velocity.x > 0.0f)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
         if(myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && attacking && player != null){
             player.SendMessage("TakeDMG", 10);
             attacking = false;
@@ -71,6 +80,10 @@ public class squash_script : MonoBehaviour {
 
         in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) ||
             myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
+        if(!in_air && attacking)
+        {
+            anim.Play("Squash Chasing");
+        }
         health_percentage = health / max_health;
         if (chasing_player && !anim.GetCurrentAnimatorStateInfo(0).IsName("Squash Shock"))
         {
@@ -111,6 +124,7 @@ public class squash_script : MonoBehaviour {
                     if(temp < attack_chance){
                         myRigidbody.AddForce(new Vector2(attack_velo, attack_velo));
                         attacking = true;
+                        anim.Play("Squash Jump");
                     }
                 }
             }
@@ -151,6 +165,7 @@ public class squash_script : MonoBehaviour {
                     {
                         myRigidbody.AddForce(new Vector2(-1.0f * attack_velo, attack_velo));
                         attacking = true;
+                        anim.Play("Squash Jump");
                     }
                 }
             }
