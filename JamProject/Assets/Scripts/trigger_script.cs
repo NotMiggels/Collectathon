@@ -45,6 +45,7 @@ public class trigger_script : MonoBehaviour {
         if(escape_countdown < 0)
         {
             //player_inside = false;
+            escape_countdown = 2.0f;
             chasing = false;
             SendMessageUpwards("Idle");
         }

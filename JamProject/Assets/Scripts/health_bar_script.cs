@@ -36,18 +36,27 @@ public class health_bar_script : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if(flag == 1){
-            if (script.health_percentage > 0.0f)
-            {
+            //if (script.health_percentage > 0.0f)
+            //{
                 //Debug.Log("squash hp -");
+            if(script.health_percentage < 0.0f){
+                ls.x = 0.0f;
+            }
+            else{
                 ls.x = orig_scale * script.health_percentage;
             }
+                
+            //}
             transform.localScale = ls;
         }
         else if(flag == 2){
             
-            if (script2.health_percentage > 0.0f)
+            if (script2.health_percentage < 0.0f)
             {
-                Debug.Log("player hp -");
+                ls.x = 0.0f;
+            }
+            else
+            {
                 ls.x = orig_scale * script2.health_percentage;
             }
             transform.localScale = ls;

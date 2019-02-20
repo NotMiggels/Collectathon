@@ -30,7 +30,7 @@ public class master_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("CT count: " + ct_count);
+        //Debug.Log("CT count: " + ct_count);
 	}
     /*
      * called by crispy toast scripts to increment the number

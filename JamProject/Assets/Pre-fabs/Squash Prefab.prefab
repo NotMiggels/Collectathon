@@ -385,11 +385,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3778d68c8de3efc419910492f89dfcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top_spd: 0.4
+  top_spd: 100
   jump_velo: 0
-  accel: 5
-  brake_drag: 10
-  attack_velo: 50
+  accel: 35
+  brake_drag: 2
+  attack_velo: 45
   sprite: {fileID: 1477460632048160}
   attack_trigger_l: {fileID: 1301054968211118}
   attack_trigger_r: {fileID: 1879906893816750}
