@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class main_menu_script : MonoBehaviour {
     public Button testing1;
     public Button jungle;
+
+    public Button volcano;
     public Text text;
     private master_script ms;
 	// Use this for initialization
@@ -14,6 +16,7 @@ public class main_menu_script : MonoBehaviour {
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         testing1.onClick.AddListener(GoTesting1);
         jungle.onClick.AddListener(GoJungle);
+        volcano.onClick.AddListener(GoVolcano);
 	}
 	
 	// Update is called once per frame
@@ -25,5 +28,9 @@ public class main_menu_script : MonoBehaviour {
     }
     void GoJungle(){
         SceneManager.LoadScene("JungleScene");
+    }
+
+    void GoVolcano(){
+        SceneManager.LoadScene("VolcanoScene");
     }
 }
