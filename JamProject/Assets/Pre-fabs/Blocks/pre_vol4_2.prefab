@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212015914291858000}
   - component: {fileID: 61059419488491660}
   - component: {fileID: 251043959961202564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pre_vol4_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
