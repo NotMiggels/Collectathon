@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4882027651708212}
   - component: {fileID: 212253618140725982}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: laavhole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
