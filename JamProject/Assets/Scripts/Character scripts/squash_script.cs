@@ -83,7 +83,7 @@ public class squash_script : MonoBehaviour
             {
                 sr.flipX = false;
             }
-            if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && attacking && player != null)
+            if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && player != null)
             {
                 player.SendMessage("TakeDMG", 10);
                 attacking = false;

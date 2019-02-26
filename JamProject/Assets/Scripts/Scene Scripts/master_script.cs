@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class master_script : MonoBehaviour {
-
+    public float jelly_init_health;
     private int ct_count;//ct stands for crispy toast
-
+    private float jelly_health;
     private static master_script ms;
     void Awake()
     {
@@ -23,7 +23,7 @@ public class master_script : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        
+        jelly_health = jelly_init_health;
         ct_count = 0;
         DontDestroyOnLoad(this.gameObject);
 	}
@@ -45,5 +45,13 @@ public class master_script : MonoBehaviour {
     public int getCT()
     {
         return ct_count;
+    }
+    public void setJellyHealth(float hp)
+    {
+        jelly_health = hp;
+    }
+    public float getJellyHealth()
+    {
+        return jelly_health;
     }
 }

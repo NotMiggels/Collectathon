@@ -41,7 +41,7 @@ public class banana_script : MonoBehaviour
         shocked = false;
         dead = false;
         //health = 100;
-        death_countdown = 1.0f;
+        death_countdown = 2.0f;
         in_air = false;
         max_health = health;
         anim = sprite.GetComponent<Animator>();
@@ -115,7 +115,7 @@ public class banana_script : MonoBehaviour
                     sr.flipX = false;
                 }
 
-                if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && attacking && player != null)
+                if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && player != null)
                 {
                     player.SendMessage("TakeDMG", 10);
                     attacking = false;
@@ -236,7 +236,7 @@ public class banana_script : MonoBehaviour
                 if (health <= 0.0f)
                 {
                     region_trigger.SendMessage("EnemyDecrement");
-                    //anim.Play("Squash Death");
+                    anim.Play("Banana Death");
                     dead = true;
                     health_percentage = 0.0f;
                     //Destroy(myRigidbody.gameObject);

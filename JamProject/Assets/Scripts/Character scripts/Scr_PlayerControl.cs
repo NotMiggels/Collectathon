@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scr_PlayerControl : MonoBehaviour {
 
-
+    
     public float top_spd; //1
     public float jump_velo; //20
     public float accel; //.45
@@ -12,15 +12,17 @@ public class Scr_PlayerControl : MonoBehaviour {
     public GameObject atk_trigger_l;
     public GameObject atk_trigger_r;
     public GameObject sprite;
+    public float dmg_cd;
     public float health;
     public float health_percentage;
     public float swamp_drag;
     private float max_health;
-
+    private float dmg_cd_default;
+    private bool dmg_cooling;
     //public GameObject hitbox;
     private bool playerMoving;
     private Vector2 lastMove;
-
+    private master_script ms;
     private Animator anim;
     private Rigidbody2D myRigidbody;
     private CapsuleCollider2D myCollider;
@@ -39,6 +41,10 @@ public class Scr_PlayerControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
+        dmg_cooling = false;
+        dmg_cd_default = dmg_cd;
+        health = ms.getJellyHealth();
         max_health = health;
         in_air = true;
         W_pressed = false;
@@ -89,6 +95,15 @@ public class Scr_PlayerControl : MonoBehaviour {
         anim.SetFloat("LastMoveY", lastMove.y);
         */
         //playerMoving = false;
+        if (dmg_cooling)
+        {
+            dmg_cd -= Time.deltaTime;
+            if(dmg_cd < 0)
+            {
+                dmg_cd = dmg_cd_default;
+                dmg_cooling = false;
+            }
+        }
         if (health > 0.0f)
         {
             health_percentage = health / max_health;
@@ -182,11 +197,11 @@ public class Scr_PlayerControl : MonoBehaviour {
             {
                 myRigidbody.drag = 0.0f;
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 sr.flipX = true;
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 sr.flipX = false;
             }
@@ -232,9 +247,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         }
     }
     void TakeDMG(int dmg){
-        if (!shielding)
+        if (!shielding && !dmg_cooling)
         {
             health -= dmg;
+            dmg_cooling = true;
         }
     }
     void Knocked(Vector2 v)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class crispy_toast : MonoBehaviour {
 
@@ -8,9 +9,12 @@ public class crispy_toast : MonoBehaviour {
     private BoxCollider2D bc;
     private bool collected;
     private int self_count;
+    private string own_scene;
     //private GameObject ct;
     void Awake()
     {
+        DontDestroyOnLoad(this);
+        own_scene = SceneManager.GetActiveScene().name;
         self_count = 0;
         crispy_toast[] CTs = Resources.FindObjectsOfTypeAll<crispy_toast>();
         foreach(crispy_toast CT in CTs)
@@ -35,14 +39,30 @@ public class crispy_toast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-         * if player touches it
-         */
-        if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
+
+        if (collected)
         {
-            ms.AddCT();
-            collected = true;
             this.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (SceneManager.GetActiveScene().name != own_scene)
+            {
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                this.gameObject.SetActive(true);
+            }
+            /*
+             * if player touches it
+             */
+            if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
+            {
+                ms.AddCT();
+                collected = true;
+                //this.gameObject.SetActive(false);
+            }
         }
 	}
     /*
