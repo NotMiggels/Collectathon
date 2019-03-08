@@ -319,6 +319,9 @@ MonoBehaviour:
   health: 100
   health_percentage: 0
   swamp_drag: 15
+  fling_spd: 2
+  fling_spd_up: 0.05
+  jello: {fileID: 50086533116313196, guid: 83cd224299e6e43489345e157779e882, type: 2}
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1

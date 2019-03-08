@@ -18,6 +18,8 @@ TagManager:
   - swamp
   - Testing1ToastContainer
   - JungleToastContainer
+  - Fling'd Jelly
+  - Jello
   layers:
   - Default
   - TransparentFX

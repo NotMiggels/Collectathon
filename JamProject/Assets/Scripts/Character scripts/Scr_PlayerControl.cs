@@ -16,6 +16,9 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float health;
     public float health_percentage;
     public float swamp_drag;
+    public float fling_spd;
+    public float fling_spd_up;
+    public Rigidbody2D jello;
     private float max_health;
     private float dmg_cd_default;
     private bool dmg_cooling;
@@ -204,6 +207,24 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (Input.GetKey(KeyCode.D))
             {
                 sr.flipX = false;
+            }
+            if (Input.GetKeyDown(KeyCode.L)){
+                if (sr.flipX == true)
+                {
+                    Vector3 temp = new Vector3(transform.position.x - 0.35f,
+                                              transform.position.y,
+                                               transform.position.z);
+                    Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
+                    jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
+                }
+                else{
+                    Vector3 temp = new Vector3(transform.position.x + 0.35f,
+                                             transform.position.y,
+                                              transform.position.z);
+                    Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
+                    jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
+                }
+
             }
             if (!moving_anim_playing && myRigidbody.velocity.magnitude > 0.0f &&
                !attack_anim_playing && !shielding)

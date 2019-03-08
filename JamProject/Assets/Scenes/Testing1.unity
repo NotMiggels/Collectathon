@@ -580,6 +580,14 @@ Prefab:
       propertyPath: m_Name
       value: Mario-QuestionBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 4271406611230242, guid: 83cd224299e6e43489345e157779e882, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271406611230242, guid: 83cd224299e6e43489345e157779e882, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83cd224299e6e43489345e157779e882, type: 2}
   m_IsPrefabAsset: 0
@@ -1017,7 +1025,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.25900137
+      value: -0.295
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.y
