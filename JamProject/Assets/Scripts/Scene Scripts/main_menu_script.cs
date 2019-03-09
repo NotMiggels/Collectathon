@@ -9,6 +9,9 @@ public class main_menu_script : MonoBehaviour {
     public Button jungle;
 
     public Button volcano;
+
+    public Button finallevel;
+    
     public Text text;
     private master_script ms;
 	// Use this for initialization
@@ -17,6 +20,7 @@ public class main_menu_script : MonoBehaviour {
         testing1.onClick.AddListener(GoTesting1);
         jungle.onClick.AddListener(GoJungle);
         volcano.onClick.AddListener(GoVolcano);
+        finallevel.onClick.AddListener(GoFinalLevel);
 	}
 	
 	// Update is called once per frame
@@ -32,5 +36,8 @@ public class main_menu_script : MonoBehaviour {
 
     void GoVolcano(){
         SceneManager.LoadScene("VolcanoScene");
+    }
+    void GoFinalLevel(){
+        SceneManager.LoadScene("FinalLevel");
     }
 }
