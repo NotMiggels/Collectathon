@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VolcanoScene.unity
     guid: 2de3ffc93dd061140ac8461d6e311957
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel.unity
+    guid: 57dda1d3a1dc93840918c5ecf994ff27
   m_configObjects: {}
