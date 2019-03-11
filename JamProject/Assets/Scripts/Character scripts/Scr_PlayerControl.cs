@@ -19,6 +19,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float fling_spd;
     public float fling_spd_up;
     public Rigidbody2D jello;
+    public AudioClip swing;
+    private AudioSource audio;
     private float max_health;
     private float dmg_cd_default;
     private bool dmg_cooling;
@@ -47,6 +49,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         dmg_cooling = false;
         dmg_cd_default = dmg_cd;
+        audio = GetComponent<AudioSource>();
         health = ms.getJellyHealth();
         max_health = health;
         in_air = true;
@@ -132,6 +135,8 @@ public class Scr_PlayerControl : MonoBehaviour {
             {
                 Debug.Log("attack");
                 attacking = true;
+                audio.clip = swing;
+                audio.Play();
                 //facing left
                 if (sr.flipX)
                 {
