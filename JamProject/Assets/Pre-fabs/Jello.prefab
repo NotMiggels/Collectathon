@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 61156808997825176}
   - component: {fileID: 50086533116313196}
   - component: {fileID: 114278785413176346}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Jello
   m_TagString: Jello
   m_Icon: {fileID: 0}
