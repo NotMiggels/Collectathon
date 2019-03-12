@@ -23,6 +23,7 @@ public class cam_script : MonoBehaviour {
         player_rb = player.GetComponent<Rigidbody2D>();
         my_rb = GetComponent<Rigidbody2D>();
         offset = new Vector3(-0.1f, 0.4f, -10.0f);
+        transform.position = player.transform.position + offset;
         Debug.Log(offset);
     }
 	// Update is called once per frame
