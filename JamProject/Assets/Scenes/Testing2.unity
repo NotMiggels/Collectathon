@@ -294,27 +294,6 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1152488521}
-    - target: {fileID: 1850847267736694, guid: 78f2bb6a9fe050d45b5370606e0df4fb, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114381551053114046, guid: 78f2bb6a9fe050d45b5370606e0df4fb,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Jelly, our deity is facing a drastic crisis!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114381551053114046, guid: 78f2bb6a9fe050d45b5370606e0df4fb,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: All of the Crispy Toast from its tomb was stolen by those enemies spawning
-        from portals.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114381551053114046, guid: 78f2bb6a9fe050d45b5370606e0df4fb,
-        type: 2}
-      propertyPath: dialogue.sentences.Array.data[2]
-      value: You must retrieve the toast, or our deity will remain powerless and we'll
-        all be in big trouble!
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f2bb6a9fe050d45b5370606e0df4fb, type: 2}
   m_IsPrefabAsset: 0
