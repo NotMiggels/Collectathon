@@ -62,11 +62,11 @@ public class Scr_PlayerControl : MonoBehaviour {
     void Start () {
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         ability_active = false;
-        ability_gauge = 1.0f;
+        ability_gauge = ms.getJellyGauge(); //inherited from master script
+        health = ms.getJellyHealth(); //inherited from master script
         dmg_cooling = false;
         dmg_cd_default = dmg_cd;
         audio = GetComponent<AudioSource>();
-        health = ms.getJellyHealth();
         max_health = health;
         in_air = true;
         W_pressed = false;
@@ -84,6 +84,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         attacking = false;
         selected_ability = 0;
         UI_manager = GameObject.FindGameObjectWithTag("UIManager");
+        if (ms.get_definedSpawn())
+        {
+            myRigidbody.transform.position = ms.getSpawnLocation();
+        }
     }
 	
 	// Update is called once per frame
@@ -331,13 +335,14 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (ability_active)
             {
                 ability_gauge -= Time.deltaTime * (1.0f / gauge_time);
+                Debug.Log(ability_gauge);
                 if(selected_ability == 1)
                 {
                     jump_boost = 0.15f;
                 }
             }
             //gauge refilling by time
-            else if (!ability_active)
+            else if(ability_gauge < 1.0f)
             {
                 ability_gauge += Time.deltaTime * (1.0f / gauge_recover_time);
             }

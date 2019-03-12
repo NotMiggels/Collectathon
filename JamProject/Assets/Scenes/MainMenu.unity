@@ -180,9 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Jungle
-
-'
+  m_Text: Village
 --- !u!222 &7429537
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1273,6 +1271,11 @@ Prefab:
     - target: {fileID: 1038552360082712, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
       propertyPath: m_Name
       value: MasterScript
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: jelly_init_gauge
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}

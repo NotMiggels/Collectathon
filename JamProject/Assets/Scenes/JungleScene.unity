@@ -10939,11 +10939,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4438515807632268, guid: be81528025c28b64db0b1707881d1f13, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 317.3
+      value: 320.69
       objectReference: {fileID: 0}
     - target: {fileID: 4438515807632268, guid: be81528025c28b64db0b1707881d1f13, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -110.1
+      value: -124.4
       objectReference: {fileID: 0}
     - target: {fileID: 4438515807632268, guid: be81528025c28b64db0b1707881d1f13, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13903,7 +13903,7 @@ Prefab:
     - target: {fileID: 114384387458836422, guid: f8d25edfd23f8ea4da2af478d83f8d2b,
         type: 2}
       propertyPath: destination
-      value: MainMenu
+      value: Village
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d25edfd23f8ea4da2af478d83f8d2b, type: 2}

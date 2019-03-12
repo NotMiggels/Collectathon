@@ -31,7 +31,7 @@ public class main_menu_script : MonoBehaviour {
         SceneManager.LoadScene("Testing1");
     }
     void GoJungle(){
-        SceneManager.LoadScene("JungleScene");
+        SceneManager.LoadScene("Village");
     }
 
     void GoVolcano(){
