@@ -46,7 +46,7 @@ public class MovingPlatformScript : MonoBehaviour {
 	{
 		if(cond == -1)
 		{
-			print("WHAT");
+		
 			body.velocity = (locA - org) / movetime;
 			yield return new WaitForSeconds(movetime);
 			coroutine = waittime(staytime);
@@ -55,7 +55,7 @@ public class MovingPlatformScript : MonoBehaviour {
 		}
 		else
 		{
-			print("Wfdsgh");
+
 			body.velocity = (org - locA) / movetime;
 			yield return new WaitForSeconds(movetime);
 			coroutine = waittime(staytime);
