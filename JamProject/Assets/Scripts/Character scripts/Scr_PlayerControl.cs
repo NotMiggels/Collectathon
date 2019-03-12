@@ -12,20 +12,34 @@ public class Scr_PlayerControl : MonoBehaviour {
     public GameObject atk_trigger_l;
     public GameObject atk_trigger_r;
     public GameObject sprite;
+    private GameObject UI_manager;
+    public float gauge_time; //how long would the gauge last
+                             //from a full charge (w/o) using active ability
     public float dmg_cd;
     public float health;
     public float health_percentage;
+    public float jump_boost;
     public float swamp_drag;
     public float fling_spd;
+    public float jello_spd;//jello in ability #1
     public float fling_spd_up;
+    public float jello_spd_up;//jello in ability #1
+    public float gauge_recover_time; //the time it takes for the gauge to fully recover
     public Rigidbody2D jello;
+    public Rigidbody2D jello2;
     public AudioClip swing;
     private AudioSource audio;
     private float max_health;
     private float dmg_cd_default;
+    private float ability_gauge;
     private bool dmg_cooling;
     //public GameObject hitbox;
     private bool playerMoving;
+    private bool ability_active;
+    private int selected_ability; // a flag that represents the selected ability
+                                  // 0 = none
+    public int ability_count; //the number of abilities Jelly has,
+                              //excluding the default state (as ability #0)
     private Vector2 lastMove;
     private master_script ms;
     private Animator anim;
@@ -47,6 +61,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
+        ability_active = false;
+        ability_gauge = 1.0f;
         dmg_cooling = false;
         dmg_cd_default = dmg_cd;
         audio = GetComponent<AudioSource>();
@@ -66,7 +82,8 @@ public class Scr_PlayerControl : MonoBehaviour {
         trig_r = atk_trigger_r.GetComponent<BoxCollider2D>();
         cf.SetLayerMask(LayerMask.GetMask("Enemy"));
         attacking = false;
-
+        selected_ability = 0;
+        UI_manager = GameObject.FindGameObjectWithTag("UIManager");
     }
 	
 	// Update is called once per frame
@@ -101,6 +118,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         anim.SetFloat("LastMoveY", lastMove.y);
         */
         //playerMoving = false;
+        /*
+         * A block of code that prevents Jelly
+         * from taking too much damage from an attack
+         */
         if (dmg_cooling)
         {
             dmg_cd -= Time.deltaTime;
@@ -110,8 +131,14 @@ public class Scr_PlayerControl : MonoBehaviour {
                 dmg_cooling = false;
             }
         }
+        /*
+         * If Jelly is not dead
+         */
         if (health > 0.0f)
         {
+            /*
+             * Check animation status
+             */ 
             health_percentage = health / max_health;
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack"))
             {
@@ -130,7 +157,9 @@ public class Scr_PlayerControl : MonoBehaviour {
             {
                 moving_anim_playing = false;
             }
-
+            /*
+             * attack
+             */
             if (attack_anim_playing && !attacking)
             {
                 Debug.Log("attack");
@@ -160,14 +189,20 @@ public class Scr_PlayerControl : MonoBehaviour {
                     }
                 }
             }
+            /*
+             * Block of code that resets Jelly's vertical velocity as he touches the ground
+             */
             if (in_air && (myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
                 myCollider.IsTouchingLayers(LayerMask.GetMask("Platform"))))
             {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0.0f);
             }
+            /*
+             * Block of code that checks if Jelly is in mid air
+             */ 
             in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
                 myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
-            //jelly would be able to keep jumping in swamp
+            //Jelly would be able to keep jumping in swamp
             if (myCollider.IsTouchingLayers(LayerMask.GetMask("Swamp")))
             {
                 in_air = false;
@@ -179,32 +214,50 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
 
             //Debug.Log(in_air);
+            /*
+             * Jump
+             */
             if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed && !shielding)
             {
                 W_pressed = true;
-                myRigidbody.AddForce(new Vector2(0.0f, jump_velo));
+                myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
             }
             if (Input.GetKeyUp(KeyCode.W))
             {
                 W_pressed = false;
             }
+            /*
+             * Go left
+             */
             if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd * -1.0f && !shielding)
             {
                 myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
             }
+            /*
+             * Go right
+             */ 
             if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd && !shielding)
             {
                 myRigidbody.AddForce(new Vector2(accel, 0.0f));
             }
+            /*
+             * Brake
+             */ 
             if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f && !shielding)
             {
                 //orig_drag = myRigidbody.drag;
                 myRigidbody.drag = brake_drag;
             }
+            /*
+             * End braking
+             */
             if (Input.GetKeyUp(KeyCode.S) && !in_air)
             {
                 myRigidbody.drag = 0.0f;
             }
+            /*
+             * Code that flips the sprite as Jelly moves towards left or right
+             */ 
             if (Input.GetKey(KeyCode.A))
             {
                 sr.flipX = true;
@@ -213,6 +266,9 @@ public class Scr_PlayerControl : MonoBehaviour {
             {
                 sr.flipX = false;
             }
+            /*
+             * Jelly fling
+             */ 
             if (Input.GetKeyDown(KeyCode.L)){
                 if (sr.flipX == true)
                 {
@@ -231,6 +287,92 @@ public class Scr_PlayerControl : MonoBehaviour {
                 }
 
             }
+            /*
+             * Switching between states (abilities)
+             */
+            if (Input.GetKeyDown(KeyCode.Q) && !ability_active)
+            {
+                
+                selected_ability -= 1;
+                if(selected_ability < 0)
+                {
+                    selected_ability = ability_count;
+                }
+                UI_manager.SendMessage("SetAbilityText", selected_ability);
+                Debug.Log("current ability#:" + selected_ability);
+            }
+            if (Input.GetKeyDown(KeyCode.E) && !ability_active)
+            {
+                
+                selected_ability += 1;
+                if(selected_ability > ability_count)
+                {
+                    selected_ability = 0;
+                }
+                UI_manager.SendMessage("SetAbilityText", selected_ability);
+                Debug.Log("current ability#:" + selected_ability);
+            }
+            if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && !ability_active)
+            {
+                Debug.Log("ability active");
+                ability_active = true;
+            }
+            //restore passive effectors
+            else if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && ability_active)
+            {
+                Debug.Log("ability inactive");
+                if (selected_ability == 1)
+                {
+                    jump_boost = 0;
+                }
+                ability_active = false;
+            }
+            //passive abilities
+            if (ability_active)
+            {
+                ability_gauge -= Time.deltaTime * (1.0f / gauge_time);
+                if(selected_ability == 1)
+                {
+                    jump_boost = 0.15f;
+                }
+            }
+            //gauge refilling by time
+            else if (!ability_active)
+            {
+                ability_gauge += Time.deltaTime * (1.0f / gauge_recover_time);
+            }
+            //disable ability if gauge depleted
+            if(ability_gauge < 0.0f)
+            {
+                ability_active = false;
+            }
+            //active ability
+            if (Input.GetKeyDown(KeyCode.I) && ability_active)
+            {
+                ability_gauge -= 0.3f;
+                if(selected_ability == 1)
+                {
+                    if (sr.flipX == true)
+                    {
+                        Vector3 temp = new Vector3(transform.position.x - 0.35f,
+                                                  transform.position.y,
+                                                   transform.position.z);
+                        Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
+                        jelloclone.velocity = (new Vector2(-1.0f * jello_spd, jello_spd_up));
+                    }
+                    else
+                    {
+                        Vector3 temp = new Vector3(transform.position.x + 0.35f,
+                                                 transform.position.y,
+                                                  transform.position.z);
+                        Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
+                        jelloclone.velocity = (new Vector2(1.0f * jello_spd, jello_spd_up));
+                    }
+                }
+            }
+            /*
+             * animation stuff
+             */
             if (!moving_anim_playing && myRigidbody.velocity.magnitude > 0.0f &&
                !attack_anim_playing && !shielding)
             {
@@ -282,5 +424,17 @@ public class Scr_PlayerControl : MonoBehaviour {
     void Knocked(Vector2 v)
     {
         myRigidbody.AddForce(v);
+    }
+    public int Selected_ability()
+    {
+        return selected_ability;
+    }
+    public bool Ability_active()
+    {
+        return ability_active;
+    }
+    public float Ability_gauge()
+    {
+        return ability_gauge;
     }
 }

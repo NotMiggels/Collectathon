@@ -411,14 +411,21 @@ MonoBehaviour:
   atk_trigger_l: {fileID: 1592464505018790}
   atk_trigger_r: {fileID: 1579069572008236}
   sprite: {fileID: 1519853476951486}
+  gauge_time: 10
   dmg_cd: 1
   health: 100
   health_percentage: 0
+  jump_boost: 0.15
   swamp_drag: 15
   fling_spd: 2
+  jello_spd: 1.6
   fling_spd_up: 0.05
+  jello_spd_up: 0.1
+  gauge_recover_time: 35
   jello: {fileID: 50086533116313196, guid: 83cd224299e6e43489345e157779e882, type: 2}
+  jello2: {fileID: 50266825057580722, guid: 62c8ddbd9a37b9a42848033856fc7263, type: 2}
   swing: {fileID: 8300000, guid: b4088b3576b3fbc41b791c7144eb2d5c, type: 3}
+  ability_count: 1
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1

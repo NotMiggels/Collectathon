@@ -21,6 +21,7 @@ TagManager:
   - Fling'd Jelly
   - Jello
   - interObject
+  - UIManager
   layers:
   - Default
   - TransparentFX
@@ -38,7 +39,7 @@ TagManager:
   - Triggers
   - Swamp
   - SwampBG
-  - 
+  - Jello
   - 
   - 
   - 
@@ -57,4 +58,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Jello
+    uniqueID: 1804697711
     locked: 0
