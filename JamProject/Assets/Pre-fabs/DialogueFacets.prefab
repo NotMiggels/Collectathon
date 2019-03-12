@@ -116,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1960194597601092
 GameObject:
   m_ObjectHideFlags: 1
@@ -329,11 +329,11 @@ MonoBehaviour:
   dialogue:
     name: Jarvis
     sentences:
-    - Fucking hell Jelly, you be hella fuckin' up!
-    - I told you to get me that hash-flavored weed, not that horse shit anti-vape
-      brand!
-    - What's that? I'm high and I don't make sense? Nah fam, I always make sense.
-      Go back out and get me that good shit.
+    - Jelly, our deity is facing a drastic crisis!
+    - All of the Crispy Toast from its tomb was stolen by those enemies spawning from
+      portals.
+    - You must retrieve the toast, or our deity will remain powerless and we'll all
+      be in big trouble!
 --- !u!114 &114392859296313570
 MonoBehaviour:
   m_ObjectHideFlags: 1
