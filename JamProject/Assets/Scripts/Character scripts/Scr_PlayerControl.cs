@@ -27,7 +27,11 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float gauge_recover_time; //the time it takes for the gauge to fully recover
     public Rigidbody2D jello;
     public Rigidbody2D jello2;
+    public AudioClip walk;
+    public AudioClip jump;
+    public AudioClip ouch;
     public AudioClip swing;
+    public AudioClip fling;
     private AudioSource audio;
     private float max_health;
     private float dmg_cd_default;
