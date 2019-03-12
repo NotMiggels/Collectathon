@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Temple 1.unity
     guid: f9694de1e07d78541b6ff1394e0cc3b7
+  - enabled: 1
+    path: Assets/Scenes/insideVolcanoScene.unity
+    guid: 66b5e5fa88a234c48b182ebb47638bea
   m_configObjects: {}

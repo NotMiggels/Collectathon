@@ -13570,6 +13570,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.504072, y: 5.029276}
   m_EdgeRadius: 0
+--- !u!114 &2030785249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030785247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1156b68fb57514b929158202834706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: insideVolcanoScene
+  spawn_x: 0
+  spawn_y: 0
+  pre_defined_spawn_location: 0
 --- !u!1001 &2030874997
 Prefab:
   m_ObjectHideFlags: 0
