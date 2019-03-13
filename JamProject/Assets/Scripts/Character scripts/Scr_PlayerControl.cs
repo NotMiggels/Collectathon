@@ -148,7 +148,8 @@ public class Scr_PlayerControl : MonoBehaviour {
              * Check animation status
              */ 
             health_percentage = health / max_health;
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack") ||
+                anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack2"))
             {
                 attack_anim_playing = true;
             }
@@ -396,10 +397,17 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing)
             {
                 attacking = false;
+                if(shielding){
+                    anim.Play("Jelly attack2");
+                    shielding = false;
+                }
+                else{
+                    anim.Play("Jelly attack");
+                }
                 shielding = false;
                 //moving_anim_playing = false;
                 //attack_anim_playing = true;
-                anim.Play("Jelly attack");
+
             }
             if (attack_anim_playing && anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly idle"))
             {

@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Item Scripts/jello2_script2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/Scr_PlayerControl.cs">
     <Files>
       <File FileName="Assets/Scripts/background_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/banana_script.cs" Line="17" Column="36" />
       <File FileName="Assets/Scripts/Character scripts/squash_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/health_bar_script.cs" Line="76" Column="14" />
       <File FileName="Assets/Scripts/Other Scripts/trigger_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="152" Column="74" />
       <File FileName="Assets/Scripts/Other Scripts/cam_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="19" Column="26" />
-      <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="6" Column="12" />
+      <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/Other Scripts/MovingPlatformScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
