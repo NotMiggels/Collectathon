@@ -10740,6 +10740,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.156
@@ -10771,6 +10776,36 @@ Prefab:
     - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[0]
+      value: Jar Person
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[1]
+      value: Jar Person
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[2]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jar Person
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jelly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
