@@ -81,13 +81,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jar Person
     sentences:
-    - Hey Jelly.
-    - How's it goin Jelly?
-    - g
-    - g
-    - g
+    - Well I'll be, our knife-holding friend Jelly is here!
+    - Good day, Jelly! I got somethin' you need to hear about.
+    - On my daily stroll today, I looked up and saw a shiny thing in the treetops!
+    - Don't have a clue what it is, though. I'd go up and look myself, but I can't
+      clear this gap. It's hard gettin' out of these swamps, you know.
+    - Wait, you said it's something shiny? Hmm, it could very well be a piece of Crispy
+      Toast.
+    - Thanks for telling me this. I'll climb the trees nearby in search of that light.
+    - Glad I could help, brother. Take care not to fall!
+    names:
+    - Jar Guy
+    - Jar Guy
+    - Jar Guy
+    - Jar Guy
+    - Jelly
+    - Jelly
+    - Jar Guy
 --- !u!212 &212782833858257976
 SpriteRenderer:
   m_ObjectHideFlags: 1
