@@ -60,10 +60,11 @@ public class Scr_PlayerControl : MonoBehaviour {
     private bool attacking;
     private ContactFilter2D cf = new ContactFilter2D();
     private SpriteRenderer sr;
-   
+    private bool control_disabled;
 
     // Use this for initialization
     void Start () {
+        control_disabled = false;
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         ability_active = false;
         ability_gauge = ms.getJellyGauge(); //inherited from master script
@@ -223,40 +224,51 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
 
             //Debug.Log(in_air);
-            /*
-             * Jump
-             */
-            if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed && !shielding)
+           
+            if (!control_disabled)
             {
-                W_pressed = true;
-                myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
+                /*
+                * Jump
+                */
+                if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed && !shielding)
+                {
+                    W_pressed = true;
+                    myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
+                }
+                /*
+                * Go left
+                */
+                if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd * -1.0f && !shielding)
+                {
+                    myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
+                }
+                /*
+                * Go right
+                */
+                if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd && !shielding)
+                {
+                    myRigidbody.AddForce(new Vector2(accel, 0.0f));
+                }
+                /*
+                * Brake
+                */
+                if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f && !shielding)
+                {
+                    //orig_drag = myRigidbody.drag;
+                    myRigidbody.drag = brake_drag;
+                }
             }
+            
             if (Input.GetKeyUp(KeyCode.W))
             {
                 W_pressed = false;
             }
-            /*
-             * Go left
-             */
-            if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd * -1.0f && !shielding)
-            {
-                myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
-            }
-            /*
-             * Go right
-             */ 
-            if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd && !shielding)
-            {
-                myRigidbody.AddForce(new Vector2(accel, 0.0f));
-            }
-            /*
-             * Brake
-             */ 
-            if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f && !shielding)
-            {
-                //orig_drag = myRigidbody.drag;
-                myRigidbody.drag = brake_drag;
-            }
+            
+            
+            
+            
+            
+            
             /*
              * End braking
              */
@@ -453,5 +465,13 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float Ability_gauge()
     {
         return ability_gauge;
+    }
+    public void DiasbleControl()
+    {
+        control_disabled = true;
+    }
+    public void EnableControl()
+    {
+        control_disabled = false;
     }
 }
