@@ -5671,7 +5671,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1856364842735502, guid: 1fd1ce28018e3d14c9e5bac1ae020805, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd1ce28018e3d14c9e5bac1ae020805, type: 2}
@@ -10744,6 +10744,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.156
@@ -10775,6 +10785,74 @@ Prefab:
     - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Well I'll be, our knife-holding friend Jelly is here!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Good day, Jelly! I got somethin' you need to hear about.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: On my daily stroll today, I looked up and saw a shiny thing in the treetops!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Don't have a clue what it is, though. I'd go up and look myself, but
+        I can't clear this gap. It's hard gettin' out of these swamps, you know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Wait, you said it's something shiny? Hmm, it could very well be a piece
+        of Crispy Toast.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: Thanks for telling me this. I'll climb the trees nearby in search of
+        that light.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: Glad I could help, brother. Take care not to fall!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[1]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[2]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[5]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[6]
+      value: Jar Guy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
@@ -13483,7 +13561,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[7]
       value: The treetops are ridden with nasty bad guys, and you REALLY don't wanna
-        fall down from these heights. You won't like it.
+        fall down from these heights.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -13504,6 +13582,11 @@ Prefab:
         type: 2}
       propertyPath: dialogue.names.Array.data[3]
       value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[5]
+      value: Jelly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
