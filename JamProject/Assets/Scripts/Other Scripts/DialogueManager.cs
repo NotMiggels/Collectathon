@@ -28,8 +28,8 @@ public class DialogueManager : MonoBehaviour {
         dialogue_indicator.SetActive(false);
         npc = da_npc;
         //animator.SetBool("IsOpen", true);
-        
 
+        names.Clear();
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
