@@ -343,7 +343,7 @@ Prefab:
     - target: {fileID: 212004464118347294, guid: a04a7d0a677d3814a84dcfe2176c7387,
         type: 2}
       propertyPath: m_SortingOrder
-      value: -10
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04a7d0a677d3814a84dcfe2176c7387, type: 2}
