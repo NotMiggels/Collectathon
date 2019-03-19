@@ -9,43 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1635672470143964}
+  m_RootGameObject: {fileID: 1096097389449184}
   m_IsPrefabAsset: 1
---- !u!1 &1635672470143964
+--- !u!1 &1096097389449184
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4973749818563418}
-  - component: {fileID: 212964287977721256}
+  - component: {fileID: 4037630319924308}
+  - component: {fileID: 212510200311943914}
   m_Layer: 0
-  m_Name: halllight
+  m_Name: Spotlight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4973749818563418
+--- !u!4 &4037630319924308
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635672470143964}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.594, y: 4.439, z: 0}
-  m_LocalScale: {x: 0.06643392, y: 0.13154818, z: 1}
+  m_GameObject: {fileID: 1096097389449184}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9016527, y: 3.127849, z: 0}
+  m_LocalScale: {x: -0.05, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &212964287977721256
+--- !u!212 &212510200311943914
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635672470143964}
+  m_GameObject: {fileID: 1096097389449184}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -30
-  m_Sprite: {fileID: 21300000, guid: 4c2fc4df7f544fb458bda8ac62ec0762, type: 3}
+  m_SortingOrder: -5
+  m_Sprite: {fileID: 21300000, guid: e28a95ed70fc47647a546ccf43f778a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
