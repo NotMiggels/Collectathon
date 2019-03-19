@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class parallax_script : MonoBehaviour {
 
-	public bool parax;
+	public bool scrolling, paralax;
 
 	public float backgroundSize;
 	public float paralaxSpeed;
-	public GameObject backg1;
-	public GameObject backg2;
-	public GameObject backg3;
 	public Transform cameraTransform;
 	private Transform[] layers;
 	private float viewZone = 10;
@@ -18,11 +15,25 @@ public class parallax_script : MonoBehaviour {
 	private int rightIndex;
 	private float lastCameraX;
 	private Vector3 tempVec3 = new Vector3();
+
+	public GameObject bg1;
+	public GameObject bg2;
+	public GameObject bg3;
+
 	
 	// Use this for initialization
 	void Start () 
 	{
-		
+		bg1.transform.position = bg2.transform.position;
+		bg3.transform.position = bg2.transform.position;
+		Debug.Log(bg1.transform.position);
+		Debug.Log(bg2.transform.position);
+		Debug.Log(bg3.transform.position);
+		bg1.transform.position += new Vector3(-1 * backgroundSize, 0, 0);
+		bg3.transform.position += new Vector3( backgroundSize,0, 0);
+		Debug.Log(bg1.transform.position);
+		Debug.Log(bg2.transform.position);
+		Debug.Log(bg3.transform.position);
 		cameraTransform = Camera.main.transform;
 		lastCameraX = cameraTransform.position.x;
 
@@ -39,10 +50,15 @@ public class parallax_script : MonoBehaviour {
 
 	private void Update()
 	{
+		if(paralax)
+		{
 		float deltaX = cameraTransform.position.x - lastCameraX;
 		transform.position += Vector3.right * (deltaX * paralaxSpeed);
+		}
 		lastCameraX = cameraTransform.position.x;
 		
+		if(scrolling)
+		{
 		if(cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
 		{
 			ScrollLeft();
@@ -51,26 +67,10 @@ public class parallax_script : MonoBehaviour {
 		{
 			ScrollRight();
 		}
-		
-		
+		}
 	}
 
-	void LateUpdate()
-	{
-		tempVec3.x = backg1.transform.position.x;
-    	tempVec3.y = cameraTransform.position.y;
- 		tempVec3.z =  backg1.transform.position.z;
-    	backg1.transform.position = tempVec3;
-		tempVec3.x = backg2.transform.position.x;
-    	tempVec3.y = cameraTransform.position.y;
- 		tempVec3.z =  backg2.transform.position.z;
-    	backg2.transform.position = tempVec3;
-		tempVec3.x = backg3.transform.position.x;
-    	tempVec3.y = cameraTransform.position.y;
- 		tempVec3.z =  backg3.transform.position.z;
-    	backg3.transform.position = tempVec3;
-
-	}
+	
 
 	private void ScrollLeft()
 	{
