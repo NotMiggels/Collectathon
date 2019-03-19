@@ -8,19 +8,24 @@ public class parallax_script : MonoBehaviour {
 
 	public float backgroundSize;
 	public float paralaxSpeed;
-
-	private Transform cameraTransform;
+	public GameObject backg1;
+	public GameObject backg2;
+	public GameObject backg3;
+	public Transform cameraTransform;
 	private Transform[] layers;
 	private float viewZone = 10;
 	private int leftIndex;
 	private int rightIndex;
 	private float lastCameraX;
+	private Vector3 tempVec3 = new Vector3();
 	
 	// Use this for initialization
 	void Start () 
 	{
+		
 		cameraTransform = Camera.main.transform;
 		lastCameraX = cameraTransform.position.x;
+
 		layers = new Transform[transform.childCount];
 		for(int i = 0; i < transform.childCount; i++)
 		{
@@ -37,7 +42,7 @@ public class parallax_script : MonoBehaviour {
 		float deltaX = cameraTransform.position.x - lastCameraX;
 		transform.position += Vector3.right * (deltaX * paralaxSpeed);
 		lastCameraX = cameraTransform.position.x;
-
+		
 		if(cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
 		{
 			ScrollLeft();
@@ -46,6 +51,25 @@ public class parallax_script : MonoBehaviour {
 		{
 			ScrollRight();
 		}
+		
+		
+	}
+
+	void LateUpdate()
+	{
+		tempVec3.x = backg1.transform.position.x;
+    	tempVec3.y = cameraTransform.position.y;
+ 		tempVec3.z =  backg1.transform.position.z;
+    	backg1.transform.position = tempVec3;
+		tempVec3.x = backg2.transform.position.x;
+    	tempVec3.y = cameraTransform.position.y;
+ 		tempVec3.z =  backg2.transform.position.z;
+    	backg2.transform.position = tempVec3;
+		tempVec3.x = backg3.transform.position.x;
+    	tempVec3.y = cameraTransform.position.y;
+ 		tempVec3.z =  backg3.transform.position.z;
+    	backg3.transform.position = tempVec3;
+
 	}
 
 	private void ScrollLeft()
