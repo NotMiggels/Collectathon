@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/pepper_sprite_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/squash_script.cs">
     <Files>
       <File FileName="Assets/Scripts/Character scripts/banana_script.cs" Line="17" Column="36" />
       <File FileName="Assets/Scripts/Character scripts/pepper_script.cs" Line="17" Column="28" />
@@ -13,7 +13,8 @@
       <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="19" Column="26" />
       <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/MovingPlatformScript.cs" Line="51" Column="46" />
-      <File FileName="Assets/Scripts/Character scripts/pepper_sprite_script.cs" Line="6" Column="23" />
+      <File FileName="Assets/Scripts/Character scripts/pepper_sprite_script.cs" Line="17" Column="38" />
+      <File FileName="Assets/Scripts/Other Scripts/pepper_flame_script2.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
