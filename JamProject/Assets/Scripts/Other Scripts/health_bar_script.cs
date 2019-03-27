@@ -8,6 +8,7 @@ public class health_bar_script : MonoBehaviour {
     private squash_script script;
     private Scr_PlayerControl script2;
     private banana_script script3;
+    private pepper_script script4;
     private float orig_scale;
     private int flag;
 	// Use this for initialization
@@ -36,7 +37,12 @@ public class health_bar_script : MonoBehaviour {
                 flag = 3;
             }
         }
-
+        if(flag == 0){
+            script4 = parent.GetComponent<pepper_script>();
+            if(script4 != null){
+                flag = 4;
+            }
+        }
         ls = transform.localScale;
         orig_scale = transform.localScale.x;
 	}
@@ -79,6 +85,19 @@ public class health_bar_script : MonoBehaviour {
             else
             {
                 ls.x = orig_scale * script3.health_percentage;
+            }
+            transform.localScale = ls;
+        }
+        else if (flag == 4)
+        {
+            
+            if (script4.health_percentage < 0.0f)
+            {
+                ls.x = 0.0f;
+            }
+            else
+            {
+                ls.x = orig_scale * script4.health_percentage;
             }
             transform.localScale = ls;
         }

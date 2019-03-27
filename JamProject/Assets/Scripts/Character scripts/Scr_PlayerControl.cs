@@ -25,6 +25,9 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float fling_spd_up;
     public float jello_spd_up;//jello in ability #1
     public float gauge_recover_time; //the time it takes for the gauge to fully recover
+    public float block_cooldown_max;
+    private float block_cooldown;
+    private bool block_cd;
     public Rigidbody2D jello;
     public Rigidbody2D jello2;
     public AudioClip walk;
@@ -64,6 +67,8 @@ public class Scr_PlayerControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        block_cd = false;
+        block_cooldown = -1.0f;
         control_disabled = false;
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         ability_active = false;
@@ -139,6 +144,9 @@ public class Scr_PlayerControl : MonoBehaviour {
                 dmg_cd = dmg_cd_default;
                 dmg_cooling = false;
             }
+        }
+        if(block_cd){
+            block_cooldown -= Time.deltaTime;
         }
         /*
          * If Jelly is not dead
@@ -342,11 +350,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             else if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && ability_active)
             {
                 Debug.Log("ability inactive");
-                if (selected_ability == 1)
-                {
-                    jump_boost = 0;
-                }
-                ability_active = false;
+                RestorePassive();
             }
             //passive abilities
             if (ability_active)
@@ -367,6 +371,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             if(ability_gauge < 0.0f)
             {
                 ability_active = false;
+                RestorePassive();
             }
             //active ability
             if (Input.GetKeyDown(KeyCode.I) && ability_active)
@@ -406,7 +411,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 //moving_anim_playing = false;
                 anim.Play("Jelly idle");
             }
-            if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing)
+            if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing && !shielding)
             {
                 attacking = false;
                 if(shielding){
@@ -426,8 +431,9 @@ public class Scr_PlayerControl : MonoBehaviour {
                 attacking = false;
                 //attack_anim_playing = false;
             }
-            if (Input.GetKey(KeyCode.K) && !shielding && !attack_anim_playing)
+            if (Input.GetKey(KeyCode.K) && !shielding && !attack_anim_playing && block_cooldown < 0)
             {
+                block_cooldown = block_cooldown_max;
                 shielding = true;
                 //moving_anim_playing = false;
                 //attack_anim_playing = false;
@@ -436,6 +442,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (Input.GetKeyUp(KeyCode.K) && shielding)
             {
                 shielding = false;
+                block_cd = true;
                 anim.Play("Jelly idle");
             }
         }
@@ -453,6 +460,13 @@ public class Scr_PlayerControl : MonoBehaviour {
     void Knocked(Vector2 v)
     {
         myRigidbody.AddForce(v);
+    }
+    void RestorePassive(){
+        if (selected_ability == 1)
+        {
+            jump_boost = 0;
+        }
+        ability_active = false;
     }
     public int Selected_ability()
     {
