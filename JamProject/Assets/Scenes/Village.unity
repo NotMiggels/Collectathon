@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4804448858950032, guid: 052d93a25c3d0744da858970f6570178, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4804448858950032, guid: 052d93a25c3d0744da858970f6570178, type: 2}
       propertyPath: m_LocalScale.x
@@ -205,7 +205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4141537708967930, guid: 47759556edfec5e46af03a2cb6f268fe, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4141537708967930, guid: 47759556edfec5e46af03a2cb6f268fe, type: 2}
       propertyPath: m_LocalScale.x
@@ -306,7 +306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &494196786
 Prefab:
@@ -345,7 +345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4777114445626874, guid: a04a7d0a677d3814a84dcfe2176c7387, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4777114445626874, guid: a04a7d0a677d3814a84dcfe2176c7387, type: 2}
       propertyPath: m_LocalScale.x
@@ -362,6 +362,129 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a04a7d0a677d3814a84dcfe2176c7387, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &637110038
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.822449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.393
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Good morning, Jelly. Where are you off to in such a hurry?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[0]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[1]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[2]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[5]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: I'm off to the Temple of the Deity. Our deity's in trouble.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: HE IS?!?!?!? AAAAAAAAAHHH!!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: My ears... Not sure they'll recover from that one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Sorry, Jelly!! I got a little excited. I'm sure you've got it under control.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: But hey, if you press W, you could jump as high as you would whenever
+        someone screams that loud.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: Thanks, I'll... keep that in mind.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[6]
+      value: Jelly
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &765623014
 Prefab:
@@ -415,6 +538,145 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4549895167967562, guid: bad20cd3276597c43b5d1049af79b35b,
     type: 2}
   m_PrefabInternal: {fileID: 765623014}
+--- !u!1001 &881729094
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[1]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[2]
+      value: Jar Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jar Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[5]
+      value: Jar Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Wooaahhhh, IT'S JELLY!! I finally got to meet you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Nice to meet you, llittle guy! I can't stay long, though. I have to save
+        our deity and our village from being destroyed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[0]
+      value: Jar Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Wow, that's so cool! So you're gonna beat up those weird mean things
+        that've been hurting people, right?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: That is the plan. Just know that everything's gonna be okay.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Thank you, Mr. Jelly! You're the best! I wish I could help you, but I'm
+        too young to have my own knife.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[6]
+      value: Jar Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[7]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: '"Press J to swing a knife." That''s what a guy said on TV once. He was
+        talking about a new toy knife.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: Hopefully I'll get to be just like you when I'm older, Jelly!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &913049105
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +705,7 @@ Transform:
   - {fileID: 987740405}
   - {fileID: 765623015}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &987740404
 Prefab:
@@ -539,7 +801,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
@@ -570,7 +832,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1313479018
 Prefab:
@@ -617,7 +879,7 @@ Prefab:
     - target: {fileID: 224172470436475338, guid: 1fd1ce28018e3d14c9e5bac1ae020805,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224172470436475338, guid: 1fd1ce28018e3d14c9e5bac1ae020805,
         type: 2}
@@ -709,7 +971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4601262982330514, guid: 6fd9a933ee1bade459fe9964548d99da, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114589406873972758, guid: 6fd9a933ee1bade459fe9964548d99da,
         type: 2}
@@ -797,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1582399940
 Prefab:
@@ -836,7 +1098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4287849371627314, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1427692863619690, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_Name
@@ -905,7 +1167,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4287849371627314, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4287849371627314, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_LocalScale.x
