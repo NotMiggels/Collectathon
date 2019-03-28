@@ -411,6 +411,7 @@ MonoBehaviour:
   atk_trigger_l: {fileID: 1592464505018790}
   atk_trigger_r: {fileID: 1579069572008236}
   sprite: {fileID: 1519853476951486}
+  monolith: {fileID: 1974164682072058, guid: f7a437048f42e48258bf257b492461c9, type: 2}
   gauge_time: 10
   dmg_cd: 1
   health: 100
@@ -430,7 +431,7 @@ MonoBehaviour:
   ouch: {fileID: 0}
   swing: {fileID: 8300000, guid: b4088b3576b3fbc41b791c7144eb2d5c, type: 3}
   fling: {fileID: 0}
-  ability_count: 1
+  ability_count: 2
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1

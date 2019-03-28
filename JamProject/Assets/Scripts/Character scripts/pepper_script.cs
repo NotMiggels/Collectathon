@@ -66,6 +66,9 @@ public class pepper_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(health <= 0.0f){
+            dead = true;
+        }
         if(jump_countdown > 0.0f){
             jump_countdown -= Time.deltaTime;
         }
@@ -155,6 +158,11 @@ public class pepper_script : MonoBehaviour {
                     Debug.Log("pepper attacks");
                     //Attack(false);
                 }
+            }
+        }
+        else{
+            if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Pepper_death")){
+                anim.Play("Pepper_death");
             }
         }
 	}

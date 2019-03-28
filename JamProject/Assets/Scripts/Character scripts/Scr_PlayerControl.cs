@@ -12,6 +12,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     public GameObject atk_trigger_l;
     public GameObject atk_trigger_r;
     public GameObject sprite;
+    public GameObject monolith;
     private GameObject UI_manager;
     public float gauge_time; //how long would the gauge last
                              //from a full charge (w/o) using active ability
@@ -379,7 +380,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 ability_gauge -= 0.3f;
                 if(selected_ability == 1)
                 {
-                    if (sr.flipX == true)
+                    if (sr.flipX == true)//left
                     {
                         Vector3 temp = new Vector3(transform.position.x - 0.35f,
                                                   transform.position.y,
@@ -387,7 +388,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                         Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
                         jelloclone.velocity = (new Vector2(-1.0f * jello_spd, jello_spd_up));
                     }
-                    else
+                    else//right
                     {
                         Vector3 temp = new Vector3(transform.position.x + 0.35f,
                                                  transform.position.y,
@@ -396,6 +397,22 @@ public class Scr_PlayerControl : MonoBehaviour {
                         jelloclone.velocity = (new Vector2(1.0f * jello_spd, jello_spd_up));
                     }
                 }
+                else if(selected_ability == 2)
+                {
+                    if(sr.flipX == true){//left
+                        Vector3 temp = new Vector3(transform.position.x - 0.5f,
+                                                   transform.position.y + 0.5f,
+                                                   transform.position.z);
+                        Instantiate(monolith, temp, transform.rotation);
+                    }
+                    else{//right
+                        Vector3 temp = new Vector3(transform.position.x + 0.5f,
+                                                   transform.position.y + 0.5f,
+                                                   transform.position.z);
+                        Instantiate(monolith, temp, transform.rotation);  
+                    }
+                }
+
             }
             /*
              * animation stuff

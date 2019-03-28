@@ -22,6 +22,7 @@ TagManager:
   - Jello
   - interObject
   - UIManager
+  - seed
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - Swamp
   - SwampBG
   - Jello
-  - 
+  - seed
   - 
   - 
   - 

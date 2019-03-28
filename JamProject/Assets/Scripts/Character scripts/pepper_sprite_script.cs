@@ -16,4 +16,7 @@ public class pepper_sprite_script : MonoBehaviour {
     public void Attack(){
         pepper.SendMessage("Attack");
     }
+    public void Die(){
+        Destroy(pepper);
+    }
 }
