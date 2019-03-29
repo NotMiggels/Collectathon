@@ -108,9 +108,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3000
-        width: 1000
-        height: 1000
+        y: 5250
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8f2a6a4a6c4f8748b5445dccb39a06d
+      spriteID: ff2367fbf7ada214781f2862ca7b5330
       vertices: []
       indices: 
       edges: []
@@ -127,10 +127,10 @@ TextureImporter:
       name: pic_finalbossattack2_1
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 3000
-        width: 1000
-        height: 1000
+        x: 1750
+        y: 5250
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,7 +138,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81b3376eaacf9994382d3c459af1aaf6
+      spriteID: 47ccbb3053b714e4c96987529df95939
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: pic_finalbossattack2_2
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 3000
-        width: 1000
-        height: 1000
+        x: 3500
+        y: 5250
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,7 +158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 355c0f5e64357854aab0beb98309d754
+      spriteID: 1839474995606294ea22d69dc9aae439
       vertices: []
       indices: 
       edges: []
@@ -167,10 +167,10 @@ TextureImporter:
       name: pic_finalbossattack2_3
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 3000
-        width: 1000
-        height: 1000
+        x: 5250
+        y: 5250
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6195264e2dbb5a442a2ae61e0cbdf3d4
+      spriteID: a300ec7969a718a46921718ec47b9be1
       vertices: []
       indices: 
       edges: []
@@ -187,10 +187,10 @@ TextureImporter:
       name: pic_finalbossattack2_4
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 3000
-        width: 1000
-        height: 1000
+        x: 7000
+        y: 5250
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,7 +198,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79fa4f764e0f84d4d99c3a0463ca75fe
+      spriteID: f00fd9c748068c54995521205cccc93b
       vertices: []
       indices: 
       edges: []
@@ -208,9 +208,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2000
-        width: 1000
-        height: 1000
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,7 +218,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 224044cb3dd7aed489ccc3ab68ec0322
+      spriteID: f47bf74d36ce8d54e9e8069c1573ef96
       vertices: []
       indices: 
       edges: []
@@ -227,10 +227,10 @@ TextureImporter:
       name: pic_finalbossattack2_6
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 1750
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,7 +238,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a4d00ed15c5b514bad8ea20d6385218
+      spriteID: fbccfd00975c52b46a133258d83e0818
       vertices: []
       indices: 
       edges: []
@@ -247,10 +247,10 @@ TextureImporter:
       name: pic_finalbossattack2_7
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 3500
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,7 +258,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc7b19690083a42429d2379babb81c69
+      spriteID: 4407e5f9d77c62345b3849e9775f6dca
       vertices: []
       indices: 
       edges: []
@@ -267,10 +267,10 @@ TextureImporter:
       name: pic_finalbossattack2_8
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 5250
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +278,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bbc2b50b33b2f7409fe74f4984feeff
+      spriteID: 8a130cc25da1a1b43a3aecac02747a3d
       vertices: []
       indices: 
       edges: []
@@ -287,10 +287,10 @@ TextureImporter:
       name: pic_finalbossattack2_9
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 2000
-        width: 1000
-        height: 1000
+        x: 7000
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,7 +298,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63075f36008d4a44db348de6e5527d59
+      spriteID: 5d061c2772a4f5346bb5c48af60c1a3a
       vertices: []
       indices: 
       edges: []
@@ -308,9 +308,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1000
-        width: 1000
-        height: 1000
+        y: 1750
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,7 +318,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf805653457b3d4480fc56889db5077
+      spriteID: e60697ba8c1ace941a11c44260da7b26
       vertices: []
       indices: 
       edges: []
@@ -327,10 +327,10 @@ TextureImporter:
       name: pic_finalbossattack2_11
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 1750
+        y: 1750
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,7 +338,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90059287596f7b4798745ba8999fabf
+      spriteID: 9128733fe2f393a49ae46873b2399078
       vertices: []
       indices: 
       edges: []
@@ -347,10 +347,10 @@ TextureImporter:
       name: pic_finalbossattack2_12
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 3500
+        y: 1750
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,7 +358,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e0744d59c719346960a1ea6137bffb
+      spriteID: 6d14a7b61ad8c3e4bbcc75df6805c484
       vertices: []
       indices: 
       edges: []
@@ -367,10 +367,10 @@ TextureImporter:
       name: pic_finalbossattack2_13
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 5250
+        y: 1750
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,7 +378,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bf9df890012c90408cfe86f8f3891a3
+      spriteID: 4740cf874c34def46a1fdee5d7ee4ff5
       vertices: []
       indices: 
       edges: []
@@ -387,10 +387,10 @@ TextureImporter:
       name: pic_finalbossattack2_14
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 7000
+        y: 1750
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,7 +398,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e881272c3c66f13449db59377fe3f892
+      spriteID: 5752c1f100e7bc24296a0c66526f1775
       vertices: []
       indices: 
       edges: []
@@ -409,8 +409,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,7 +418,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f679b1372b005b4ca96fb0e0f0b739e
+      spriteID: b7d491f34b0c8024a8b10f3a17e6ccb9
       vertices: []
       indices: 
       edges: []
@@ -427,10 +427,10 @@ TextureImporter:
       name: pic_finalbossattack2_16
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1750
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,7 +438,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfb1840f2cb3979499f47e530e261808
+      spriteID: 34b9aac034b4b034dbcdbcf88ff5f334
       vertices: []
       indices: 
       edges: []
@@ -447,10 +447,10 @@ TextureImporter:
       name: pic_finalbossattack2_17
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 3500
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,7 +458,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2925886363006e7479cf80f66bb40674
+      spriteID: 0d713d9a11a522b46b57e97b0c966944
       vertices: []
       indices: 
       edges: []
@@ -467,10 +467,10 @@ TextureImporter:
       name: pic_finalbossattack2_18
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 5250
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,7 +478,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 615325061a870bc49b56b04fd2f07b96
+      spriteID: ea568628d3ff18f478edb2589855911f
       vertices: []
       indices: 
       edges: []
@@ -487,10 +487,10 @@ TextureImporter:
       name: pic_finalbossattack2_19
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 7000
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,7 +498,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1c21bcef0c1ca4408edffef55bb593a
+      spriteID: fec16cb7b189f7240b0c0e5b14b36939
       vertices: []
       indices: 
       edges: []
@@ -506,7 +506,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 15ed9cbb5eaf91242af8718fed9c3a0e
+    spriteID: 77d63d6f96198a942b3886d79c0b640d
     vertices: []
     indices: 
     edges: []

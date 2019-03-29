@@ -1,14 +1,17 @@
 fileFormatVersion: 2
-guid: 50d32c76a2d320a4db9872cf52599960
+guid: 21adbb38651ed094c8f380cf3f3d4f90
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pic_finalbossattack1_1_0
-    21300002: pic_finalbossattack1_1_1
-    21300004: pic_finalbossattack1_1_2
-    21300006: pic_finalbossattack1_1_3
-    21300008: pic_finalbossattack1_1_4
-    21300010: pic_finalbossattack1_1_5
-    21300012: pic_finalbossattack1_1_6
+    21300000: pic_finalbossattack3_0
+    21300002: pic_finalbossattack3_1
+    21300004: pic_finalbossattack3_2
+    21300006: pic_finalbossattack3_3
+    21300008: pic_finalbossattack3_4
+    21300010: pic_finalbossattack3_5
+    21300012: pic_finalbossattack3_6
+    21300014: pic_finalbossattack3_7
+    21300016: pic_finalbossattack3_8
+    21300018: pic_finalbossattack3_9
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -91,7 +94,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_0
+      name: pic_finalbossattack3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,13 +108,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4935e7002f23424a96c61da17c8545c
+      spriteID: af4b1b1ef03a64c4983da867c1a1bd19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_1
+      name: pic_finalbossattack3_1
       rect:
         serializedVersion: 2
         x: 1750
@@ -125,13 +128,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a52b32954c262e4caa601efea8c1f42
+      spriteID: f8f23fcdbc9f14244978d251bde01f90
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_2
+      name: pic_finalbossattack3_2
       rect:
         serializedVersion: 2
         x: 3500
@@ -145,13 +148,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24c93a4ecd458234f9bea7e5056eaa84
+      spriteID: d3a130cee4be5c24eb43f3d0e1d1c41c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_3
+      name: pic_finalbossattack3_3
+      rect:
+        serializedVersion: 2
+        x: 5250
+        y: 3500
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fa40c6b1ed24e4aafa4c770ba4b7ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack3_4
       rect:
         serializedVersion: 2
         x: 0
@@ -165,13 +188,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb518dc016137842a1552fe8e4a4b91
+      spriteID: e1a714e79b4756548926d7600c54cb93
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_4
+      name: pic_finalbossattack3_5
       rect:
         serializedVersion: 2
         x: 1750
@@ -185,13 +208,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2942c507e1975c4f878d09018114268
+      spriteID: 0076180add663ad48b891451d0277ef5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_5
+      name: pic_finalbossattack3_6
       rect:
         serializedVersion: 2
         x: 3500
@@ -205,13 +228,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 467c82b095bd0f841a42d21d549956b9
+      spriteID: 498739d2f97453240aee6a094b337d0d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbossattack1_1_6
+      name: pic_finalbossattack3_7
+      rect:
+        serializedVersion: 2
+        x: 5250
+        y: 1750
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db5d15e2c265b7428cc01fb35a01202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack3_8
       rect:
         serializedVersion: 2
         x: 0
@@ -225,7 +268,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 871407075001d364a953a04403b10456
+      spriteID: a19b2cc72629869479efa654bdc69098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack3_9
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47872330b13c4845a22c6edc494dbae
       vertices: []
       indices: 
       edges: []
@@ -233,7 +296,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e2014de1b2f8e6d46a54803baa21e6dc
+    spriteID: 07148818f8f7dc5458e9f0fbba26c9c0
     vertices: []
     indices: 
     edges: []

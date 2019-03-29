@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: efdf86c54bbd467418324d812bcf14f3
+guid: e498c6de8eea9764084b2e433a429fe7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pic_finalbosstalking_0
-    21300002: pic_finalbosstalking_1
-    21300004: pic_finalbosstalking_2
-    21300006: pic_finalbosstalking_3
+    21300000: pic_finalbossattack4_0
+    21300002: pic_finalbossattack4_1
+    21300004: pic_finalbossattack4_2
+    21300006: pic_finalbossattack4_3
+    21300008: pic_finalbossattack4_4
+    21300010: pic_finalbossattack4_5
+    21300012: pic_finalbossattack4_6
+    21300014: pic_finalbossattack4_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,13 +92,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pic_finalbosstalking_0
+      name: pic_finalbossattack4_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1000
-        width: 1000
-        height: 1000
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,19 +106,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 396b134143fd0464eba0b6e8c1d798d0
+      spriteID: 7b4d21133f848fe4294bf9613772bf12
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbosstalking_1
+      name: pic_finalbossattack4_1
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 1000
-        height: 1000
+        x: 1750
+        y: 3500
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,19 +126,99 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63dda7c16909df945a4b93c50d548c6e
+      spriteID: 304617741e269d54b84ee0ec01bcdbd2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbosstalking_2
+      name: pic_finalbossattack4_2
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 3500
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47342d857d3924643b1f92d8c4979125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack4_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b1651d6b9608e4c961e56609d2051f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack4_4
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1750
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e253da57b8cd8c48a66588b272c7f1c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack4_5
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1750
+        width: 1750
+        height: 1750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dcd89161bf10c42a098f9774f6416d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finalbossattack4_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,19 +226,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81519f406283dd1459d9af2a5beab47b
+      spriteID: 969b32b434d7e6349a581894b3454b14
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_finalbosstalking_3
+      name: pic_finalbossattack4_7
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1750
         y: 0
-        width: 1000
-        height: 1000
+        width: 1750
+        height: 1750
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fee24eba4896ac140853959c86789a02
+      spriteID: 96f8438c314b5e64eb4a74079ad11c59
       vertices: []
       indices: 
       edges: []
@@ -170,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a0c7f16eded1e6c46b0ca06f638aaafc
+    spriteID: b667ccc957387ae438828d7c7a6b8908
     vertices: []
     indices: 
     edges: []
