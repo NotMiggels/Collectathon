@@ -80,7 +80,9 @@ public class DialogueManager : MonoBehaviour {
     {
         player.GetComponent<Scr_PlayerControl>().EnableControl();
         dialogue_box.SetActive(false);
-        npc.GetComponent<TalkToCharacter>().DoneTalking();
+        if(npc.GetComponent<TalkToCharacter>() != null){
+            npc.GetComponent<TalkToCharacter>().DoneTalking();
+        }
         npc = null;
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);

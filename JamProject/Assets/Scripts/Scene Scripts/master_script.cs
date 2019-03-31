@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class master_script : MonoBehaviour {
     public float jelly_init_health;
     public float jelly_init_gauge;
+    public Dialogue[] dialogues;
+    public int[] dialogue_CT_count;
+    private int dialogue_index;
+    private int dialogue_index_max;
     private bool predefined_spawn;
     private float spawn_x;
     private float spawn_y;
@@ -13,6 +17,8 @@ public class master_script : MonoBehaviour {
     private float jelly_health;
     private float jelly_gauge; //ability gauge
     private static master_script ms;
+    private UI_healthbar UI_manager;
+
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -32,11 +38,23 @@ public class master_script : MonoBehaviour {
         jelly_gauge = jelly_init_gauge;
         ct_count = 0;
         DontDestroyOnLoad(this.gameObject);
+        dialogue_index_max = dialogues.Length;
+        dialogue_index = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         //Debug.Log("CT count: " + ct_count);
+        if(dialogue_index < dialogue_index_max){
+            if (ct_count == dialogue_CT_count[dialogue_index])
+            {
+                UI_manager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UI_healthbar>();
+                UI_manager.ShowDialogueBox();
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogues[dialogue_index], gameObject);
+                dialogue_index += 1;
+            }  
+        }
+
 	}
     /*
      * called by crispy toast scripts to increment the number

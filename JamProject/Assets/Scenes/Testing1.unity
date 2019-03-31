@@ -1194,6 +1194,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
     type: 2}
   m_PrefabInternal: {fileID: 1678888932}
+--- !u!1 &1678888934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1678888932}
+--- !u!114 &1678888935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1678888934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747517bde5c134f44908ecb4d80a7dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Hi!
+    - You've collected a Crispy Toast!
+    names:
+    - Crispy Toast
+    - Crispy Toast
 --- !u!1001 &1796893528
 Prefab:
   m_ObjectHideFlags: 0
