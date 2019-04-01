@@ -8166,6 +8166,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
     type: 2}
   m_PrefabInternal: {fileID: 970305277}
+--- !u!1 &970305279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+    type: 2}
+  m_PrefabInternal: {fileID: 970305277}
+--- !u!114 &970305280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 970305279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747517bde5c134f44908ecb4d80a7dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - Jelly, can you hear me? Your deity speaks to you.
+    - You have done well to find a Crispy Toast so high up in the treetops. I can
+      already feel some of my power returning to me.
+    - Yes, I'm sensing a piece in the immediate area. It's at the far end of this
+      section of the jungle.
+    - But given its location, expect to run into a large number of foes... be careful!
+    - Perfect! That's one less piece to worry about.
+    - '... but how could a piece have gotten up here, of all places?'
+    names:
+    - Deity
+    - Deity
+    - Deity
+    - Deity
+    - Jelly
+    - Jelly
 --- !u!4 &970516715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4565366542675542, guid: fe3eb3770ce4ed74ba4246a85115940e,
@@ -10911,18 +10944,19 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Good day, Jelly! I got somethin' you need to hear about.
+      value: Good day, Jelly! You'll never guess what I saw on my daily stroll today!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: On my daily stroll today, I looked up and saw a shiny thing in the treetops!
+      value: I looked up at the trees and saw a shiny thing coming from there! If
+        you look up there now, it's actually pretty close by.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Don't have a clue what it is, though. I'd go up and look myself, but
-        I can't clear this gap. It's hard gettin' out of these swamps, you know.
+      value: Don't have a clue what it is, though. I'd go up there myself, but I can't
+        clear this gap.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -10933,13 +10967,13 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Thanks for telling me this. I'll climb the trees nearby in search of
-        that light.
+      value: Thanks for telling me. I'll climb the trees nearby in search of that
+        light.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[6]
-      value: Glad I could help, brother. Take care not to fall!
+      value: Glad I could help, brother. And, uh... try not to fall!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -15177,8 +15211,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: The monsters have started situating in the jungle closer to our home!
-        You've gotta do someting!
+      value: The monsters have started appearing closer and closer to our home! You've
+        gotta do something!
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -15193,8 +15227,7 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: That is one reason I'm here for. How close are they relative to us all
-        now?
+      value: How close to the village are they now?
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -15231,8 +15264,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: So if one of them starts to taunt you, don't just sit there and take
-        it! Use that as a chance to hit them back.
+      value: So if one starts to taunt you, don't just sit there and take it! Use
+        that as a chance to hit them back.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
@@ -17298,6 +17331,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494492679870174, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
