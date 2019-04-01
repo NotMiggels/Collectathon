@@ -6803,8 +6803,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: I saw a missing piece of Crispy Toast in the alcove off to the right
-        of here, Mr. Jelly.
+      value: I saw a missing piece of Crispy Toast in the alcove off to the right,
+        Mr. Jelly.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -6814,9 +6814,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: But from what I saw, there are fire geysers in the way of it. You'll
-        have to be careful not to touch any of them if you want to collect that Crispy
-        Toast in one piece.
+      value: But watch out for those fire geysers. You'll have to avoid touching them
+        if you want to make it out safely.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -6831,8 +6830,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: I don't understand why we even get hurt by fire, anyway. We're made of
-        glass, after all.
+      value: I don't understand why we even get hurt by fire. We're made of glass,
+        after all.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -6858,8 +6857,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Given that the temperatures of this planet are more intense than our
-        own, you definitely wouldn't feel good after touching those flames.
+      value: Since the temperatures of this planet are more intense than our own,
+        you definitely wouldn't feel good after touching those flames.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
