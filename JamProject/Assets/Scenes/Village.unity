@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4804448858950032, guid: 052d93a25c3d0744da858970f6570178, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4804448858950032, guid: 052d93a25c3d0744da858970f6570178, type: 2}
       propertyPath: m_LocalScale.x
@@ -205,7 +205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4141537708967930, guid: 47759556edfec5e46af03a2cb6f268fe, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4141537708967930, guid: 47759556edfec5e46af03a2cb6f268fe, type: 2}
       propertyPath: m_LocalScale.x
@@ -306,7 +306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &494196786
 Prefab:
@@ -345,7 +345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4777114445626874, guid: a04a7d0a677d3814a84dcfe2176c7387, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4777114445626874, guid: a04a7d0a677d3814a84dcfe2176c7387, type: 2}
       propertyPath: m_LocalScale.x
@@ -410,12 +410,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Good morning, Jelly. Where are you off to in such a hurry?
+      value: Good morning, Jelly. Where are you off to at this hour?
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -465,13 +465,13 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Sorry, Jelly!! I got a little excited. I'm sure you've got it under control.
+      value: Sorry, Jelly!! I got a little excited. I'm sure you'll take care of it.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: But hey, if you press W, you could jump as high as you would whenever
-        someone screams that loud.
+      value: But hey, if you press W, you can jump as high as you would whenever someone
+        lets out a loud scream, like I just did.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -628,8 +628,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Nice to meet you, llittle guy! I can't stay long, though. I have to save
-        our deity and our village from being destroyed.
+      value: Nice to meet you, little guy! I can't stay long, though. I have to save
+        the deity and protect the village.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -639,8 +639,7 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Wow, that's so cool! So you're gonna beat up those weird mean things
-        that've been hurting people, right?
+      value: Wow, that's so cool! Are you gonna fight those weird mean things, too?
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -650,8 +649,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Thank you, Mr. Jelly! You're the best! I wish I could help you, but I'm
-        too young to have my own knife.
+      value: Thank you, Mr. Jelly! You're the best! I wish I had a knife like yours.
+        Then I could help you fight the monsters!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -666,13 +665,23 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: '"Press J to swing a knife." That''s what a guy said on TV once. He was
-        talking about a new toy knife.'
+      value: I saw a toy knife on TV once. The guy said "Press J to swing a knife,"
+        and that's all I rememberred.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[6]
-      value: Hopefully I'll get to be just like you when I'm older, Jelly!
+      value: Hopefully I can be just like you when I'm older, Jelly!
+      objectReference: {fileID: 0}
+    - target: {fileID: 58743792677548238, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 58743792677548238, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_Radius
+      value: 2.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
@@ -705,7 +714,7 @@ Transform:
   - {fileID: 987740405}
   - {fileID: 765623015}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &987740404
 Prefab:
@@ -764,6 +773,119 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1591077065774056, guid: 2007f47a44e1f4a369e70681d9831ec3,
     type: 2}
   m_PrefabInternal: {fileID: 1151169524}
+--- !u!1001 &1117974914
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857252897742078, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+      propertyPath: m_Name
+      value: pic_jarperson1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Tell me, Jelly: how do you keep that lid of yours so clean?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[1]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[2]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[5]
+      value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Don't even get me started... I have to wash and swab it down every night
+        for thirty minutes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: That is, if I don't have to work overtime.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Sounds tedious... but hey, at least they're easy to use!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Just press K to hold it in front of youself. Beats having to swab yourself
+        down, am I right?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1151169524
 Prefab:
   m_ObjectHideFlags: 0
@@ -773,11 +895,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.14
+      value: -11.19
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.494
+      value: 0.454
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -801,7 +923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
@@ -937,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1553303574
 Prefab:
@@ -976,7 +1098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4601262982330514, guid: 6fd9a933ee1bade459fe9964548d99da, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 114589406873972758, guid: 6fd9a933ee1bade459fe9964548d99da,
         type: 2}
@@ -1064,7 +1186,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1582399940
 Prefab:
@@ -1103,7 +1225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4287849371627314, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1427692863619690, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_Name
@@ -1134,6 +1256,123 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1729954533
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.781
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.399
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666495562883374, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_Name
+      value: pic_jarperson2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Have you been using your special power, Jelly?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[0]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: You mean flinging jam from my knife? Yeah, I kind of have to now that
+        I'm fighting so many bad guys.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[1]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[2]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jar Gal
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Great, keep it up! Remember that all you have to do is press L. But you
+        probably already knew that, right?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Yeah, I did. I can't use it all the time, though. I need to be healthy
+        to use it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: That makes sense. We are at our best when we're healthy.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1748654506
 Prefab:
@@ -1172,7 +1411,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4287849371627314, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4287849371627314, guid: dc8bddff7acc3804a82a4618cc80711b, type: 2}
       propertyPath: m_LocalScale.x
