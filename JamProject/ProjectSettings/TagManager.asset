@@ -40,6 +40,7 @@ TagManager:
   - FT2
   - FT3
   - FT4
+  - cloggedhole
   layers:
   - Default
   - TransparentFX

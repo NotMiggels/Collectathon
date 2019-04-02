@@ -17,7 +17,19 @@ public class jello_script : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("hit");
+          
+        //collision.gameObject.SendMessage("change");
+     
         Destroy(this.gameObject);
+        
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+          if(collision.gameObject.tag == "cloggedhole")
+        {
+            collision.gameObject.SendMessage("change");
+        }
+          Destroy(this.gameObject);
     }
 
 }
