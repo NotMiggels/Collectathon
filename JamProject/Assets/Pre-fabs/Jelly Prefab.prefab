@@ -288,7 +288,8 @@ AudioSource:
   m_GameObject: {fileID: 1591077065774056}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243510115055732350, guid: e94db785f5e4342c2be7a6346d6e0e5d,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -426,11 +427,10 @@ MonoBehaviour:
   block_cooldown_max: 1
   jello: {fileID: 50086533116313196, guid: 83cd224299e6e43489345e157779e882, type: 2}
   jello2: {fileID: 50266825057580722, guid: 62c8ddbd9a37b9a42848033856fc7263, type: 2}
-  walk: {fileID: 0}
-  jump: {fileID: 0}
-  ouch: {fileID: 0}
-  swing: {fileID: 8300000, guid: b4088b3576b3fbc41b791c7144eb2d5c, type: 3}
-  fling: {fileID: 0}
+  jump: {fileID: 8300000, guid: 7f5d0956be2d94cf8b00c652f2e10f74, type: 3}
+  ouch: {fileID: 8300000, guid: cc69276e4ba134e7e8bd849f5ef293a6, type: 3}
+  swing: {fileID: 8300000, guid: 46a2a9dfbd2274cc99258e7805848330, type: 3}
+  fling: {fileID: 8300000, guid: 97116df1717664f47ae5b4b7b58b8d91, type: 3}
   ability_count: 2
 --- !u!114 &114988984917638772
 MonoBehaviour:

@@ -2152,7 +2152,7 @@ Transform:
   - {fileID: 2091981291}
   - {fileID: 1627502215}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &359835820
 MonoBehaviour:
@@ -4531,7 +4531,8 @@ AudioSource:
   m_GameObject: {fileID: 711643485}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243754207541949770, guid: e94db785f5e4342c2be7a6346d6e0e5d,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 54b6c60edfdfe4b049bfdfbf9224f74c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -7644,7 +7645,7 @@ Transform:
   - {fileID: 1288853872}
   - {fileID: 640579864}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186410949
 GameObject:
@@ -8778,7 +8779,7 @@ Transform:
   - {fileID: 1220976979}
   - {fileID: 17326392}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1345204731
 Prefab:

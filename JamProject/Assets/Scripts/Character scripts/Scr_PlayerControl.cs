@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scr_PlayerControl : MonoBehaviour {
 
-    
+
     public float top_spd; //1
     public float jump_velo; //20
     public float accel; //.45
@@ -31,7 +31,6 @@ public class Scr_PlayerControl : MonoBehaviour {
     private bool block_cd;
     public Rigidbody2D jello;
     public Rigidbody2D jello2;
-    public AudioClip walk;
     public AudioClip jump;
     public AudioClip ouch;
     public AudioClip swing;
@@ -102,7 +101,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         }
         jump_boost = 0.0f;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         /*
@@ -158,7 +157,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             /*
              * Check animation status
-             */ 
+             */
             health_percentage = health / max_health;
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack") ||
                 anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack2"))
@@ -220,7 +219,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
             /*
              * Block of code that checks if Jelly is in mid air
-             */ 
+             */
             in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
                 myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
             //Jelly would be able to keep jumping in swamp
@@ -235,7 +234,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
 
             //Debug.Log(in_air);
-           
+
             if (!control_disabled)
             {
                 /*
@@ -245,6 +244,8 @@ public class Scr_PlayerControl : MonoBehaviour {
                 {
                     W_pressed = true;
                     myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
+                    audio.clip = jump;
+                    audio.Play();
                 }
                 /*
                 * Go left
@@ -269,17 +270,17 @@ public class Scr_PlayerControl : MonoBehaviour {
                     myRigidbody.drag = brake_drag;
                 }
             }
-            
+
             if (Input.GetKeyUp(KeyCode.W))
             {
                 W_pressed = false;
             }
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             /*
              * End braking
              */
@@ -289,7 +290,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
             /*
              * Code that flips the sprite as Jelly moves towards left or right
-             */ 
+             */
             if (Input.GetKey(KeyCode.A))
             {
                 sr.flipX = true;
@@ -300,7 +301,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
             /*
              * Jelly fling
-             */ 
+             */
             if (Input.GetKeyDown(KeyCode.L)){
                 if (sr.flipX == true)
                 {
@@ -317,14 +318,15 @@ public class Scr_PlayerControl : MonoBehaviour {
                     Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
                     jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
                 }
-
+                audio.clip = fling;
+                audio.Play();
             }
             /*
              * Switching between states (abilities)
              */
             if (Input.GetKeyDown(KeyCode.Q) && !ability_active)
             {
-                
+
                 selected_ability -= 1;
                 if(selected_ability < 0)
                 {
@@ -335,7 +337,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             }
             if (Input.GetKeyDown(KeyCode.E) && !ability_active)
             {
-                
+
                 selected_ability += 1;
                 if(selected_ability > ability_count)
                 {
@@ -411,7 +413,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                         Vector3 temp = new Vector3(transform.position.x + 0.5f,
                                                    transform.position.y + 0.5f,
                                                    transform.position.z);
-                        Instantiate(monolith, temp, transform.rotation);  
+                        Instantiate(monolith, temp, transform.rotation);
                     }
                 }
 
@@ -474,6 +476,8 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             health -= dmg;
             dmg_cooling = true;
+            audio.clip = ouch;
+            audio.Play();
         }
     }
     void Knocked(Vector2 v)
