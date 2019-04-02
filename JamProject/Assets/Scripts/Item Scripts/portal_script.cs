@@ -25,7 +25,7 @@ public class portal_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if (bc.IsTouchingLayers(LayerMask.GetMask("Player")) && Input.GetKeyDown(KeyCode.Space))
         {
             ms.setJellyHealth(player_script.health);
             ms.setJellyGauge(player_script.Ability_gauge());

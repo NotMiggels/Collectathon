@@ -34,9 +34,11 @@ public class banana_script : MonoBehaviour
     //private Boolean in_air;
     public float health;
     private float max_health;
+    private bool taunting;
     // Use this for initialization
     void Start()
     {
+        taunting = false;
         dropped = false;
         shocked = false;
         dead = false;
@@ -119,6 +121,8 @@ public class banana_script : MonoBehaviour
                 {
                     player.SendMessage("TakeDMG", 10);
                     attacking = false;
+                    anim.Play("Banana Taunting");
+                    taunting = true;
                     //Debug.Log("player damaged");
                 }
 
@@ -134,7 +138,7 @@ public class banana_script : MonoBehaviour
                 {
                     anim.Play("Banana ATK 2nd half");
                 }
-                if (chasing_player && anim.GetCurrentAnimatorStateInfo(0).IsName("Banana Chasing"))
+                if (chasing_player && anim.GetCurrentAnimatorStateInfo(0).IsName("Banana Chasing") && !taunting)
                 {
                     shocked = false;
                     //locate the player
@@ -306,5 +310,9 @@ public class banana_script : MonoBehaviour
     {
         myRigidbody.AddForce(v);
     }
-
+    public void EndTaunting()
+    {
+        taunting = false;
+        Idle();
+    }
 }

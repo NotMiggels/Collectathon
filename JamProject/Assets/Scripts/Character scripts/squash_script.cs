@@ -31,9 +31,11 @@ public class squash_script : MonoBehaviour
     //private Boolean in_air;
     public float health;
     private float max_health;
+    private bool taunting;
     // Use this for initialization
     void Start()
     {
+        taunting = false;
         shocked = false;
         dead = false;
         //health = 100;
@@ -87,6 +89,8 @@ public class squash_script : MonoBehaviour
             {
                 player.SendMessage("TakeDMG", 10);
                 attacking = false;
+                anim.Play("Squash Taunting");
+                taunting = true;
                 //Debug.Log("player damaged");
             }
 
@@ -99,7 +103,7 @@ public class squash_script : MonoBehaviour
             }
             */
 
-            if (chasing_player && anim.GetCurrentAnimatorStateInfo(0).IsName("Squash Chasing"))
+            if (chasing_player && anim.GetCurrentAnimatorStateInfo(0).IsName("Squash Chasing") && !taunting)
             {
                 shocked = false;
                 //locate the player
@@ -248,7 +252,6 @@ public class squash_script : MonoBehaviour
         player = null;
         anim.Play("Squash Idle");
         chasing_player = false;
-
     }
 
     void TakingDMG(int dmg){
@@ -258,5 +261,9 @@ public class squash_script : MonoBehaviour
     void Knocked(Vector2 v){
         myRigidbody.AddForce(v);
     }
-
+    public void EndTaunting()
+    {
+        taunting = false;
+        Idle();
+    }
 }

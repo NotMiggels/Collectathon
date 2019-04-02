@@ -23,6 +23,23 @@ TagManager:
   - interObject
   - UIManager
   - seed
+  - VolcanoToastContainer1
+  - VolcanoToast1
+  - VolcanoToast2
+  - VolcanoToast3
+  - VolcanoToast4
+  - VolcanoToast5
+  - VolcanoToastContainer2
+  - VT6
+  - VT7
+  - VT8
+  - VT9
+  - VT10
+  - FinalToastContainer
+  - FT1
+  - FT2
+  - FT3
+  - FT4
   layers:
   - Default
   - TransparentFX
@@ -42,7 +59,7 @@ TagManager:
   - SwampBG
   - Jello
   - seed
-  - 
+  - Tomato
   - 
   - 
   - 

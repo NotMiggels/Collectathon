@@ -416,7 +416,7 @@ MonoBehaviour:
   dmg_cd: 1
   health: 100
   health_percentage: 0
-  jump_boost: 0.15
+  jump_boost_max: 0.15
   swamp_drag: 15
   fling_spd: 2
   jello_spd: 1.6

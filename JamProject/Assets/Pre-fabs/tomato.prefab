@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4597782555541756}
   - component: {fileID: 61899987431121556}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Detection Box R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4705541236518582}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: seed spawn R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4651832557076868}
   - component: {fileID: 61549690433254630}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Detection Box L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 4485193076837316}
   - component: {fileID: 212875587781472008}
   - component: {fileID: 114350781791043414}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Health bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 212146725713474710}
   - component: {fileID: 95732142352580510}
   - component: {fileID: 114517381780511966}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570437824945210}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: seed spawn L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 4524435500272770}
   - component: {fileID: 212186921024590516}
   - component: {fileID: 95552636879533812}
+  - component: {fileID: 114018796442216252}
   m_Layer: 12
   m_Name: sprite
   m_TagString: Untagged
@@ -187,7 +188,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828732482691842}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.636, y: 1.157, z: 0}
+  m_LocalPosition: {x: -2.2536285, y: 0.87172276, z: 0}
   m_LocalScale: {x: 0.25541288, y: 0.24184321, z: 1}
   m_Children:
   - {fileID: 4479212006232666}
@@ -363,6 +364,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114018796442216252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477460632048160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e77decae3d3f640a180e77115e2c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squash: {fileID: 1828732482691842}
+  ChaseTrigger: {fileID: 1104482124811882}
 --- !u!114 &114147601986709806
 MonoBehaviour:
   m_ObjectHideFlags: 1

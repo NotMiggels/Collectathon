@@ -1375,9 +1375,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 135778279}
+  - component: {fileID: 135778280}
   m_Layer: 0
   m_Name: CrispyToasts
-  m_TagString: Untagged
+  m_TagString: VolcanoToastContainer1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1400,6 +1401,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &135778280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 135778278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59005f34f145f534fa8f857db8fb9e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &138531420
 Prefab:
   m_ObjectHideFlags: 0
@@ -2536,6 +2548,10 @@ Prefab:
     - target: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
       propertyPath: m_Name
       value: Crispy Toast (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
+      propertyPath: m_TagString
+      value: VolcanoToast1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
@@ -4799,6 +4815,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4271742874991356, guid: 1a02eacfd81a1e74a8adb52f96ba295b,
     type: 2}
   m_PrefabInternal: {fileID: 1589311534}
+--- !u!1 &487555681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 487555683}
+  - component: {fileID: 487555682}
+  m_Layer: 0
+  m_Name: Vol pt.1 script
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &487555682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487555681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e626038bf9845eb48b5ad2e6b3a989e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal: {fileID: 0}
+  container_tag: VolcanoToastContainer1
+--- !u!4 &487555683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487555681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7940507, y: 19.47258, z: -0.21874997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &491226898
 Prefab:
   m_ObjectHideFlags: 0
@@ -5991,6 +6049,10 @@ Prefab:
     - target: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
+      propertyPath: m_TagString
+      value: VolcanoToast5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
@@ -8823,6 +8885,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
+      propertyPath: m_TagString
+      value: VolcanoToast2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
   m_IsPrefabAsset: 0
@@ -10603,6 +10669,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
+      propertyPath: m_TagString
+      value: VolcanoToast3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
   m_IsPrefabAsset: 0
@@ -11765,7 +11835,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4228954958732872, guid: 342415c14d3750d49b293fdf0d23f926, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.46
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 4228954958732872, guid: 342415c14d3750d49b293fdf0d23f926, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11853,9 +11923,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: insideVolcanoScene
-  spawn_x: 0
-  spawn_y: 0
-  pre_defined_spawn_location: 0
+  spawn_x: -19.193
+  spawn_y: 10.997
+  pre_defined_spawn_location: 1
 --- !u!1001 &1480273587
 Prefab:
   m_ObjectHideFlags: 0
@@ -11957,9 +12027,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: insideVolcanoScene
-  spawn_x: 0
-  spawn_y: 0
-  pre_defined_spawn_location: 0
+  spawn_x: -19.95
+  spawn_y: 14.99
+  pre_defined_spawn_location: 1
 --- !u!1001 &1486786534
 Prefab:
   m_ObjectHideFlags: 0
@@ -14830,6 +14900,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
+      propertyPath: m_TagString
+      value: VolcanoToast4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
   m_IsPrefabAsset: 0
@@ -15885,9 +15959,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: insideVolcanoScene
-  spawn_x: 0
-  spawn_y: 0
-  pre_defined_spawn_location: 0
+  spawn_x: 22.075
+  spawn_y: 21.749
+  pre_defined_spawn_location: 1
 --- !u!1001 &2030874997
 Prefab:
   m_ObjectHideFlags: 0
@@ -16152,9 +16226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: insideVolcanoScene
-  spawn_x: 0
-  spawn_y: 0
-  pre_defined_spawn_location: 0
+  spawn_x: -19.95
+  spawn_y: 14.99
+  pre_defined_spawn_location: 1
 --- !u!1001 &2059638044
 Prefab:
   m_ObjectHideFlags: 0

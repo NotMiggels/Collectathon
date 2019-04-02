@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 4680061087868826}
   - component: {fileID: 212749893659959960}
   - component: {fileID: 95620537366758226}
+  - component: {fileID: 114667083262011600}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -418,6 +419,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114667083262011600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562298482329422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55e746b873f8234cb989860421d58d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  banana: {fileID: 1882994887445588}
+  ChaseTrigger: {fileID: 1782900546580126}
 --- !u!114 &114686212033560346
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,7 +19,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float dmg_cd;
     public float health;
     public float health_percentage;
-    public float jump_boost;
+    public float jump_boost_max;
     public float swamp_drag;
     public float fling_spd;
     public float jello_spd;//jello in ability #1
@@ -65,6 +65,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     private ContactFilter2D cf = new ContactFilter2D();
     private SpriteRenderer sr;
     private bool control_disabled;
+    private float jump_boost;
 
     // Use this for initialization
     void Start () {
@@ -99,6 +100,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             myRigidbody.transform.position = ms.getSpawnLocation();
         }
+        jump_boost = 0.0f;
     }
 	
 	// Update is called once per frame
@@ -360,7 +362,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 Debug.Log(ability_gauge);
                 if(selected_ability == 1)
                 {
-                    jump_boost = 0.15f;
+                    jump_boost = jump_boost_max;
                 }
             }
             //gauge refilling by time

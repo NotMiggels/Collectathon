@@ -53,4 +53,8 @@ public class trigger_script : MonoBehaviour {
     void EnemyDecrement(){
         enemy_count -= 1;
     }
+    public void EndChasing()
+    {
+        chasing = false;
+    }
 }
