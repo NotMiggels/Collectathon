@@ -372,9 +372,9 @@ MonoBehaviour:
   - {fileID: 1366923885945094}
   - {fileID: 1378842464737310}
   - {fileID: 1451657637588780}
-  fire_interv: 0.25
+  fire_interv: 0.22
   delaytime: 2
-  duration: 1
+  duration: 3
 --- !u!114 &114211603681276680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -520,7 +520,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1007cd47187547046a60530a871d5ea2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

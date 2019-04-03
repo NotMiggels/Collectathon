@@ -744,8 +744,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Who, me? I chased one of those creatures into one of their portals, and
-        now I'm stranded here!
+      value: Who, me? I chased one of those creatures into a portal, and now I'm stranded
+        here!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -790,6 +790,21 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[6]
       value: Well, I'll do what's needed of me to save our home.
+      objectReference: {fileID: 0}
+    - target: {fileID: 58743792677548238, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 58743792677548238, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
@@ -6927,6 +6942,11 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
       value: Yeah, I guess you're kind of right about that, aren't ya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 212602308730693496, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
