@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class volcano_entrance : MonoBehaviour
+
+public class door : MonoBehaviour
 {
 	private master_script ms;
 	private GameObject player;
