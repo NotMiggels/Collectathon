@@ -750,6 +750,11 @@ Prefab:
       value: That includes looking high, low, east, and west! Leave no area unchecked;
         you can't go wrong.
       objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
   m_IsPrefabAsset: 0
@@ -2303,6 +2308,10 @@ Prefab:
     - target: {fileID: 61952595785646942, guid: 7685e33d9f5dd9a4685478f0707193ca,
         type: 2}
       propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603150077947050, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -5171,7 +5180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.4754934
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7785,7 +7794,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 124.69329
+      value: 127.6
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9682,7 +9691,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 112.5
+      value: 110.7
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10111,7 +10120,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 100.3
+      value: 98.4
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10149,7 +10158,13 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.92557377
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61952595785646942, guid: 7685e33d9f5dd9a4685478f0707193ca,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 251428369921734536, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1139799729 stripped
@@ -10953,6 +10968,10 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1603150077947050, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 251428369921734536, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
@@ -11335,8 +11354,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: I looked up at the trees and saw a shiny thing coming from there! If
-        you look up there now, it's actually pretty close by.
+      value: I looked up at the trees and saw a shiny thing coming from them! It's
+        actually pretty close by, too.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -11347,14 +11366,14 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Wait, you said it's something shiny? Hmm, it could very well be a piece
-        of Crispy Toast.
+      value: Wait, you said it's something shiny? Hmm, maybe it's a piece of Crispy
+        Toast.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
       value: Thanks for telling me. I'll climb the trees nearby in search of that
-        light.
+        shiny thing.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -11390,6 +11409,11 @@ Prefab:
         type: 2}
       propertyPath: dialogue.names.Array.data[6]
       value: Jar Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
@@ -11566,6 +11590,10 @@ Prefab:
     - target: {fileID: 61952595785646942, guid: 7685e33d9f5dd9a4685478f0707193ca,
         type: 2}
       propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603150077947050, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -12357,7 +12385,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.2770042
+      value: -6.955
       objectReference: {fileID: 0}
     - target: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12555,7 +12583,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 85.5
+      value: 85.3
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12587,7 +12615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.60721684
+      value: 0.47362912
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
@@ -13537,7 +13565,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 112.5
+      value: 110.7
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14421,6 +14449,11 @@ Prefab:
       propertyPath: m_Offset.x
       value: 0.13
       objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
   m_IsPrefabAsset: 0
@@ -14465,7 +14498,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 138.172
+      value: 138.10056
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
@@ -14501,7 +14534,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalScale.x
-      value: 5.3582244
+      value: 5.3821797
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalScale.y
@@ -14720,6 +14753,11 @@ Prefab:
     - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 212602308730693496, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
@@ -15494,7 +15532,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4044038391475946, guid: 23c8e0973b0f14844a06edc93452e1ed, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.0382
+      value: 5.936
       objectReference: {fileID: 0}
     - target: {fileID: 4044038391475946, guid: 23c8e0973b0f14844a06edc93452e1ed, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15913,6 +15951,11 @@ Prefab:
       value: So if one starts to taunt you, don't just sit there and take it! Use
         that as a chance to hit them back.
       objectReference: {fileID: 0}
+    - target: {fileID: 212602308730693496, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
   m_IsPrefabAsset: 0
@@ -15929,7 +15972,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.114
+      value: -6.95
       objectReference: {fileID: 0}
     - target: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16284,7 +16327,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 100.3
+      value: 98.4
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16322,7 +16365,13 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.92557377
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61952595785646942, guid: 7685e33d9f5dd9a4685478f0707193ca,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 251428369921734536, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1943234289 stripped
@@ -16798,7 +16847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 13.79
+      value: 14.604
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16834,7 +16883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
       propertyPath: m_LocalScale.y
-      value: 37.773037
+      value: 38.30186
       objectReference: {fileID: 0}
     - target: {fileID: 212017010353454376, guid: 7685e33d9f5dd9a4685478f0707193ca,
         type: 2}
@@ -17027,6 +17076,10 @@ Prefab:
     - target: {fileID: 61952595785646942, guid: 7685e33d9f5dd9a4685478f0707193ca,
         type: 2}
       propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603150077947050, guid: 7685e33d9f5dd9a4685478f0707193ca, type: 2}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -17380,6 +17433,11 @@ Prefab:
     - target: {fileID: 4273863478621424, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
       propertyPath: m_LocalScale.x
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212602308730693496, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}
