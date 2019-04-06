@@ -12229,8 +12229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: insideVolcanoScene
-  spawn_x: -19.95
-  spawn_y: 14.99
+  spawn_x: 16.485
+  spawn_y: 13.88
   pre_defined_spawn_location: 1
 --- !u!1001 &1486786534
 Prefab:
@@ -16388,8 +16388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: insideVolcanoScene
-  spawn_x: -19.95
-  spawn_y: 14.99
+  spawn_x: -5.31
+  spawn_y: 4.35
   pre_defined_spawn_location: 1
 --- !u!1001 &2059638044
 Prefab:
