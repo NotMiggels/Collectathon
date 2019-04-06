@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class scr_levelselection : MonoBehaviour {
 
 	private master_script ms;
 	public GameObject[] levellist;
 	public int sceneid;
+	public string scenename;
 	// Use this for initialization
 	void Start () {
 		ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
@@ -30,4 +33,9 @@ public class scr_levelselection : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	void GoVolcano(int sceneid){
+		
+        SceneManager.LoadScene(scenename);
+    }
 }
