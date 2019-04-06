@@ -11,6 +11,7 @@ public class FireGeyser : MonoBehaviour {
 	private IEnumerator coroutine;
 	private GameObject player;
 	public float duration;
+	public float lastingtime;
 	
 
 
@@ -48,6 +49,10 @@ public class FireGeyser : MonoBehaviour {
 		}
         yield return new WaitForSecondsRealtime(fire_interv + deelay);
 		deelay = 0;
+		if (index == sprite_count-1)
+        { 
+			yield return new WaitForSecondsRealtime(lastingtime);
+		} 
         geyser[index].SetActive(false);
 		geyser[index].GetComponent<FireGeyser2>().damaged = false;
         index += 1;

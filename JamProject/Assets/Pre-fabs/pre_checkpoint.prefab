@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 50778651734579422}
   - component: {fileID: 61879575554232266}
   - component: {fileID: 114189002284996980}
+  - component: {fileID: 122650728536711802}
   m_Layer: 0
   m_Name: pre_checkpoint
   m_TagString: Untagged
@@ -180,6 +181,21 @@ MonoBehaviour:
   checkpt:
   - {fileID: 1118952431302272}
   - {fileID: 1922148764192500}
+  checkname: 
+  crossed: 0
+  sceneid: 0
+  checkid: 0
+--- !u!122 &122650728536711802
+Halo:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300104922144798}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 5
 --- !u!212 &212050902388665728
 SpriteRenderer:
   m_ObjectHideFlags: 1
