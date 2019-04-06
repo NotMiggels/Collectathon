@@ -10,7 +10,7 @@ public class scr_checkpoint : MonoBehaviour {
 	public string checkname;
 	private master_script ms;
 	public int crossed;
-	private Component halo;
+	private IEnumerator coroutine;
 
 	//Used to identify the checkpoint
 	public int sceneid;
@@ -18,11 +18,13 @@ public class scr_checkpoint : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		halo = GetComponent("Halo");
+		
 		ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
 		myCollider = GetComponent<BoxCollider2D>();
 		checkpt[1].SetActive(false);
 		checkpt[0].SetActive(true);
+		checkpt[2].SetActive(false);
+		checkpt[3].SetActive(false);
 		crossed = 0;
 	}
 	
@@ -39,23 +41,40 @@ public class scr_checkpoint : MonoBehaviour {
 		ms.unlockcheckpoint(sceneid, checkid);
 		ms.updatelastcheck(sceneid, checkid);
 		crossed = 1;
+		coroutine = delaytime(1f);
+		StartCoroutine(coroutine);
+
 	}
 	if(collision.gameObject.tag == "Player" && crossed == 1 && ((ms.lastcheckpoint != checkid && ms.lastscene != sceneid)
 	|| (ms.lastscene == sceneid && ms.lastcheckpoint != checkid)))
 	{
+		checkpt[1].SetActive(false);
+		checkpt[3].SetActive(false);
+		checkpt[2].SetActive(true);
 		ms.unlockcheckpoint(sceneid, checkid);
 		ms.updatelastcheck(sceneid, checkid);
-		halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
-		
-		
+		coroutine = delayshutdown(1.5f);
+		StartCoroutine(coroutine);
 
 	}
   }
 
   private IEnumerator delayshutdown(float delay)
   {
-	 yield return new WaitForSeconds(delay);
-	halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
-	 
+	yield return new WaitForSeconds(delay);
+	checkpt[1].SetActive(false);
+	checkpt[3].SetActive(true);
+	checkpt[2].SetActive(false);
+	
+  }
+  
+  private IEnumerator delaytime(float delay)
+  {
+	yield return new WaitForSeconds(delay);
+	checkpt[1].SetActive(false);
+	checkpt[3].SetActive(false);
+	checkpt[2].SetActive(true);
+	coroutine = delayshutdown(1.5f);
+	StartCoroutine(coroutine);
   }
 }
