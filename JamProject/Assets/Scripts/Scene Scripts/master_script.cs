@@ -23,6 +23,7 @@ public class master_script : MonoBehaviour {
     private List<List<int>> checkpoints;
     //What scene to load from
     public int sceneid;
+    public int lastscene;
     public int lastcheckpoint;
 
     void Awake()
@@ -137,5 +138,11 @@ public class master_script : MonoBehaviour {
     public void unlockcheckpoint(int sceneid, int checkid)
     {
         checkpoints[sceneid][checkid] = 1;
+    }
+
+    public void updatelastcheck(int sceneid, int checkid)
+    {
+        lastscene = sceneid;
+        lastcheckpoint = checkid;
     }
 }
