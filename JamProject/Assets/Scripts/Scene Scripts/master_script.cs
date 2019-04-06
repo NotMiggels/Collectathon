@@ -19,6 +19,10 @@ public class master_script : MonoBehaviour {
     private static master_script ms;
     private UI_healthbar UI_manager;
 
+    //Data structures for Checkpoints
+    public int[] checkpoints;
+    public int lastcheckpoint;
+
     void Awake()
     {
         DontDestroyOnLoad(this);

@@ -22,7 +22,6 @@ public class cloggablehole : MonoBehaviour {
 
 	private void change()
 	{
-
 		holestate[1].SetActive(true);
 		holestate[0].SetActive(false);
 		m_Collider.enabled = !m_Collider.enabled;

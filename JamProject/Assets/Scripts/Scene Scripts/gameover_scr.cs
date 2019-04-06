@@ -29,19 +29,23 @@ public class gameover_scr : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	//Have to respawn from last checkpoint/spawn point
 	void GoContinue(){
 
         SceneManager.LoadScene(destination);
     }
 
+	//Go back to village
     void GoJelly(){
 		
 		ms.set_definedSpawn(pre_defined_spawn_location);
 		ms.setSpawnLocation(spawn_x, spawn_y);
         SceneManager.LoadScene("Village");
     }
+
+	//Just move back to TitleScreen
     void GoMainMenu(){
-   		Debug.Log("yikers");
         SceneManager.LoadScene("TitleScreen");
     }
 }
