@@ -20,7 +20,9 @@ public class master_script : MonoBehaviour {
     private UI_healthbar UI_manager;
 
     //Data structures for Checkpoints
-    public int[] checkpoints;
+    private List<List<int>> checkpoints;
+    //What scene to load from
+    public int sceneid;
     public int lastcheckpoint;
 
     void Awake()
@@ -44,6 +46,31 @@ public class master_script : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         dialogue_index_max = dialogues.Length;
         dialogue_index = 0;
+        for(int i = 0; i < 3; i++)
+        {
+            int length = 0;
+            if(i == 0)
+            {
+                length = 3;
+                checkpoints[i] = new List<int>(3);
+            }
+            else if(i == 1)
+            {
+                length = 3;
+                checkpoints[i] = new List<int>(3);
+            }
+            else if(i == 2)
+            { 
+                length = 3;
+                checkpoints[i] = new List<int>(3);
+            }
+            for(int j = 0; j < length; j++)
+            {
+                checkpoints[i][j] = 0;
+            }
+        }
+
+
 	}
 	
 	// Update is called once per frame
@@ -106,5 +133,9 @@ public class master_script : MonoBehaviour {
     public bool get_definedSpawn()
     {
         return predefined_spawn;
+    }
+    public void unlockcheckpoint(int sceneid, int checkid)
+    {
+        checkpoints[sceneid][checkid] = 1;
     }
 }
