@@ -7181,7 +7181,7 @@ Prefab:
     - target: {fileID: 114017697991351290, guid: 7aedcef6402688141be8c3c97fe765a8,
         type: 2}
       propertyPath: duration
-      value: 2
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aedcef6402688141be8c3c97fe765a8, type: 2}
