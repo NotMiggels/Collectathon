@@ -8,7 +8,7 @@ public class scr_checkpoint : MonoBehaviour {
 	private float xcoord;
 	private float ycoord;
 	private BoxCollider2D myCollider;
-	private Animation crossed;
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,14 +19,20 @@ public class scr_checkpoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && player != null)
-        {
-			Debug.Log("yikes");
-			checkpt[0].SetActive(false);
-			checkpt[1].SetActive(true);
-			crossed["crossedcheckpt"].wrapMode = WrapMode.Once;
-			crossed.Play("crossedcheckpt");
+	
+			
 
-		}
+		
 	}
+  void OnTriggerEnter2D(Collider2D collision)
+  {
+	if(collision.gameObject.tag == "Player")
+	{
+		Debug.Log("yikes");
+		checkpt[0].SetActive(false);
+		checkpt[1].SetActive(true);
+	
+		myCollider.enabled = !myCollider.enabled;
+	}
+  }
 }
