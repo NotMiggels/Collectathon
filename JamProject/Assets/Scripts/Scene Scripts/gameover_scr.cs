@@ -32,6 +32,8 @@ public class gameover_scr : MonoBehaviour {
 
 	//Have to respawn from last checkpoint/spawn point
 	void GoContinue(){
+		int sceneid = ms.lastscene;
+		int checkid = ms.lastcheckpoint;
 
         SceneManager.LoadScene(destination);
     }

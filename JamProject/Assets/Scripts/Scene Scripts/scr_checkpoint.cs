@@ -20,7 +20,6 @@ public class scr_checkpoint : MonoBehaviour {
 		myCollider = GetComponent<BoxCollider2D>();
 		checkpt[1].SetActive(false);
 		checkpt[0].SetActive(true);
-
 	}
 	
 	// Update is called once per frame

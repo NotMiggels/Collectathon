@@ -20,7 +20,7 @@ public class master_script : MonoBehaviour {
     private UI_healthbar UI_manager;
 
     //Data structures for Checkpoints
-    private List<List<int>> checkpoints;
+    public List<List<int>> checkpoints;
     //What scene to load from
     public int sceneid;
     public int lastscene;
