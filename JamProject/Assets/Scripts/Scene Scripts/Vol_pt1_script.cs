@@ -58,7 +58,7 @@ public class Vol_pt1_script: MonoBehaviour
             portal.SetActive(portal_activate);
         }
         
-        CTs = GameObject.FindGameObjectsWithTag("lol");
+        CTs = GameObject.FindGameObjectsWithTag("VolcanoToast2");
     }
 
     // Update is called once per frame
