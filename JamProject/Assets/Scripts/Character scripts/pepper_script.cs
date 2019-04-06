@@ -87,7 +87,7 @@ public class pepper_script : MonoBehaviour {
                        myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")));
             if (jump_countdown <= 0.0f && !in_air && !attacking)
             {
-                Debug.Log("pepper ready to jump");
+                //Debug.Log("pepper ready to jump");
                 //reset the countdown
                 jump_countdown = jump_interval;   
                 System.Random random = new System.Random();
@@ -138,7 +138,7 @@ public class pepper_script : MonoBehaviour {
                     attack_countdown = attack_cooldown;
                     anim.Play("Pepper_pre_attack");
 
-                    Debug.Log("pepper attacks");
+                    //Debug.Log("pepper attacks");
                     //Attack(true);
                 }
             }
@@ -155,7 +155,7 @@ public class pepper_script : MonoBehaviour {
                     attack_countdown = attack_cooldown;
                     anim.Play("Pepper_pre_attack");
 
-                    Debug.Log("pepper attacks");
+                    //Debug.Log("pepper attacks");
                     //Attack(false);
                 }
             }
@@ -177,11 +177,11 @@ public class pepper_script : MonoBehaviour {
     }
     void Jump(Vector2 v){
         if (v.x > 0.0f){
-            Debug.Log("pepper jump right");
+            //Debug.Log("pepper jump right");
             sr.flipX = true;
         }
         else{
-            Debug.Log("pepper jump left");
+            //Debug.Log("pepper jump left");
             sr.flipX = false;
         }
         myRigidbody.AddForce(v);

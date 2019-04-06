@@ -23,10 +23,10 @@ public class seed_script : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log("seed speed: " + myRB.velocity.magnitude);
+        //Debug.Log("seed speed: " + myRB.velocity.magnitude);
         if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && player != null)
         {
-            Debug.Log("player damaged");
+            //Debug.Log("player damaged");
             player.SendMessage("TakeDMG", dmg);
             Destroy(gameObject);
         }
