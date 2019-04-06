@@ -34,7 +34,7 @@ public class scr_levelselection : MonoBehaviour {
 		
 	}
 
-	void GoVolcano(int sceneid){
+	void GoToLevel(){
 
         SceneManager.LoadScene(scenename);
     }
