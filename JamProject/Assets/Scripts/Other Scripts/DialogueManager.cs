@@ -13,15 +13,17 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> names;
     private GameObject npc;
     private GameObject player;
+    private GameObject[] UIElement;
    //public Animator animator;
 
-	
+
 	void Start () {
         sentences = new Queue<string>();
         names = new Queue<string>();
         player = GameObject.FindGameObjectWithTag("Player");
+        UIElement = GameObject.FindGameObjectsWithTag("UI");
 	}
-	
+
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
         player.GetComponent<Scr_PlayerControl>().DiasbleControl();
@@ -41,7 +43,10 @@ public class DialogueManager : MonoBehaviour {
             names.Enqueue(name);
         }
         DisplayNextSentence();
-        Debug.Log(sentences.Count);
+        Debug.Log(UIElement.Length);
+        foreach(GameObject UI in UIElement) {
+          UI.SetActive(false);
+        }
     }
 
     public void DisplayNextSentence()
@@ -82,6 +87,9 @@ public class DialogueManager : MonoBehaviour {
         dialogue_box.SetActive(false);
         if(npc.GetComponent<TalkToCharacter>() != null){
             npc.GetComponent<TalkToCharacter>().DoneTalking();
+        }
+        foreach(GameObject UI in UIElement) {
+          UI.SetActive(true);
         }
         npc = null;
         //gameObject.SetActive(false);
