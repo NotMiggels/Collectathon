@@ -98,7 +98,7 @@ public class tomato_script : MonoBehaviour
                        myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")));
             if (jump_countdown <= 0.0f && !in_air && !attacking)
             {
-                Debug.Log("tomato ready to jump");
+                //Debug.Log("tomato ready to jump");
                 //reset the countdown
                 jump_countdown = jump_interval;
                 System.Random random = new System.Random();
@@ -151,7 +151,7 @@ public class tomato_script : MonoBehaviour
                     attack_countdown = attack_cooldown;
                     anim.Play("Tomato_concerned");
 
-                    Debug.Log("Tomato attacks");
+                    //Debug.Log("Tomato attacks");
                     //Attack(true);
                 }
             }
@@ -169,7 +169,7 @@ public class tomato_script : MonoBehaviour
                     attack_countdown = attack_cooldown;
                     anim.Play("Tomato_concerned");
 
-                    Debug.Log("Tomato attacks");
+                    //Debug.Log("Tomato attacks");
                     //Attack(false);
                 }
             }
@@ -195,12 +195,12 @@ public class tomato_script : MonoBehaviour
     {
         if (v.x > 0.0f)
         {
-            Debug.Log("Tomato jump right");
+            //Debug.Log("Tomato jump right");
             sr.flipX = true;
         }
         else
         {
-            Debug.Log("Tomato jump left");
+            //Debug.Log("Tomato jump left");
             sr.flipX = false;
         }
         myRigidbody.AddForce(v);
@@ -215,7 +215,7 @@ public class tomato_script : MonoBehaviour
             int temp = random.Next(3);
             temp += 3;
             for (int a = 0; a < temp; a++){
-                Debug.Log("tomato attack L");
+                //Debug.Log("tomato attack L");
                 //random modifier of seed velo on y axis
                 double temp2 = random.NextDouble();
                 float temp_y = (float)(seed_velo_y * temp2);
@@ -238,7 +238,7 @@ public class tomato_script : MonoBehaviour
             temp += 3;
             for (int a = 0; a < temp; a++)
             {
-                Debug.Log("tomato attack R");
+                //Debug.Log("tomato attack R");
                 double temp2 = random.NextDouble();
                 float temp_y = (float)(seed_velo_y * temp2);
                 int temp3 = random.Next(101);
