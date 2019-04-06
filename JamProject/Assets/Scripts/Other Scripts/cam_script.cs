@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class cam_script : MonoBehaviour {
 
@@ -71,5 +73,6 @@ public class cam_script : MonoBehaviour {
         //transform.parent = orig_trans;
         gameOver = true;
         transform.position = new Vector3(-17.0f, 1.0f, 10.0f);
+        SceneManager.LoadScene("GameOver");
     }
 }

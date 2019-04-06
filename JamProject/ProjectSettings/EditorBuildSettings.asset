@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/insideVolcanoScene.unity
     guid: 66b5e5fa88a234c48b182ebb47638bea
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: be616290d9f92d84f8021586e691a5e1
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: d80c135c672f0ff41bf93bdd1073e7a8
   m_configObjects: {}

@@ -40,4 +40,7 @@ public class main_menu_script : MonoBehaviour {
     void GoFinalLevel(){
         SceneManager.LoadScene("FinalLevel");
     }
+    void GoGameOver(){
+        SceneManager.LoadScene("GameOver");
+    }
 }
