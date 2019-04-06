@@ -70,6 +70,7 @@ public class master_script : MonoBehaviour {
             {
                 checkpoints[i][j] = 0;
             }
+            checkpoints[i][0] = 1;
         }
 
 
