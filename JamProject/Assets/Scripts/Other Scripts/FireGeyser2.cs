@@ -9,9 +9,10 @@ public class FireGeyser2 : MonoBehaviour {
     public float dmg;
 	// Use this for initialization
 	void Start () {
-		 myCollider = GetComponent<BoxCollider2D>();
+		myCollider = GetComponent<BoxCollider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         damaged = false;
+        
 	}
 	
 	// Update is called once per frame
