@@ -15,10 +15,10 @@ public class spawnlocationdata : MonoBehaviour {
 		locdata[2] = new Vector2[3];
 
 		//Initailize all the location data
-		
+
 		//Jungle
 
-		locdata[0][0] = new Vector2(2,2);
+		locdata[0][0] = new Vector2(-0.32f,0.441f);
 		locdata[0][1] = new Vector2(3,3);
 		locdata[0][2] = new Vector2(3,3);
 
@@ -40,5 +40,10 @@ public class spawnlocationdata : MonoBehaviour {
 		locdata[3][0] = new Vector2(2,2);
 		locdata[3][1] = new Vector2(3,3);
 		locdata[3][2] = new Vector2(3,3);
+	}
+
+	public Vector2[][] returndata()
+	{
+		return locdata;
 	}
 }

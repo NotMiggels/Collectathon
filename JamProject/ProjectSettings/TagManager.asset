@@ -42,6 +42,7 @@ TagManager:
   - FT4
   - cloggedhole
   - Boss
+  - Locdata
   layers:
   - Default
   - TransparentFX
