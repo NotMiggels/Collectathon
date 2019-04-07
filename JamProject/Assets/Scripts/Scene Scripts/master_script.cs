@@ -47,7 +47,7 @@ public class master_script : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         dialogue_index_max = dialogues.Length;
         dialogue_index = 0;
-        checkpoints = new int[3][];
+        checkpoints = new int[4][];
         for(int i = 0; i < 3; i++)
         {
             int length = 0;
@@ -65,6 +65,11 @@ public class master_script : MonoBehaviour {
             { 
                 length = 3;
                 checkpoints[2] = new int[3];
+            }
+            else if(i == 3)
+            { 
+                length = 3;
+                checkpoints[3] = new int[3];
             }
             for(int j = 0; j < length; j++)
             {
