@@ -86,7 +86,7 @@ public class banana_script : MonoBehaviour
         {
             //Debug.Log("hanging");
             if(drop_box.IsTouchingLayers(LayerMask.GetMask("Player"))){
-                Debug.Log("drop");
+                //Debug.Log("drop");
                 myRigidbody.bodyType = RigidbodyType2D.Dynamic;
                 myRigidbody.freezeRotation = true;
                 myRigidbody.drag = brake_drag;
