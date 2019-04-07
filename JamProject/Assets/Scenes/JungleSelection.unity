@@ -189,6 +189,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114429997176808080, guid: e4372342c976fca4086becc9bd53e8ac,
+        type: 2}
+      propertyPath: buttonlist.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4974222016752218, guid: e4372342c976fca4086becc9bd53e8ac, type: 2}
       propertyPath: m_LocalPosition.x
       value: 463
@@ -241,6 +246,21 @@ Prefab:
       propertyPath: scenename
       value: JungleScene
       objectReference: {fileID: 0}
+    - target: {fileID: 114429997176808080, guid: e4372342c976fca4086becc9bd53e8ac,
+        type: 2}
+      propertyPath: buttonlist.Array.data[0]
+      value: 
+      objectReference: {fileID: 944136367}
+    - target: {fileID: 114429997176808080, guid: e4372342c976fca4086becc9bd53e8ac,
+        type: 2}
+      propertyPath: buttonlist.Array.data[1]
+      value: 
+      objectReference: {fileID: 616701642}
+    - target: {fileID: 114429997176808080, guid: e4372342c976fca4086becc9bd53e8ac,
+        type: 2}
+      propertyPath: buttonlist.Array.data[2]
+      value: 
+      objectReference: {fileID: 1760335079}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4372342c976fca4086becc9bd53e8ac, type: 2}
   m_IsPrefabAsset: 0
