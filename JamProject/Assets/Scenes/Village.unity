@@ -152,6 +152,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114189002284996980, guid: 13e7192d19b78dd48bbf3a7ae8a78a69,
+        type: 2}
+      propertyPath: sceneid
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13e7192d19b78dd48bbf3a7ae8a78a69, type: 2}
   m_IsPrefabAsset: 0
@@ -570,6 +575,16 @@ Prefab:
     - target: {fileID: 1300104922144798, guid: 13e7192d19b78dd48bbf3a7ae8a78a69, type: 2}
       propertyPath: m_Name
       value: pre_checkpoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189002284996980, guid: 13e7192d19b78dd48bbf3a7ae8a78a69,
+        type: 2}
+      propertyPath: sceneid
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114189002284996980, guid: 13e7192d19b78dd48bbf3a7ae8a78a69,
+        type: 2}
+      propertyPath: checkid
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13e7192d19b78dd48bbf3a7ae8a78a69, type: 2}
