@@ -26,6 +26,15 @@ public class scr_checkpoint : MonoBehaviour {
 		checkpt[2].SetActive(false);
 		checkpt[3].SetActive(false);
 		crossed = 0;
+		if(ms.checkpoints[sceneid][checkid] ==1)
+		{
+			checkpt[0].SetActive(false);
+			checkpt[3].SetActive(true);
+			checkpt[1].SetActive(false);
+			checkpt[2].SetActive(false);
+			crossed = 1;
+		}
+		
 	}
 	
 	// Update is called once per frame
@@ -34,6 +43,7 @@ public class scr_checkpoint : MonoBehaviour {
 	}
   void OnTriggerEnter2D(Collider2D collision)
   {
+	//Unlocking new checkpoint
 	if(collision.gameObject.tag == "Player" && crossed == 0)
 	{
 		checkpt[0].SetActive(false);
@@ -45,6 +55,7 @@ public class scr_checkpoint : MonoBehaviour {
 		StartCoroutine(coroutine);
 
 	}
+	//Updating checkpoint
 	if(collision.gameObject.tag == "Player" && crossed == 1 && ((ms.lastcheckpoint != checkid && ms.lastscene != sceneid)
 	|| (ms.lastscene == sceneid && ms.lastcheckpoint != checkid)))
 	{
