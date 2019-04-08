@@ -4196,6 +4196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817505191}
+  - component: {fileID: 817505192}
   m_Layer: 0
   m_Name: CrispyToasts
   m_TagString: VolcanoToastContainer2
@@ -4221,6 +4222,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817505192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817505190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59005f34f145f534fa8f857db8fb9e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &829108226
 Prefab:
   m_ObjectHideFlags: 0
