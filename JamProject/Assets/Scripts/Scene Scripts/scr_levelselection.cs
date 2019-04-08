@@ -51,7 +51,7 @@ public class scr_levelselection : MonoBehaviour {
 		//ms.set_definedSpawn(true);
 
 		Vector2 [][] datalisty = spawndata.returndata();
-		ms.setSpawnLocation(datalisty[sceneid][].x, datalisty[sceneid][].y);
+		//ms.setSpawnLocation(datalisty[sceneid][].x, datalisty[sceneid][].y);
 		
         SceneManager.LoadScene(scenename);
     }
