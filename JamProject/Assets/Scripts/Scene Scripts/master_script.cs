@@ -53,13 +53,13 @@ public class master_script : MonoBehaviour {
             int length = 0;
             if(i == 0)
             {
-                length = 3;
-                checkpoints[0] = new int[3];
+                length = 4;
+                checkpoints[0] = new int[4];
             }
             else if(i == 1)
             {
-                length = 3;
-                checkpoints[1] = new int[3];
+                length = 4;
+                checkpoints[1] = new int[4];
             }
             else if(i == 2)
             { 
@@ -68,8 +68,8 @@ public class master_script : MonoBehaviour {
             }
             else if(i == 3)
             { 
-                length = 3;
-                checkpoints[3] = new int[3];
+                length = 4;
+                checkpoints[3] = new int[4];
             }
             for(int j = 0; j < length; j++)
             {

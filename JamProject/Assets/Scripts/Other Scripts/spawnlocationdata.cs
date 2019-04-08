@@ -9,7 +9,7 @@ public class spawnlocationdata : MonoBehaviour {
 	private Vector2[][] locdata;
 	// Use this for initialization
 	void Start () {
-		locdata = new Vector2[3][];
+		locdata = new Vector2[4][];
 		locdata[0] = new Vector2[4];
 		locdata[1] = new Vector2[4];
 		locdata[2] = new Vector2[3];
