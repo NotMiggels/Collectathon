@@ -17555,8 +17555,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: It makes so much sense. All you have to do is repeatedly press W to resurface
-        from the swamp. Then once your at the surface, you're home-free!
+      value: It makes so much sense. All you have to do is repeatedly press the Spacebar
+        to resurface from the swamp. Then once your at the surface, you're home-free!
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
