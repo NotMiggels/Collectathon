@@ -537,7 +537,7 @@ Prefab:
     - target: {fileID: 114384387458836422, guid: f8d25edfd23f8ea4da2af478d83f8d2b,
         type: 2}
       propertyPath: destination
-      value: VolcanoScene
+      value: VolcanoSelection
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d25edfd23f8ea4da2af478d83f8d2b, type: 2}
@@ -818,6 +818,11 @@ Prefab:
     - target: {fileID: 1046698383525502, guid: f8d25edfd23f8ea4da2af478d83f8d2b, type: 2}
       propertyPath: m_Name
       value: Portal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114384387458836422, guid: f8d25edfd23f8ea4da2af478d83f8d2b,
+        type: 2}
+      propertyPath: destination
+      value: FinalSelection
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d25edfd23f8ea4da2af478d83f8d2b, type: 2}

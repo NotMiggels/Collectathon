@@ -26,7 +26,7 @@ public class spawnlocationdata : MonoBehaviour {
 
 		//Volcano
 
-		locdata[1][0] = new Vector2(2,2);
+		locdata[1][0] = new Vector2(0f,.44f);
 		locdata[1][1] = new Vector2(-6.7741f,9.517f);
 		locdata[1][2] = new Vector2(12.68f, 5.605f);
 		locdata[1][3] = new Vector2(1.479f,16.531f);
@@ -39,7 +39,7 @@ public class spawnlocationdata : MonoBehaviour {
 
 		//Final Level
 
-		locdata[3][0] = new Vector2(2,2);
+		locdata[3][0] = new Vector2(-0.32f,0.295f);
 		locdata[3][1] = new Vector2(-2.044f, 8.473f);
 		locdata[3][2] = new Vector2(-2.054245f,13.684f);
 		locdata[3][2] = new Vector2(12.109f, 38.518f);

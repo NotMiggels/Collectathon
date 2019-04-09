@@ -58,4 +58,14 @@ public class scr_levelselection : MonoBehaviour {
 		ms.setSpawnLocation(datalisty[sceneid][checkid].x, datalisty[sceneid][checkid].y);
         SceneManager.LoadScene(scenename);
     }
+
+	public void ChangeSelection()
+	{
+		SceneManager.LoadScene("InsideVolcanoSelection");
+	}
+
+	public void BackSelection()
+	{
+ 		SceneManager.LoadScene("VolcanoSelection");
+	}
 }
