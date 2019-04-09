@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour {
     private UI_healthbar UI_manager;
     public Dialogue dialogue;
+    public bool talkedTo;
 
     public void Start()
     {

@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> names;
     private GameObject npc;
     private GameObject player;
+    private bool skippable;
     private GameObject[] UIElement;
    //public Animator animator;
 
@@ -36,10 +37,14 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
-        //player.GetComponent<Scr_PlayerControl>().DiasbleControl();
         dialogue_indicator.SetActive(false);
         npc = da_npc;
+        skippable = npc.GetComponent<DialogueTrigger>().talkedTo;
         //animator.SetBool("IsOpen", true);
+
+        if (!skippable) {
+          player.GetComponent<Scr_PlayerControl>().DiasbleControl();
+        }
 
         names.Clear();
         sentences.Clear();
@@ -107,6 +112,7 @@ public class DialogueManager : MonoBehaviour {
         foreach(GameObject UI in UIElement) {
           UI.SetActive(true);
         }
+        npc.GetComponent<DialogueTrigger>().talkedTo = true;
         npc = null;
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);
