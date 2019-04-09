@@ -33,8 +33,8 @@ public class volcano_entrance : MonoBehaviour
 		if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
 		{
 			UI_manager.ShowInterIndicator();
-			//Debug.Log("Press the Spacebar to enter");
-			if (Input.GetKeyDown(KeyCode.Space))
+			//Debug.Log("Press S to enter");
+			if (Input.GetKeyDown(KeyCode.S))
 			{
 				ms.setJellyHealth(player_script.health);
 				ms.setJellyGauge(player_script.Ability_gauge());

@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour {
             dialogueText.text += letter;
             yield return new WaitForSeconds(0.03f);
         }
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.S));
         DisplayNextSentence();
     }
 
