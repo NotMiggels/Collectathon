@@ -673,7 +673,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press SPACEBAR to talk to NPC
+  m_Text: Press S to Speak
 --- !u!114 &114244657402785224
 MonoBehaviour:
   m_ObjectHideFlags: 1

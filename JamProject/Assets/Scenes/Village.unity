@@ -436,8 +436,8 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Great, keep it up! Remember that all you have to do is press L. You probably
-        already knew that, right?
+      value: Great, keep it up! Remember that all you have to do is swing your knife.
+        You probably already knew that, right?
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
@@ -469,6 +469,11 @@ Prefab:
         type: 2}
       propertyPath: dialogue.names.Array.data[4]
       value: Jar Women
+      objectReference: {fileID: 0}
+    - target: {fileID: 212982513939572714, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9, type: 2}
@@ -580,8 +585,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: But hey, if you press W, you can jump as high as you would whenever someone
-        lets out a loud scream, like I just did.
+      value: But hey, if you press the Spacebar, you can jump as high as you would
+        when someone screams like I just did.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -592,6 +597,11 @@ Prefab:
         type: 2}
       propertyPath: dialogue.names.Array.data[6]
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 212602308730693496, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06fbbc5c3dc054099a60d2e8aaaf76, type: 2}

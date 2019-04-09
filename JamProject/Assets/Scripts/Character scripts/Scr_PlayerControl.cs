@@ -240,7 +240,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 /*
                 * Jump
                 */
-                if (Input.GetKey(KeyCode.W) && !in_air && !W_pressed && !shielding)
+                if (Input.GetKey(KeyCode.Space) && !in_air && !W_pressed && !shielding)
                 {
                     W_pressed = true;
                     myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
@@ -264,30 +264,13 @@ public class Scr_PlayerControl : MonoBehaviour {
                 /*
                 * Brake
                 */
-                if (Input.GetKey(KeyCode.S) && !in_air && myRigidbody.velocity.magnitude > 0.0f && !shielding)
-                {
-                    //orig_drag = myRigidbody.drag;
-                    myRigidbody.drag = brake_drag;
-                }
             }
 
-            if (Input.GetKeyUp(KeyCode.W))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 W_pressed = false;
             }
 
-
-
-
-
-
-            /*
-             * End braking
-             */
-            if (Input.GetKeyUp(KeyCode.S) && !in_air)
-            {
-                myRigidbody.drag = 0.0f;
-            }
             /*
              * Code that flips the sprite as Jelly moves towards left or right
              */

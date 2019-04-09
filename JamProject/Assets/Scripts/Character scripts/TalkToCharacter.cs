@@ -30,7 +30,7 @@ public class TalkToCharacter : MonoBehaviour
         }
         if (touching && !talking)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 Debug.Log("space received");
                 talking = true;
