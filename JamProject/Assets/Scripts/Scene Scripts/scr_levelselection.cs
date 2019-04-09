@@ -36,6 +36,7 @@ public class scr_levelselection : MonoBehaviour {
 				levellist[i].SetActive(true);
 			}
 			buttonlist[i].onClick.AddListener(GoToLevel);
+			
 			//buttonlist[i].onClick.AddListener(() => GoToLevel(i));
 		}
 	}
