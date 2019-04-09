@@ -8715,8 +8715,7 @@ MonoBehaviour:
     - Jelly, can you hear me? Your deity speaks to you.
     - You have done well to find a Crispy Toast so high up in the treetops. I can
       already feel some of my power returning to me.
-    - Yes, I'm sensing a piece in the immediate area. It's at the far end of this
-      section of the jungle.
+    - Yes, I'm sensing a piece at the far end of this section of the jungle.
     - But given its location, expect to run into a large number of foes... be careful!
     - Perfect! That's one less piece to worry about.
     - '... but how could a piece have gotten up here, of all places?'
@@ -18201,6 +18200,15 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1043275547496652, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224009134951904782, guid: c91d653a1004d1147800212f3dbd806c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494492679870174, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
