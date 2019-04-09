@@ -539,7 +539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &872518004
 GameObject:
@@ -683,7 +683,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Check point 3
+  m_Text: The Swamp
 --- !u!222 &890546415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -870,7 +870,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Secret Base
+  m_Text: Prettiest Tree
 --- !u!222 &1273865617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1246,9 +1246,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Checkpoint 4
-
-'
+  m_Text: Jar Ruins
 --- !u!222 &1966962408
 CanvasRenderer:
   m_ObjectHideFlags: 0
