@@ -20,10 +20,10 @@ public class UI_healthbar : MonoBehaviour {
     private master_script ms;
     // Use this for initialization
     void Start (){
-        if(passive_icon1 != null){
+        if (passive_icon1 != null)
+        {
             passive_icon1.SetActive(false);
         }
-
         player = GameObject.FindGameObjectWithTag("Player");
         player_script = player.GetComponent<Scr_PlayerControl>();
 		actual_bar = health_bar.GetComponent<Slider>();
