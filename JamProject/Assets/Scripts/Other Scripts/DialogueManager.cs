@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject dialogue_indicator;
     public Text nameText;
     public Text dialogueText;
+    private float delay;
     private Queue<string> sentences;
     private Queue<string> names;
     private GameObject npc;
@@ -22,11 +23,20 @@ public class DialogueManager : MonoBehaviour {
         names = new Queue<string>();
         player = GameObject.FindGameObjectWithTag("Player");
         UIElement = GameObject.FindGameObjectsWithTag("UI");
+        delay = 0.03f;
 	}
+
+  void Update (){
+    if (npc !=null) {
+      if (npc.GetComponent<TalkToCharacter>().leftArea()) {
+        EndDialogue();
+      }
+    }
+  }
 
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
-        player.GetComponent<Scr_PlayerControl>().DiasbleControl();
+        //player.GetComponent<Scr_PlayerControl>().DiasbleControl();
         dialogue_indicator.SetActive(false);
         npc = da_npc;
         //animator.SetBool("IsOpen", true);
@@ -74,14 +84,20 @@ public class DialogueManager : MonoBehaviour {
         nameText.text = name;
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+          Debug.Log(delay);
+          dialogueText.text += letter;
+          if (Input.GetKey(KeyCode.Space)) {
+            continue;
+          }
+          else{
+            yield return new WaitForSeconds(delay);
+          }
         }
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.S));
         DisplayNextSentence();
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         player.GetComponent<Scr_PlayerControl>().EnableControl();
         dialogue_box.SetActive(false);
