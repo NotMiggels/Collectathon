@@ -287,22 +287,6 @@ public class Scr_PlayerControl : MonoBehaviour {
              */
             if (Input.GetKeyDown(KeyCode.L)){
                 JellyFling();
-                {
-                    Vector3 temp = new Vector3(transform.position.x - 0.35f,
-                                              transform.position.y,
-                                               transform.position.z);
-                    Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
-                    jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
-            }
-                else{
-                    Vector3 temp = new Vector3(transform.position.x + 0.35f,
-                                             transform.position.y,
-                                              transform.position.z);
-                    Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
-                    jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
-                }
-                audio.clip = fling;
-                audio.Play();
             }
             /*
              * Switching between states (abilities)
@@ -310,24 +294,10 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Q) && !ability_active)
             {
                 AbilitySelectL();
-                selected_ability -= 1;
-                if(selected_ability < 0)
-                {
-                    selected_ability = ability_count;
-            }
-                UI_manager.SendMessage("SetAbilityText", selected_ability);
-                Debug.Log("current ability#:" + selected_ability);
             }
             if (Input.GetKeyDown(KeyCode.E) && !ability_active)
             {
                 AbilitySelectR();
-                selected_ability += 1;
-                if(selected_ability > ability_count)
-                {
-                    selected_ability = 0;
-            }
-                UI_manager.SendMessage("SetAbilityText", selected_ability);
-                Debug.Log("current ability#:" + selected_ability);
             }
             if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && !ability_active)
             {
@@ -344,11 +314,6 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (ability_active)
             {
                 ActivatePassive();
-                Debug.Log(ability_gauge);
-                if(selected_ability == 1)
-                {
-                    jump_boost = jump_boost_max;
-            }
             }
             //gauge refilling by time
             else if(ability_gauge < 1.0f)
@@ -365,41 +330,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.I) && ability_active)
             {
                 ability_gauge -= 0.3f;
-                if(selected_ability == 1)
-                {
-                    if (sr.flipX == true)//left
-                    {
-                        Vector3 temp = new Vector3(transform.position.x - 0.35f,
-                                                  transform.position.y,
-                                                   transform.position.z);
-                        Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
                 ActivateActive();
-                    }
-                    else//right
-                    {
-                        Vector3 temp = new Vector3(transform.position.x + 0.35f,
-                                                 transform.position.y,
-                                                  transform.position.z);
-                        Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
-                        jelloclone.velocity = (new Vector2(1.0f * jello_spd, jello_spd_up));
-                    }
-                }
-                else if(selected_ability == 2)
-                {
-                    if(sr.flipX == true){//left
-                        Vector3 temp = new Vector3(transform.position.x - 0.5f,
-                                                   transform.position.y + 0.5f,
-                                                   transform.position.z);
-                        Instantiate(monolith, temp, transform.rotation);
-                    }
-                    else{//right
-                        Vector3 temp = new Vector3(transform.position.x + 0.5f,
-                                                   transform.position.y + 0.5f,
-                                                   transform.position.z);
-                        Instantiate(monolith, temp, transform.rotation);
-                    }
-                }
-
             }
             /*
              * animation stuff
