@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -286,14 +286,14 @@ public class Scr_PlayerControl : MonoBehaviour {
              * Jelly fling
              */
             if (Input.GetKeyDown(KeyCode.L)){
-                if (sr.flipX == true)
+                JellyFling();
                 {
                     Vector3 temp = new Vector3(transform.position.x - 0.35f,
                                               transform.position.y,
                                                transform.position.z);
                     Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
                     jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
-                }
+            }
                 else{
                     Vector3 temp = new Vector3(transform.position.x + 0.35f,
                                              transform.position.y,
@@ -309,23 +309,23 @@ public class Scr_PlayerControl : MonoBehaviour {
              */
             if (Input.GetKeyDown(KeyCode.Q) && !ability_active)
             {
-
+                AbilitySelectL();
                 selected_ability -= 1;
                 if(selected_ability < 0)
                 {
                     selected_ability = ability_count;
-                }
+            }
                 UI_manager.SendMessage("SetAbilityText", selected_ability);
                 Debug.Log("current ability#:" + selected_ability);
             }
             if (Input.GetKeyDown(KeyCode.E) && !ability_active)
             {
-
+                AbilitySelectR();
                 selected_ability += 1;
                 if(selected_ability > ability_count)
                 {
                     selected_ability = 0;
-                }
+            }
                 UI_manager.SendMessage("SetAbilityText", selected_ability);
                 Debug.Log("current ability#:" + selected_ability);
             }
@@ -343,12 +343,12 @@ public class Scr_PlayerControl : MonoBehaviour {
             //passive abilities
             if (ability_active)
             {
-                ability_gauge -= Time.deltaTime * (1.0f / gauge_time);
+                ActivatePassive();
                 Debug.Log(ability_gauge);
                 if(selected_ability == 1)
                 {
                     jump_boost = jump_boost_max;
-                }
+            }
             }
             //gauge refilling by time
             else if(ability_gauge < 1.0f)
@@ -373,7 +373,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                                                   transform.position.y,
                                                    transform.position.z);
                         Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
-                        jelloclone.velocity = (new Vector2(-1.0f * jello_spd, jello_spd_up));
+                ActivateActive();
                     }
                     else//right
                     {
@@ -470,6 +470,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     void RestorePassive(){
         if (selected_ability == 1)
         {
+            UI_manager.SendMessage("HidePassive1");
             jump_boost = 0;
         }
         ability_active = false;
@@ -493,5 +494,91 @@ public class Scr_PlayerControl : MonoBehaviour {
     public void EnableControl()
     {
         control_disabled = false;
+    }
+    private void JellyFling(){
+        if (sr.flipX == true)
+        {
+            Vector3 temp = new Vector3(transform.position.x - 0.35f,
+                                      transform.position.y,
+                                       transform.position.z);
+            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
+            jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
+        }
+        else
+        {
+            Vector3 temp = new Vector3(transform.position.x + 0.35f,
+                                     transform.position.y,
+                                      transform.position.z);
+            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
+            jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
+        }
+        audio.clip = fling;
+        audio.Play();
+    }
+    private void AbilitySelectL(){
+        selected_ability -= 1;
+        if (selected_ability < 0)
+        {
+            selected_ability = ability_count;
+        }
+        UI_manager.SendMessage("SetAbilityText", selected_ability);
+        Debug.Log("current ability#:" + selected_ability);
+    }
+    private void AbilitySelectR(){
+        selected_ability += 1;
+        if (selected_ability > ability_count)
+        {
+            selected_ability = 0;
+        }
+        UI_manager.SendMessage("SetAbilityText", selected_ability);
+        Debug.Log("current ability#:" + selected_ability);
+    }
+    private void ActivatePassive(){
+        ability_gauge -= Time.deltaTime * (1.0f / gauge_time);
+        Debug.Log(ability_gauge);
+        if (selected_ability == 1)
+        {
+            UI_manager.SendMessage("ShowPassive1");
+            jump_boost = jump_boost_max;
+        }
+    }
+    private void ActivateActive(){
+        ability_gauge -= 0.3f;
+        if (selected_ability == 1)
+        {
+            if (sr.flipX == true)//left
+            {
+                Vector3 temp = new Vector3(transform.position.x - 0.35f,
+                                          transform.position.y,
+                                           transform.position.z);
+                Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
+                jelloclone.velocity = (new Vector2(-1.0f * jello_spd, jello_spd_up));
+            }
+            else//right
+            {
+                Vector3 temp = new Vector3(transform.position.x + 0.35f,
+                                         transform.position.y,
+                                          transform.position.z);
+                Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello2, temp, transform.rotation);
+                jelloclone.velocity = (new Vector2(1.0f * jello_spd, jello_spd_up));
+            }
+        }
+        else if (selected_ability == 2)
+        {
+            if (sr.flipX == true)
+            {//left
+                Vector3 temp = new Vector3(transform.position.x - 0.5f,
+                                           transform.position.y + 0.5f,
+                                           transform.position.z);
+                Instantiate(monolith, temp, transform.rotation);
+            }
+            else
+            {//right
+                Vector3 temp = new Vector3(transform.position.x + 0.5f,
+                                           transform.position.y + 0.5f,
+                                           transform.position.z);
+                Instantiate(monolith, temp, transform.rotation);
+            }
+        }
     }
 }
