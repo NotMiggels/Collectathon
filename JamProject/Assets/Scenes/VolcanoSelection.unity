@@ -695,7 +695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jar Ruins
+  m_Text: The Peak
 --- !u!222 &859622767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Swamp
+  m_Text: Eastern Side
 --- !u!222 &1187548338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1347,7 +1347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jungle Entrance
+  m_Text: Volcano Base
 --- !u!222 &1571419127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1534,7 +1534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Prettiest Tree
+  m_Text: Bottom-Left Ent.
 --- !u!222 &1820213409
 CanvasRenderer:
   m_ObjectHideFlags: 0

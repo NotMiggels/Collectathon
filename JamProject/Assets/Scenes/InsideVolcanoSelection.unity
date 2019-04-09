@@ -366,7 +366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Swamp
+  m_Text: Volcano Depths
 --- !u!222 &372044835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -741,7 +741,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Prettiest Tree
+  m_Text: Lower Elevators
 --- !u!222 &1077513627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Jungle Entrance
+  m_Text: Top of the Inside
 --- !u!222 &1537321971
 CanvasRenderer:
   m_ObjectHideFlags: 0
