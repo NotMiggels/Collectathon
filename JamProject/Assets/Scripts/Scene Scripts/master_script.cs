@@ -48,7 +48,7 @@ public class master_script : MonoBehaviour {
         dialogue_index_max = dialogues.Length;
         dialogue_index = 0;
         checkpoints = new int[4][];
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 4; i++)
         {
             int length = 0;
             if(i == 0)
@@ -76,6 +76,10 @@ public class master_script : MonoBehaviour {
                 checkpoints[i][j] = 0;
             }
             checkpoints[i][0] = 1;
+            if(i == 2)
+            {
+                checkpoints[i][0] = 0;
+            }
         }
 
 
