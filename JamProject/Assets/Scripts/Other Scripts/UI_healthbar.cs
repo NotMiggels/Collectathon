@@ -32,7 +32,7 @@ public class UI_healthbar : MonoBehaviour {
         dialogue_box.SetActive(false);
         conversation_indicator.SetActive(false);
         interIndicator.color = Color.clear;
-        interIndicator.text = "Press Spacebar to enter";
+        interIndicator.text = "Press S to enter";
     }
 
 	// Update is called once per frame
