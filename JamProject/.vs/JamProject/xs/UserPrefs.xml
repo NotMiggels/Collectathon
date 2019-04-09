@@ -1,21 +1,23 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scene Scripts/Vol_pt2_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/Scr_PlayerControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/Character scripts/squash_script.cs" Line="113" Column="17" />
+      <File FileName="Assets/Scripts/Character scripts/squash_script.cs" Line="113" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="93" Column="13" />
       <File FileName="Assets/Scripts/Other Scripts/cam_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/seed_script.cs" Line="26" Column="11" />
       <File FileName="Assets/Scripts/Character scripts/tomato_script.cs" Line="241" Column="19" />
       <File FileName="Assets/Scripts/Character scripts/pepper_script.cs" Line="184" Column="15" />
       <File FileName="Assets/Scripts/Character scripts/banana_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="39" Column="2" />
+      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="24" Column="33" />
       <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="21" Column="32" />
       <File FileName="Assets/Scripts/Character scripts/pepper_sprite_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="297" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/MovingPlatformScript.cs" Line="40" Column="21" />
-      <File FileName="Assets/Scripts/Scene Scripts/Vol_pt2_script.cs" Line="79" Column="48" />
+      <File FileName="Assets/Scripts/Scene Scripts/Vol_pt2_script.cs" Line="81" Column="1" />
       <File FileName="Assets/Scripts/Scene Scripts/JungleScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="24" Column="44" />
+      <File FileName="Assets/Scripts/Other Scripts/ability_gauge_script.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

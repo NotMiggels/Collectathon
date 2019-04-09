@@ -11,6 +11,7 @@ public class UI_healthbar : MonoBehaviour {
     public Text interIndicator;
     public Text ability_text;
     public Text CT_count;
+    public GameObject passive_icon1;
     private GameObject player;
     private Scr_PlayerControl player_script;
     private Slider actual_bar;
@@ -18,11 +19,14 @@ public class UI_healthbar : MonoBehaviour {
 
     private master_script ms;
     // Use this for initialization
-    void Start () {
+    void Start (){
+        if(passive_icon1 != null){
+            passive_icon1.SetActive(false);
+        }
 
         player = GameObject.FindGameObjectWithTag("Player");
         player_script = player.GetComponent<Scr_PlayerControl>();
-		    actual_bar = health_bar.GetComponent<Slider>();
+		actual_bar = health_bar.GetComponent<Slider>();
         actual_gauge = gauge_bar.GetComponent<Slider>();
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         dialogue_box.SetActive(false);
@@ -70,5 +74,11 @@ public class UI_healthbar : MonoBehaviour {
     public void HideInterIndicator()
     {
       interIndicator.color = Color.clear;
+    }
+    public void HidePassive1(){
+        passive_icon1.SetActive(false);
+    }
+    public void ShowPassive1(){
+        passive_icon1.SetActive(true);
     }
 }
