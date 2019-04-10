@@ -29,7 +29,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float block_cooldown_max;
     private float block_cooldown;
     private bool block_cd;
-    public Rigidbody2D jello;
+    public Rigidbody2D jelloR;
+    public Rigidbody2D jelloL;
     public Rigidbody2D jello2;
     public AudioClip jump;
     public AudioClip ouch;
@@ -432,7 +433,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             Vector3 temp = new Vector3(transform.position.x - 0.35f,
                                       transform.position.y,
                                        transform.position.z);
-            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
+            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jelloL, temp, transform.rotation);
             jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
         }
         else
@@ -440,7 +441,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             Vector3 temp = new Vector3(transform.position.x + 0.35f,
                                      transform.position.y,
                                       transform.position.z);
-            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jello, temp, transform.rotation);
+            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jelloR, temp, transform.rotation);
             jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
         }
         audio.clip = fling;

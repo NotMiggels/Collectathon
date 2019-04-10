@@ -425,7 +425,8 @@ MonoBehaviour:
   jello_spd_up: 0.1
   gauge_recover_time: 35
   block_cooldown_max: 1
-  jello: {fileID: 50086533116313196, guid: 83cd224299e6e43489345e157779e882, type: 2}
+  jelloR: {fileID: 50086533116313196, guid: 83cd224299e6e43489345e157779e882, type: 2}
+  jelloL: {fileID: 50431365290212682, guid: 7c6d9b03343364136b4a1133be0c5f4a, type: 2}
   jello2: {fileID: 50266825057580722, guid: 62c8ddbd9a37b9a42848033856fc7263, type: 2}
   jump: {fileID: 8300000, guid: 7f5d0956be2d94cf8b00c652f2e10f74, type: 3}
   ouch: {fileID: 8300000, guid: cc69276e4ba134e7e8bd849f5ef293a6, type: 3}

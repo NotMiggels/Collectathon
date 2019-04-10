@@ -1,8 +1,22 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other Scripts/UI_healthbar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Item Scripts/cannonball_script.cs">
     <Files>
-      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="26" Column="9" />
+      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="289" Column="38" />
+      <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
+      <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="33" Column="51" />
+      <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="41" Column="32" />
+      <File FileName="Assets/Scripts/Other Scripts/Dialogue.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/DialogueTrigger.cs" Line="17" Column="9" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="425" Column="6" />
+      <File FileName="Assets/Scripts/Character scripts/pepper_sprite_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/banana_sprite_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="20" Column="30" />
+      <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/cannonball_script.cs" Line="22" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

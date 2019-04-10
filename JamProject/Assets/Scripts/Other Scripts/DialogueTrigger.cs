@@ -14,6 +14,7 @@ public class DialogueTrigger : MonoBehaviour {
     {
         Debug.Log("here we are");
         UI_manager.ShowDialogueBox();
+        //check if jelly is celebrating for CT too
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue, gameObject);
     }
 

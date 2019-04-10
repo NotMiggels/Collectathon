@@ -16,11 +16,12 @@ public class jello_script : MonoBehaviour {
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("hit");
-          
-        //collision.gameObject.SendMessage("change");
-     
-        Destroy(this.gameObject);
+        if(!collision.otherCollider.isTrigger){
+            Debug.Log("hit");
+            //collision.gameObject.SendMessage("change");
+            Destroy(this.gameObject);
+        }
+
         
     }
     void OnTriggerEnter2D(Collider2D collision)

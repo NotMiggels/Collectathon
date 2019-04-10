@@ -16,6 +16,11 @@ public class boss_script : MonoBehaviour {
     public float move_spd;
     public float spin_atk_spd;
     public int spin_dmg;
+    public int attack_interval_lower_bound;
+    public int attack_interval_upper_bound;
+    public float cannonball_spd;
+    public GameObject cannonball_spawn_L;
+    public GameObject cannonball_spawn_R;
     private CircleCollider2D myCollider;
     private Rigidbody2D myRigidbody;
     private SpriteRenderer m_sr;
@@ -31,10 +36,12 @@ public class boss_script : MonoBehaviour {
     private bool on_right;
     private GameObject player;
     private int attack_choice; // 0:none, 1:spin, 2:cannon, 3:spatula, 4:lighter 
+    private int cannon_fire_count;
     private Vector3 spin_target;
 
 	// Use this for initialization
     void Start () {
+        cannon_fire_count = 0;
         attack_choice = 0;
         preparing_atk = false;
         on_left = false;
@@ -91,21 +98,20 @@ public class boss_script : MonoBehaviour {
         /*
          * attacking
          */ 
-        else if(!moving && attacking && !in_position && !preparing_atk){
-            Attack();
-        }
+
         /*
          * check if it has gone past the player (spin attack)
          */ 
         else if(moving && attacking && !in_position && !preparing_atk){
             if(attack_choice == 1){
+                Debug.Log("CheckSpin()");
                 CheckSpin();
             }
         }
 	}
 
     private void CheckSpin(){
-        if(transform.position.x < spin_target.x + 0.15f && transform.position.x > spin_target.x - 0.15f){
+        if(transform.position.x < spin_target.x + 0.3f && transform.position.x > spin_target.x - 0.3f){
             MoveToOppositeStandbyLocation();
         }
     }
@@ -114,15 +120,15 @@ public class boss_script : MonoBehaviour {
      */ 
     private void StartAttack(){
         in_position = false;
-        preparing_atk = false;
         moving = false;
+        attacking = false;
         if(attack_choice == 1){
             //play and loop the spinning animation
             Debug.Log("playing attack anim");
             r_anim.Play("Attack1");
         }
         else if(attack_choice == 2){
-            
+            //nothing needs to be done here, probably
         }
         else if(attack_choice == 3){
             
@@ -131,6 +137,7 @@ public class boss_script : MonoBehaviour {
             
         }
         attacking = true;
+        Attack();
     }
     private void MoveToStandbyLocation(){
         attack_choice = 0;
@@ -172,10 +179,14 @@ public class boss_script : MonoBehaviour {
     }
     private void MoveToOppositeStandbyLocation()
     {
+        moving = true;
+        in_position = false;
+        attacking = false;
+        preparing_atk = false;
         attack_choice = 0;
         Debug.Log("boss starts moving");
         //System.Random rng = new System.Random();
-        if(on_right)
+        if (on_right)
         {
             Debug.Log("boss moves L");
             //go left
@@ -203,10 +214,6 @@ public class boss_script : MonoBehaviour {
             //Debug.Log("boss velocity: " + myRigidbody.velocity);
 
         }
-        moving = true;
-        in_position = false;
-        attacking = false;
-        preparing_atk = false;
     }
     private void Moving(){
         attack_choice = 0;
@@ -248,6 +255,8 @@ public class boss_script : MonoBehaviour {
     private void Attack(){
         //do what needs to be done
         attacking = true;
+        preparing_atk = false;
+        in_position = false;
         Debug.Log("boss attacks, attack_choice = " + attack_choice);
         if (attack_choice == 1)
         {
@@ -262,7 +271,9 @@ public class boss_script : MonoBehaviour {
         }
         else if (attack_choice == 2)
         {
-
+            System.Random rng = new System.Random();
+            cannon_fire_count = rng.Next(1, 4);
+            StartCoroutine(FireCannon());
         }
         else if (attack_choice == 3)
         {
@@ -274,11 +285,22 @@ public class boss_script : MonoBehaviour {
         }
     }
     private void AttackPrep(){
+        preparing_atk = true;
         Debug.Log("boss preparing for attack");
-       
-        if((player.transform.position.x < default_pos_R.transform.position.x
-            && player.transform.position.x > default_pos_L.transform.position.x)){
-            System.Random rng = new System.Random();
+        StartCoroutine(Prep());
+    }
+    private IEnumerator FireCannon(){
+        Vector3 cannon_target = player.transform.position;
+
+        yield return new WaitForSeconds(1);
+    }
+    private IEnumerator Prep(){
+        System.Random rng = new System.Random();
+        int pause_time = rng.Next(attack_interval_lower_bound, attack_interval_upper_bound);
+        yield return new WaitForSeconds(pause_time);
+        if ((player.transform.position.x < default_pos_R.transform.position.x
+            && player.transform.position.x > default_pos_L.transform.position.x))
+        {
             //int temp = rng.Next(1, 3);
             //Debug.Log("boss idle for " + temp + " seconds");
             //yield return new WaitForSeconds(temp);
@@ -287,14 +309,16 @@ public class boss_script : MonoBehaviour {
             if (temp == 0)
             {
                 //spin
-                preparing_atk = true;
                 Debug.Log("playing pre-attack anim (spin)");
                 r_anim.Play("Pre-Attack1");
-                attack_choice = temp + 1;
+                attack_choice = 1;
             }
             else if (temp == 1)
             {
                 //cannon
+                Debug.Log("playing pre-attack anim (cannon)");
+                r_anim.Play("Pre-Attack2");
+                attack_choice = 2;
             }
             else if (temp == 2)
             {
@@ -305,9 +329,10 @@ public class boss_script : MonoBehaviour {
                 //candle lighter
             }
         }
-        else{
+        else
+        {
             Debug.Log("player not in range, suspend");
+            StartCoroutine(Prep());
         }
-
     }
 }
