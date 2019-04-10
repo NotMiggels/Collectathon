@@ -20,4 +20,8 @@ public class boss_armor_sprite : MonoBehaviour
         Debug.Log("sprite calls Attack()");
         boss.SendMessage("StartAttack");
     }
+    public void GoStandbyPos(){
+        Debug.Log("sprite callse GoStandbyPos()");
+        boss.SendMessage("MoveToOppositeStandbyLocation");
+    }
 }

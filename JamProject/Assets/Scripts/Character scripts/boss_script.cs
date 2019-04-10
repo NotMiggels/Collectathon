@@ -21,6 +21,8 @@ public class boss_script : MonoBehaviour {
     public float cannonball_spd;
     public GameObject cannonball_spawn_L;
     public GameObject cannonball_spawn_R;
+    private bool moving_L;
+    private bool moving_R;
     private CircleCollider2D myCollider;
     private Rigidbody2D myRigidbody;
     private SpriteRenderer m_sr;
@@ -41,6 +43,8 @@ public class boss_script : MonoBehaviour {
 
 	// Use this for initialization
     void Start () {
+        moving_L = false;
+        moving_R = false;
         cannon_fire_count = 0;
         attack_choice = 0;
         preparing_atk = false;
@@ -62,11 +66,11 @@ public class boss_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(myRigidbody.velocity.x > 0){
+        if(myRigidbody.velocity.x > 1){
             m_sr.flipX = true;
             r_sr.flipX = true;
         }
-        else if(myRigidbody.velocity.x < 0){
+        else if(myRigidbody.velocity.x < -1){
             m_sr.flipX = false;
             r_sr.flipX = false;
         }
@@ -147,6 +151,8 @@ public class boss_script : MonoBehaviour {
         if (temp == 0)
         {
             Debug.Log("boss moves L");
+            moving_L = true;
+            moving_R = false;
             //go left
             Vector3 dir = default_pos_L.transform.position - transform.position;
             //Debug.Log("dir (b4 normalization): " + dir);
@@ -160,6 +166,8 @@ public class boss_script : MonoBehaviour {
         }
         else
         {
+            moving_L = false;
+            moving_R = true;
             Debug.Log("boss moves R");
             //go right
             Vector3 dir = default_pos_R.transform.position - transform.position;
@@ -189,6 +197,8 @@ public class boss_script : MonoBehaviour {
         if (on_right)
         {
             Debug.Log("boss moves L");
+            moving_L = true;
+            moving_R = false;
             //go left
             Vector3 dir = default_pos_L.transform.position - transform.position;
             //Debug.Log("dir (b4 normalization): " + dir);
@@ -203,6 +213,8 @@ public class boss_script : MonoBehaviour {
         else
         {
             Debug.Log("boss moves R");
+            moving_R = true;
+            moving_L = false;
             //go right
             Vector3 dir = default_pos_R.transform.position - transform.position;
             //Debug.Log("dir (b4 normalization): " + dir);
@@ -222,10 +234,12 @@ public class boss_script : MonoBehaviour {
             r_anim.Play("Boss Idle");
         }
 
-        if (transform.position.x < default_pos_L.transform.position.x)
+        if (transform.position.x < default_pos_L.transform.position.x && moving_L)
         {
             Debug.Log("boss stops at L");
             //stop
+            moving_L = false;
+            moving_R = false;
             myRigidbody.velocity = Vector2.zero;
             moving = false;
             in_position = true;
@@ -235,10 +249,12 @@ public class boss_script : MonoBehaviour {
             r_sr.flipX = true;
             m_sr.flipX = true;
         }
-        else if (transform.position.x > default_pos_R.transform.position.x)
+        else if (transform.position.x > default_pos_R.transform.position.x && moving_R)
         {
             //stop
             Debug.Log("boss stops at R");
+            moving_L = false;
+            moving_R = false;
             myRigidbody.velocity = Vector2.zero;
             moving = false;
             in_position = true;
@@ -291,8 +307,29 @@ public class boss_script : MonoBehaviour {
     }
     private IEnumerator FireCannon(){
         Vector3 cannon_target = player.transform.position;
-
-        yield return new WaitForSeconds(1);
+        r_anim.Play("Cannon Firing 2nd Half",-1, 0f);
+        if(!r_sr.flipX){
+            Vector3 dir = cannon_target - cannonball_spawn_L.transform.position;
+            dir.Normalize();
+            dir *= cannonball_spd;
+            GameObject cannon_clone = Instantiate(cannon_projectile, cannonball_spawn_L.transform.position, transform.rotation);
+            cannon_clone.GetComponent<Rigidbody2D>().velocity = new Vector2(dir.x, dir.y);
+        }
+        else{
+            Vector3 dir = cannon_target - cannonball_spawn_R.transform.position;
+            dir.Normalize();
+            dir *= cannonball_spd;
+            GameObject cannon_clone = Instantiate(cannon_projectile, cannonball_spawn_R.transform.position, transform.rotation);
+            cannon_clone.GetComponent<Rigidbody2D>().velocity = new Vector2(dir.x, dir.y);
+        }
+        yield return new WaitForSeconds(1.5f);
+        if(cannon_fire_count > 0){
+            cannon_fire_count -= 1;
+            StartCoroutine(FireCannon());
+        }
+        else{
+            r_anim.Play("Post-Attack2");
+        }
     }
     private IEnumerator Prep(){
         System.Random rng = new System.Random();
@@ -305,7 +342,7 @@ public class boss_script : MonoBehaviour {
             //Debug.Log("boss idle for " + temp + " seconds");
             //yield return new WaitForSeconds(temp);
             //int temp = rng.Next(0, 4);
-            int temp = 0;
+            int temp = 1;
             if (temp == 0)
             {
                 //spin

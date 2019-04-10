@@ -18,8 +18,14 @@ public class cannonball_script : MonoBehaviour{
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.otherCollider.isTrigger)
+        if (!collision.collider.isTrigger)
         {
+            Debug.Log("cannonball collides");
+            Debug.Log(collision.collider.gameObject);
+            if(collision.collider.gameObject.GetComponent<Scr_PlayerControl>() != null){
+                Debug.Log("player takes damage from cannonball");
+                collision.collider.gameObject.GetComponent<Scr_PlayerControl>().TakeDMG(10);
+            }
             Destroy(gameObject);
         }
     }

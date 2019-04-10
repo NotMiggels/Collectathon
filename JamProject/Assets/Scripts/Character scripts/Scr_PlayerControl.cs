@@ -386,7 +386,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             GameObject.FindGameObjectWithTag("MainCamera").SendMessage("EndGame");
         }
     }
-    void TakeDMG(int dmg){
+    public void TakeDMG(int dmg){
         if (!shielding && !dmg_cooling)
         {
             health -= dmg;
