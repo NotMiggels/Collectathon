@@ -9,10 +9,12 @@ public class DialogueManager : MonoBehaviour {
     public GameObject dialogue_indicator;
     public Text nameText;
     public Text dialogueText;
+    private float delay;
     private Queue<string> sentences;
     private Queue<string> names;
     private GameObject npc;
     private GameObject player;
+    private bool skippable;
     private GameObject[] UIElement;
    //public Animator animator;
 
@@ -22,14 +24,27 @@ public class DialogueManager : MonoBehaviour {
         names = new Queue<string>();
         player = GameObject.FindGameObjectWithTag("Player");
         UIElement = GameObject.FindGameObjectsWithTag("UI");
+        delay = 0.03f;
 	}
+
+  void Update (){
+    if (npc !=null) {
+      if (npc.GetComponent<TalkToCharacter>().leftArea()) {
+        EndDialogue();
+      }
+    }
+  }
 
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
-        player.GetComponent<Scr_PlayerControl>().DiasbleControl();
         dialogue_indicator.SetActive(false);
         npc = da_npc;
+        skippable = npc.GetComponent<DialogueTrigger>().talkedTo;
         //animator.SetBool("IsOpen", true);
+
+        if (!skippable) {
+          player.GetComponent<Scr_PlayerControl>().DiasbleControl();
+        }
 
         names.Clear();
         sentences.Clear();
@@ -74,14 +89,20 @@ public class DialogueManager : MonoBehaviour {
         nameText.text = name;
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+          Debug.Log(delay);
+          dialogueText.text += letter;
+          if (Input.GetKey(KeyCode.Space)) {
+            continue;
+          }
+          else{
+            yield return new WaitForSeconds(delay);
+          }
         }
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.S));
         DisplayNextSentence();
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         player.GetComponent<Scr_PlayerControl>().EnableControl();
         dialogue_box.SetActive(false);
@@ -91,6 +112,7 @@ public class DialogueManager : MonoBehaviour {
         foreach(GameObject UI in UIElement) {
           UI.SetActive(true);
         }
+        npc.GetComponent<DialogueTrigger>().talkedTo = true;
         npc = null;
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);

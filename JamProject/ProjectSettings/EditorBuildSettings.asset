@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: d80c135c672f0ff41bf93bdd1073e7a8
+  - enabled: 1
+    path: Assets/Scenes/InsideVolcanoSelection.unity
+    guid: 136e249509576dd43b844da6496bc70f
   m_configObjects: {}
