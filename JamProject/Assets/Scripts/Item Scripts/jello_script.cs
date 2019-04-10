@@ -29,8 +29,9 @@ public class jello_script : MonoBehaviour {
           if(collision.gameObject.tag == "cloggedhole")
         {
             collision.gameObject.SendMessage("change");
+            Destroy(this.gameObject);
         }
-          Destroy(this.gameObject);
+          
     }
 
 }

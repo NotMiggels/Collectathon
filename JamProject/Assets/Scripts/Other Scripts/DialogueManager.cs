@@ -28,18 +28,26 @@ public class DialogueManager : MonoBehaviour {
 	}
 
   void Update (){
-    if (npc !=null) {
-      if (npc.GetComponent<TalkToCharacter>().leftArea()) {
-        EndDialogue();
-      }
+        if (npc != null)
+        {
+            if (npc.GetComponent<TalkToCharacter>() != null)
+            {
+                if (npc.GetComponent<TalkToCharacter>().leftArea())
+                {
+                    EndDialogue();
+                }
+            }
+        }
     }
-  }
+  
 
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
         dialogue_indicator.SetActive(false);
         npc = da_npc;
-        skippable = npc.GetComponent<DialogueTrigger>().talkedTo;
+        if(npc.GetComponent<DialogueTrigger>() != null){
+            skippable = npc.GetComponent<DialogueTrigger>().talkedTo;
+        }
         //animator.SetBool("IsOpen", true);
 
         if (!skippable) {
@@ -112,7 +120,9 @@ public class DialogueManager : MonoBehaviour {
         foreach(GameObject UI in UIElement) {
           UI.SetActive(true);
         }
-        npc.GetComponent<DialogueTrigger>().talkedTo = true;
+        if(npc.GetComponent<DialogueTrigger>() != null){
+            npc.GetComponent<DialogueTrigger>().talkedTo = true;
+        }
         npc = null;
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);

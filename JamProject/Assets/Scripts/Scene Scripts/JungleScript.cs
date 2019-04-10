@@ -51,8 +51,12 @@ public class JungleScript : MonoBehaviour {
         {
             ct.gameObject.SetActive(true);
         }
-        portal_activate = false;
-        portal.SetActive(portal_activate);
+        if (portal != null)
+        {
+            portal_activate = false;
+            portal.SetActive(portal_activate);
+        }
+
         CTs = GameObject.FindGameObjectsWithTag("JungleToast1");
     }
 
@@ -76,7 +80,31 @@ public class JungleScript : MonoBehaviour {
             }
             scene_confirmed = true;
         }
-        primaryCTsCollected = true;
+        //primaryCTsCollected = true;
+        if (portal != null)
+        {
+            primaryCTsCollected = true;
+            if (!portal_activate)
+            {
+                foreach (GameObject CT in CTs)
+                {
+                    if (!CT.GetComponent<crispy_toast>().Collected())
+                    {
+                        primaryCTsCollected = false;
+                    }
+                }
+            }
+            /*
+             * if portal isn't activated and conditions are met
+             * activate the portal
+             */
+            if (primaryCTsCollected && !portal_activate)
+            {
+                portal_activate = true;
+                portal.SetActive(portal_activate);
+            }
+        }
+        /*
         if (!portal_activate)
         {
             foreach (GameObject CT in CTs)
@@ -91,11 +119,13 @@ public class JungleScript : MonoBehaviour {
          * if portal isn't activated and conditions are met
          * activate the portal
          */
+        /*
         if (primaryCTsCollected && !portal_activate)
         {
             portal_activate = true;
             portal.SetActive(portal_activate);
         }
+        */
     }
 }
 
