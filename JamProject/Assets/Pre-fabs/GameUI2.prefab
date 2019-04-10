@@ -764,6 +764,7 @@ MonoBehaviour:
     - You must retrieve the toast, or our deity will remain powerless and we'll all
       be in big trouble!
     names: []
+  talkedTo: 0
 --- !u!114 &114317749704211132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1852,8 +1853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: -2.6}
-  m_SizeDelta: {x: 759.4, y: 124.8}
+  m_AnchoredPosition: {x: 0.0000038147, y: 0.8}
+  m_SizeDelta: {x: 759.4, y: 151.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224677522893915776
 RectTransform:
@@ -2021,6 +2022,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000047683716, y: -184.5}
-  m_SizeDelta: {x: 1254.8, y: 141.29}
+  m_AnchoredPosition: {x: -0.000047683716, y: -171.39}
+  m_SizeDelta: {x: 1254.8, y: 185.93}
   m_Pivot: {x: 0.5, y: 0.5}
