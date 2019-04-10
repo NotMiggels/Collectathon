@@ -8,6 +8,7 @@ public class squash_script : MonoBehaviour
     public float top_spd; //1.6
     public float jump_velo; //200
     public float accel; //8
+    private float accel_max;
     public float brake_drag; //10
     public float attack_velo;
     public GameObject sprite;
@@ -17,6 +18,8 @@ public class squash_script : MonoBehaviour
     public GameObject region_trigger;
     public float bump_velo;
     public int attack_chance;
+    private float jump_cd_max;
+    private float jump_cd;
     private bool dead;
     private bool shocked;
     private bool in_air;
@@ -32,9 +35,14 @@ public class squash_script : MonoBehaviour
     public float health;
     private float max_health;
     private bool taunting;
+    private bool jammed;
     // Use this for initialization
     void Start()
     {
+        jammed = false;
+        accel_max = accel;
+        jump_cd_max = 0.2f;
+        jump_cd = jump_cd_max;
         taunting = false;
         shocked = false;
         dead = false;
@@ -74,6 +82,7 @@ public class squash_script : MonoBehaviour
 		 * 2. chasing_player should be set to false       
          *
          */
+        //jump_cd -= Time.deltaTime;
         health_percentage = health / max_health;
         if (!dead)
         {
@@ -81,7 +90,7 @@ public class squash_script : MonoBehaviour
             {
                 sr.flipX = true;
             }
-            else if(!shocked)
+            else if (!shocked)
             {
                 sr.flipX = false;
             }
@@ -103,8 +112,9 @@ public class squash_script : MonoBehaviour
             }
             */
 
-            if (chasing_player && anim.GetCurrentAnimatorStateInfo(0).IsName("Squash Chasing") && !taunting)
+            if (chasing_player && anim.GetCurrentAnimatorStateInfo(0).IsName("Squash Chasing") && !taunting)// && jump_cd < 0.0f)
             {
+                //jump_cd = jump_cd_max;
                 shocked = false;
                 //locate the player
                 Vector3 playerpos = player.transform.position;
@@ -119,12 +129,12 @@ public class squash_script : MonoBehaviour
                     //right
                     if (Xdiff2 > 0.2f && (myRigidbody.velocity.x) < top_spd && !in_air)
                     {
-                        myRigidbody.AddForce(new Vector2(accel, accel * 1.0f));
+                        JumpR();
                     }
                     //left
                     else if (Xdiff2 < -0.2f && (myRigidbody.velocity.x) > top_spd * -1.0f && !in_air)
                     {
-                        myRigidbody.AddForce(new Vector2(accel * -1.0f, accel * 1.0f));
+                        JumpL();
                     }
                     else if (Xdiff < 0.2f && Xdiff > -0.2f && myRigidbody.velocity.magnitude > top_spd && !in_air)
                     {
@@ -132,11 +142,11 @@ public class squash_script : MonoBehaviour
                         int temp = random.Next(2);
                         if (temp == 0)
                         {
-                            myRigidbody.AddForce(new Vector2(accel, accel * 1.0f));
+                            JumpR();
                         }
                         else
                         {
-                            myRigidbody.AddForce(new Vector2(accel * -1.0f, accel * 1.0f));
+                            JumpL();
                         }
                     }
                     else if (!in_air) //attack
@@ -145,7 +155,7 @@ public class squash_script : MonoBehaviour
                         int temp = random.Next(101);
                         if (temp < attack_chance)
                         {
-                            myRigidbody.AddForce(new Vector2(attack_velo, attack_velo));
+                            AttackR();
                             attacking = true;
                             //anim.Play("Squash Jump");
                         }
@@ -160,12 +170,12 @@ public class squash_script : MonoBehaviour
                     //right
                     if (Xdiff2 > 0.2f && (myRigidbody.velocity.x) < top_spd && !in_air)
                     {
-                        myRigidbody.AddForce(new Vector2(accel, accel * 1.0f));
+                        JumpR();
                     }
                     //left
                     else if (Xdiff2 < -0.2f && (myRigidbody.velocity.x) > top_spd * -1.0f && !in_air)
                     {
-                        myRigidbody.AddForce(new Vector2(accel * -1.0f, accel * 1.0f));
+                        JumpL();
                     }
                     else if (Xdiff < 0.2f && Xdiff > -0.2f && myRigidbody.velocity.magnitude > top_spd && !in_air)
                     {
@@ -173,11 +183,11 @@ public class squash_script : MonoBehaviour
                         int temp = random.Next(2);
                         if (temp == 0)
                         {
-                            myRigidbody.AddForce(new Vector2(accel, accel * 1.0f));
+                            JumpR();
                         }
                         else
                         {
-                            myRigidbody.AddForce(new Vector2(accel * -1.0f, accel * 1.0f));
+                            JumpL();
                         }
                     }
                     else if (!in_air) //attack
@@ -186,7 +196,7 @@ public class squash_script : MonoBehaviour
                         int temp = random.Next(101);
                         if (temp < attack_chance)
                         {
-                            myRigidbody.AddForce(new Vector2(-1.0f * attack_velo, attack_velo));
+                            AttackL();
                             attacking = true;
                             //anim.Play("Squash Jump");
                         }
@@ -203,23 +213,23 @@ public class squash_script : MonoBehaviour
 
             }
         }
-    
 
-            
+
+
         else
-        
+
         {
-        
+
             death_countdown -= Time.deltaTime;
 
             if (death_countdown < 0)
-            
+
             {
-            
+
                 Destroy(myRigidbody.gameObject);
 
             }
-          
+
         }
 
     }
@@ -228,14 +238,15 @@ public class squash_script : MonoBehaviour
      * a function used to set the flag
      * p is passed in from another script via SendMessage
      * this function should be called by SendMessage as well   
-     */   
+     */
     void ChasePlayer(GameObject p)
     {
         player = p;
         if (!chasing_player)
         {
             //Debug.Log("squash shocked");
-            if(p.transform.position.x > this.transform.position.x){
+            if (p.transform.position.x > this.transform.position.x)
+            {
                 sr.flipX = true;
                 shocked = true;
             }
@@ -254,16 +265,56 @@ public class squash_script : MonoBehaviour
         chasing_player = false;
     }
 
-    void TakingDMG(int dmg){
+    void TakingDMG(int dmg)
+    {
         health -= dmg;
     }
 
-    void Knocked(Vector2 v){
+    void Knocked(Vector2 v)
+    {
         myRigidbody.AddForce(v);
+    }
+    void JumpR(){
+        if(jammed){
+            myRigidbody.AddForce(new Vector2(0.0f, accel * 1.0f));
+        }
+        else{
+            myRigidbody.AddForce(new Vector2(accel, accel * 1.0f));
+        }
+    }
+    void JumpL(){
+        if(jammed){
+            myRigidbody.AddForce(new Vector2(0.0f, accel * 1.0f));
+        }
+        else{
+            myRigidbody.AddForce(new Vector2(accel * -1.0f, accel * 1.0f));
+        }
+    }
+    void AttackR(){
+        if(jammed){
+            myRigidbody.AddForce(new Vector2(0.0f, attack_velo));
+        }
+        else{
+            myRigidbody.AddForce(new Vector2(attack_velo, attack_velo));
+        }
+    }
+    void AttackL(){
+        if(jammed){
+            myRigidbody.AddForce(new Vector2(0.0f, attack_velo));
+        }
+        else{
+            myRigidbody.AddForce(new Vector2(-1.0f * attack_velo, attack_velo));
+        }
     }
     public void EndTaunting()
     {
         taunting = false;
         Idle();
+    }
+    public void Jammed(){
+        jammed = true;
+    }
+    public void UnJam(){
+        jammed = false;
     }
 }

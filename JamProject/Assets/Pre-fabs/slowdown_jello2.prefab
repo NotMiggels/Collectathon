@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a2ca9d72b4ce447987186be4a55eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jammed_gravity_scale: 50
+  jammed_gravity_scale: 5
 --- !u!212 &212816060582931586
 SpriteRenderer:
   m_ObjectHideFlags: 1

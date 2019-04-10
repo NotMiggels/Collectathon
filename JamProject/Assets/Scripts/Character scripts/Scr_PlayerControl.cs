@@ -336,7 +336,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * animation stuff
              */
-            if (!moving_anim_playing && myRigidbody.velocity.magnitude > 0.0f &&
+            if (!moving_anim_playing && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) &&
                !attack_anim_playing && !shielding)
             {
                 //moving_anim_playing = true;
