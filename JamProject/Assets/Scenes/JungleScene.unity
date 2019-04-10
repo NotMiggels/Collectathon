@@ -13580,7 +13580,7 @@ Transform:
   - {fileID: 1594556831}
   - {fileID: 1109584524}
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1592780262
 Prefab:
@@ -14684,7 +14684,7 @@ Transform:
   - {fileID: 324413163}
   - {fileID: 2053827343}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1748487963
 Prefab:
@@ -17617,7 +17617,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
       value: But I've always wondered if there's anything below the swamps themselves.
-        Ya think they're anything cool?
+        Ya think there's anything cool?
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
