@@ -26,6 +26,10 @@ public class master_script : MonoBehaviour {
     public int lastscene;
     public int lastcheckpoint;
 
+    //Data structures for 
+    public int[][] crouton;
+    private int[] crouton_count; 
+
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -47,6 +51,8 @@ public class master_script : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         dialogue_index_max = dialogues.Length;
         dialogue_index = 0;
+
+        // Checkpoint setup
         checkpoints = new int[4][];
         for(int i = 0; i < 4; i++)
         {
@@ -81,6 +87,41 @@ public class master_script : MonoBehaviour {
                 checkpoints[i][0] = 0;
             }
         }
+
+        // Crouton setup
+        crouton = new int[4][];
+        for(int i = 0; i < 4; i++)
+        {
+            int length = 0;
+            if(i == 0)
+            {
+                length = 4;
+                crouton[0] = new int[50];
+            }
+            else if(i == 1)
+            {
+                length = 4;
+                crouton[1] = new int[50];
+            }
+            else if(i == 2)
+            { 
+                length = 3;
+                crouton[2] = new int[50];
+            }
+            else if(i == 3)
+            { 
+                length = 4;
+                crouton[3] = new int[50];
+            }
+            for(int j = 0; j < length; j++)
+            {
+                crouton[i][j] = 0;
+            }
+        }
+
+        crouton_count = new int[3];
+
+        
 
 
 	}
@@ -155,5 +196,15 @@ public class master_script : MonoBehaviour {
     {
         lastscene = sceneid;
         lastcheckpoint = checkid;
+    }
+
+    public void updatecrouton(int sceneid, int croutonid)
+    {
+        crouton[sceneid][croutonid] = 0;
+    }
+
+    public void croutonAdd(int sceneid)
+    {
+        crouton_count[sceneid] +=1;
     }
 }
