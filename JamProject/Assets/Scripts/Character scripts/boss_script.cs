@@ -8,7 +8,10 @@ public class boss_script : MonoBehaviour {
     public GameObject up_pos;
     public GameObject m_sprite;
     public GameObject r_sprite;
+    public GameObject floor_detection;
     public float max_health;
+    public float attack_3_drop_spd;
+    public float attack_3_move_spd;
     public GameObject cannon_projectile;
     public GameObject lighter_projectile;
     public GameObject spatula_hitbox_L;
@@ -111,9 +114,30 @@ public class boss_script : MonoBehaviour {
                 Debug.Log("CheckSpin()");
                 CheckSpin();
             }
+            else if(attack_choice == 3){
+                Debug.Log("CheckSpatula()");
+                CheckSpatula();
+            }
         }
 	}
-
+    private void CheckSpatula(){
+        if (on_left)
+        {
+            if (transform.position.x < default_pos_R.transform.position.x - 0.3f)
+            {
+                myRigidbody.velocity = Vector2.zero;
+                r_anim.Play("Post-Attack3");
+            }
+        }
+        else if (on_right)
+        {
+            if (transform.position.x > default_pos_R.transform.position.x + 0.3f)
+            {
+                myRigidbody.velocity = Vector2.zero;
+                r_anim.Play("Post-Attack3");
+            }
+        }
+    }
     private void CheckSpin(){
         if(transform.position.x < spin_target.x + 0.3f && transform.position.x > spin_target.x - 0.3f){
             MoveToOppositeStandbyLocation();
@@ -135,13 +159,19 @@ public class boss_script : MonoBehaviour {
             //nothing needs to be done here, probably
         }
         else if(attack_choice == 3){
-            
+            //Debug.Log("playing attack anim");
+            //r_anim.Play("Attack3");
+            //move down
+            Debug.Log("boss moves down (spatula)");
+            myRigidbody.velocity = new Vector2(0, -1.0f * attack_3_drop_spd);
         }
         else if(attack_choice == 4){
             
         }
         attacking = true;
-        Attack();
+        if(attack_choice != 3){
+            Attack();
+        }
     }
     private void MoveToStandbyLocation(){
         attack_choice = 0;
@@ -293,7 +323,14 @@ public class boss_script : MonoBehaviour {
         }
         else if (attack_choice == 3)
         {
-
+            r_anim.Play("Attack3");
+            moving = true;
+            if(on_left){
+                myRigidbody.velocity = new Vector2(attack_3_move_spd, 0.0f);
+            }
+            else if(on_right){
+                myRigidbody.velocity = new Vector2(-1.0f * attack_3_move_spd, 0.0f);
+            }
         }
         else if (attack_choice == 4)
         {
@@ -342,7 +379,7 @@ public class boss_script : MonoBehaviour {
             //Debug.Log("boss idle for " + temp + " seconds");
             //yield return new WaitForSeconds(temp);
             //int temp = rng.Next(0, 4);
-            int temp = 1;
+            int temp = 2;
             if (temp == 0)
             {
                 //spin
@@ -360,6 +397,9 @@ public class boss_script : MonoBehaviour {
             else if (temp == 2)
             {
                 //spatula
+                Debug.Log("playing pre-attack anim (spatula)");
+                r_anim.Play("Pre-Attack3");
+                attack_choice = 3;
             }
             else if (temp == 3)
             {
@@ -371,5 +411,14 @@ public class boss_script : MonoBehaviour {
             Debug.Log("player not in range, suspend");
             StartCoroutine(Prep());
         }
+    }
+    private void SpatulaAttack(){
+        
+    }
+    public int GetAttackSelection(){
+        return attack_choice;
+    }
+    public void ResetAttackSelection(){
+        attack_choice = 0;
     }
 }

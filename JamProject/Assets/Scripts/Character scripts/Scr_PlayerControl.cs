@@ -105,6 +105,9 @@ public class Scr_PlayerControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        //if(myCollider.IsTouchingLayers(LayerMask.GetMask("Platform"))){
+          //  Debug.Log("jelly is touching platform");
+        //}
         /*
         playerMoving = false;
         if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)

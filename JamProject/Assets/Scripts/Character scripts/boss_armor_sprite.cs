@@ -21,7 +21,12 @@ public class boss_armor_sprite : MonoBehaviour
         boss.SendMessage("StartAttack");
     }
     public void GoStandbyPos(){
-        Debug.Log("sprite callse GoStandbyPos()");
+        Debug.Log("sprite calls GoStandbyPos()");
+        boss.SendMessage("MoveToOppositeStandbyLocation");
+    }
+    public void EndSpatula(){
+        Debug.Log("sprite calls EndSpatula()");
+        boss.GetComponent<boss_script>().ResetAttackSelection();
         boss.SendMessage("MoveToOppositeStandbyLocation");
     }
 }
