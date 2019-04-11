@@ -1096,6 +1096,28 @@ Prefab:
       propertyPath: m_Name
       value: Morbid Morbier (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 61805303943749632, guid: f176806de8f50c44c9dbb66c395e36b7,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.12593016
+      objectReference: {fileID: 0}
+    - target: {fileID: 61805303943749632, guid: f176806de8f50c44c9dbb66c395e36b7,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.9993741
+      objectReference: {fileID: 0}
+    - target: {fileID: 1858259930177510, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844988848010080, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509229573802824, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}
   m_IsPrefabAsset: 0
