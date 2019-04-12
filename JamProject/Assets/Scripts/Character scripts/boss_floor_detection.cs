@@ -17,10 +17,23 @@ public class boss_floor_detection : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Debug.Log("lel");
+        attack_choice = boss.GetComponent<boss_script>().GetAttackSelection();
+        
         if(attack_choice != 3){
+            Debug.Log("lul");
+            boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             grounded = false;
-        }/*
+        }
+        
+        if(attack_choice == 3 && myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")) && !grounded)
+        {
+            Debug.Log("boss hits ground");
+            grounded = true;
+            boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            boss.SendMessage("Attack");
+        }
+        /*
         else if (attack_choice == 3 && myCollider. && !grounded)
         {
             Debug.Log("boss hits ground");

@@ -9,6 +9,8 @@ public class boss_script : MonoBehaviour {
     public GameObject m_sprite;
     public GameObject r_sprite;
     public GameObject floor_detection;
+    public GameObject spatula_l;
+    public GameObject spatula_r;
     public float max_health;
     public float attack_3_drop_spd;
     public float attack_3_move_spd;
@@ -123,7 +125,8 @@ public class boss_script : MonoBehaviour {
     private void CheckSpatula(){
         if (on_left)
         {
-            if (transform.position.x < default_pos_R.transform.position.x - 0.3f)
+            Debug.Log("going from left (spatula)");
+            if (transform.position.x > spatula_r.transform.position.x - 0.3f)
             {
                 myRigidbody.velocity = Vector2.zero;
                 r_anim.Play("Post-Attack3");
@@ -131,7 +134,8 @@ public class boss_script : MonoBehaviour {
         }
         else if (on_right)
         {
-            if (transform.position.x > default_pos_R.transform.position.x + 0.3f)
+            Debug.Log("going from right (spatula)");
+            if (transform.position.x < spatula_l.transform.position.x + 0.3f)
             {
                 myRigidbody.velocity = Vector2.zero;
                 r_anim.Play("Post-Attack3");
@@ -163,6 +167,7 @@ public class boss_script : MonoBehaviour {
             //r_anim.Play("Attack3");
             //move down
             Debug.Log("boss moves down (spatula)");
+            Debug.Log("attack_choice: " + attack_choice);
             myRigidbody.velocity = new Vector2(0, -1.0f * attack_3_drop_spd);
         }
         else if(attack_choice == 4){
@@ -217,6 +222,8 @@ public class boss_script : MonoBehaviour {
     }
     private void MoveToOppositeStandbyLocation()
     {
+        myRigidbody.constraints = RigidbodyConstraints2D.None;
+        myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         moving = true;
         in_position = false;
         attacking = false;
@@ -293,8 +300,6 @@ public class boss_script : MonoBehaviour {
             r_sr.flipX = false;
             m_sr.flipX = false;
         }
-       
-
         attacking = false;
         preparing_atk = false;
     }
@@ -420,5 +425,13 @@ public class boss_script : MonoBehaviour {
     }
     public void ResetAttackSelection(){
         attack_choice = 0;
+    }
+    public bool OnLeft()
+    {
+        return on_left;
+    }
+    public bool OnRight()
+    {
+        return on_right;
     }
 }
