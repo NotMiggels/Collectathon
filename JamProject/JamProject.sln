@@ -1,9 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-<<<<<<< HEAD
-# Visual Studio for Mac
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JamProject", "Assembly-CSharp.csproj", "{ED102287-D15F-A923-CD20-85F495894E98}"
-=======
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JamProject", "JamProject.csproj", "{94A9ED22-B336-29B6-F605-2DCFB15F509C}"
 EndProject
@@ -14,7 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro.Editor", "Unity.TextMeshPro.Editor.csproj", "{3A848AB7-9891-EDDA-D555-BF184C2F81F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.StandardEvents", "UnityEditor.StandardEvents.csproj", "{6800202F-4402-D405-F8CB-03DC7BD78B92}"
->>>>>>> master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
