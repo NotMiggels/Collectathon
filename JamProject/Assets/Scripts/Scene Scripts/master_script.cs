@@ -212,4 +212,9 @@ public class master_script : MonoBehaviour {
     {
         crouton_count[sceneid] +=1;
     }
+    
+    public void StartGame()
+    {
+        SceneManager.LoadScene("CutScene1");
+    }
 }

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scr_cutscene1 : MonoBehaviour {
 	public GameObject[] comic;
 	private int sprite_count;
 	private int index = 0;
+	public string scenetransition;
 	// Use this for initialization
 	void Start () {
 		sprite_count = comic.Length;
@@ -21,8 +23,11 @@ public class scr_cutscene1 : MonoBehaviour {
 		{
 			comic[index].SetActive(false);
 			index +=1;
+			if(index == comic.Length)
+			{
+				 SceneManager.LoadScene(scenetransition);
+			}
 			comic[index].SetActive(true);
-
 		}
 	}
 }
