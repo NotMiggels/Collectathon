@@ -21,11 +21,13 @@ public class crouton_scr : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
+		Debug.Log("HI");
 		if(collision.gameObject.tag == "Player")
 		{
+			Debug.Log("HI");
 			ms.croutonAdd(sceneid);
 			ms.updatecrouton(sceneid, croutonid);
-			Destroy(this);
+			Destroy(gameObject);
 		}
 	}
 }

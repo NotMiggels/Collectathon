@@ -11,7 +11,7 @@ public class crouton_loading_scr : MonoBehaviour {
 		ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
 		for(int i = 0; i < 50; i ++)
 		{
-			if(ms.crouton[sceneid][i] == 0)
+			if(ms.crouton[sceneid][i] == 1)
 			{
 				crouton_list[i].SetActive(false);
 			}

@@ -120,6 +120,11 @@ public class master_script : MonoBehaviour {
         }
 
         crouton_count = new int[3];
+        crouton_count[0] = 0;
+        crouton_count[1] = 0;
+        crouton_count[2] = 0;
+
+
 
         
 
@@ -200,7 +205,7 @@ public class master_script : MonoBehaviour {
 
     public void updatecrouton(int sceneid, int croutonid)
     {
-        crouton[sceneid][croutonid] = 0;
+        crouton[sceneid][croutonid] = 1;
     }
 
     public void croutonAdd(int sceneid)
