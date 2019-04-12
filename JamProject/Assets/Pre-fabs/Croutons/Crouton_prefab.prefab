@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212462965489663496}
   - component: {fileID: 95818327560497368}
   - component: {fileID: 61660791050486152}
-  - component: {fileID: 114213328614566902}
   - component: {fileID: 50310114661475764}
+  - component: {fileID: 114213328614566902}
   m_Layer: 0
   m_Name: Crouton_prefab
   m_TagString: Untagged
