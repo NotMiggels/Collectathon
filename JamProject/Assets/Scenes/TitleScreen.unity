@@ -458,12 +458,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1824302264 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
-    type: 2}
-  m_PrefabInternal: {fileID: 442603002}
-  m_Script: {fileID: 11500000, guid: a342769d65a62d44fb6519060c0b42a3, type: 3}
 --- !u!1 &2029435034
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +533,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1824302264}
+      - m_Target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+          type: 2}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:

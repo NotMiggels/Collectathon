@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 791014559}
   - component: {fileID: 791014558}
   - component: {fileID: 791014557}
+  - component: {fileID: 791014560}
   m_Layer: 0
   m_Name: pic_deity_idle_0
   m_TagString: Untagged
@@ -605,6 +606,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791014560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791014556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909eaf072d736fb4390d9946bd2b1507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &841200706
 Prefab:
   m_ObjectHideFlags: 0
