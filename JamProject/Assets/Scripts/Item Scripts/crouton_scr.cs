@@ -8,6 +8,7 @@ public class crouton_scr : MonoBehaviour {
     private BoxCollider2D myCollider;
 	public int sceneid;
 	public int croutonid;
+	public int insidevolcano;
 	// Use this for initialization
 	void Start () {
 
@@ -26,6 +27,10 @@ public class crouton_scr : MonoBehaviour {
 		{
 			Debug.Log("HI");
 			ms.croutonAdd(sceneid);
+			if(insidevolcano == 1)
+			{
+				sceneid = 2;
+			}
 			ms.updatecrouton(sceneid, croutonid);
 			Destroy(gameObject);
 		}
