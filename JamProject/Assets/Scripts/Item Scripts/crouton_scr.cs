@@ -8,6 +8,7 @@ public class crouton_scr : MonoBehaviour {
     private BoxCollider2D myCollider;
 	public int sceneid;
 	public int croutonid;
+	public int finallevel;
 	public int insidevolcano;
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,6 @@ public class crouton_scr : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log("HI");
 		if(collision.gameObject.tag == "Player")
 		{
 			Debug.Log("HI");
@@ -30,6 +30,10 @@ public class crouton_scr : MonoBehaviour {
 			if(insidevolcano == 1)
 			{
 				sceneid = 2;
+			}
+			if(finallevel == 1)
+			{
+				sceneid = 3;
 			}
 			ms.updatecrouton(sceneid, croutonid);
 			Destroy(gameObject);

@@ -10,6 +10,7 @@ public class cloggablehole : MonoBehaviour {
 	void Start () {
 		holestate[1].SetActive(false);
 		holestate[0].SetActive(true);
+		holestate[2].SetActive(true);
 		
 		m_Collider = gameObject.GetComponent<BoxCollider2D>();
 		m_Collider.enabled = true;
@@ -24,6 +25,8 @@ public class cloggablehole : MonoBehaviour {
 	{
 		holestate[1].SetActive(true);
 		holestate[0].SetActive(false);
+		holestate[2].SetActive(false);
+
 		m_Collider.enabled = !m_Collider.enabled;
 	}
 }

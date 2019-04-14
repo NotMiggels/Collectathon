@@ -16,6 +16,8 @@ public class UI_healthbar : MonoBehaviour {
     private Scr_PlayerControl player_script;
     private Slider actual_bar;
     private Slider actual_gauge;
+    public Text Crouton_count;
+    public int sceneid;
 
     private master_script ms;
     // Use this for initialization
@@ -45,6 +47,7 @@ public class UI_healthbar : MonoBehaviour {
         actual_bar.value = player_script.health;
         actual_gauge.value = player_script.Ability_gauge();
         CT_count.text = ms.getCT().ToString();
+        Crouton_count.text = ms.getCrouton(sceneid).ToString() + ms.gettotcrouton(sceneid);
 
 	}
     public void SetAbilityText(int num)
