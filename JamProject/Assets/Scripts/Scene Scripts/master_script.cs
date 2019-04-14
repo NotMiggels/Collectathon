@@ -251,8 +251,6 @@ public class master_script : MonoBehaviour {
         return "/50";
     }
     
-    
-    
     public void StartGame()
     {
         SceneManager.LoadScene("CutScene1");
