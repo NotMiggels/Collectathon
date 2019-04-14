@@ -1237,9 +1237,25 @@ Prefab:
       propertyPath: m_Name
       value: Gameplay UI
       objectReference: {fileID: 0}
+    - target: {fileID: 114810113237503392, guid: c91d653a1004d1147800212f3dbd806c,
+        type: 2}
+      propertyPath: sceneid
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114810113237503392, guid: c91d653a1004d1147800212f3dbd806c,
+        type: 2}
+      propertyPath: Crouton_count
+      value: 
+      objectReference: {fileID: 1739141895}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1739141895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114615988928067292, guid: c91d653a1004d1147800212f3dbd806c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1739141894}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1938506101
 GameObject:
   m_ObjectHideFlags: 0

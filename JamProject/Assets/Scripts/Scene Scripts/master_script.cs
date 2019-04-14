@@ -212,6 +212,46 @@ public class master_script : MonoBehaviour {
     {
         crouton_count[sceneid] +=1;
     }
+
+    public int getCrouton(int scene)
+    {
+        if(scene == 1)
+        {
+            return crouton_count[1];
+        }
+        else if (scene == 2)
+        {
+            return crouton_count[1];
+        }
+        else if( scene == 4 || scene == 5 || scene == 6)
+        {
+            return crouton_count[0] + crouton_count[1]+ crouton_count[2];
+        }
+        else if( scene == 3)
+        {
+            return crouton_count[2];
+        }
+        return crouton_count[scene];
+    }
+
+    public string gettotcrouton(int scene)
+    {
+        if(scene == 1)
+        {
+            return "/100";
+        }
+        else if (scene == 2)
+        {
+            return "/100";
+        }
+        else if( scene == 4 || scene == 5 || scene == 6)
+        {
+            return "/200";
+        }
+        return "/50";
+    }
+    
+    
     
     public void StartGame()
     {
