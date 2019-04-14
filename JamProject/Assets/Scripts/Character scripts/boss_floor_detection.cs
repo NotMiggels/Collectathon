@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class boss_floor_detection : MonoBehaviour {
     public GameObject boss;
+    public int attack;
     private bool grounded;
     private int attack_choice;
     private BoxCollider2D myCollider;
@@ -19,14 +20,14 @@ public class boss_floor_detection : MonoBehaviour {
         //Debug.Log("lel");
         attack_choice = boss.GetComponent<boss_script>().GetAttackSelection();
         
-        if(attack_choice != 3){
+        if(attack_choice != attack){
             Debug.Log("lul");
             boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             grounded = false;
         }
         
-        if(attack_choice == 3 && myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")) && !grounded)
+        if(attack_choice == attack && myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")) && !grounded)
         {
             Debug.Log("boss hits ground");
             grounded = true;
@@ -47,7 +48,7 @@ public class boss_floor_detection : MonoBehaviour {
     {
         Debug.Log("floor detect: " + LayerMask.LayerToName(gameObject.layer));
         //if( && )
-        if (attack_choice == 3 && collision.gameObject.layer == 9 && !grounded)
+        if (attack_choice == attack && collision.gameObject.layer == 9 && !grounded)
         {
             Debug.Log("boss hits ground");
             grounded = true;

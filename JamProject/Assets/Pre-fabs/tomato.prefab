@@ -377,7 +377,7 @@ MonoBehaviour:
   seed_L_spawn_pos: {fileID: 1956800852479224}
   seed_R_spawn_pos: {fileID: 1356236120018542}
   seed_velo_x: 50
-  seed_velo_y: 5
+  seed_velo_y: 10
 --- !u!114 &114517381780511966
 MonoBehaviour:
   m_ObjectHideFlags: 1

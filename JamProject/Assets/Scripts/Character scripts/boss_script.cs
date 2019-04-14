@@ -9,6 +9,7 @@ public class boss_script : MonoBehaviour {
     public GameObject m_sprite;
     public GameObject r_sprite;
     public GameObject floor_detection;
+    public GameObject floor_detection_lighter;
     public GameObject spatula_l;
     public GameObject spatula_r;
     public float max_health;
@@ -26,6 +27,10 @@ public class boss_script : MonoBehaviour {
     public float cannonball_spd;
     public GameObject cannonball_spawn_L;
     public GameObject cannonball_spawn_R;
+    public GameObject lighter_spawn_L;
+    public GameObject lighter_spawn_R;
+    public GameObject boss_flame_R;
+    public GameObject boss_flame_L;
     private bool moving_L;
     private bool moving_R;
     private CircleCollider2D myCollider;
@@ -44,10 +49,13 @@ public class boss_script : MonoBehaviour {
     private GameObject player;
     private int attack_choice; // 0:none, 1:spin, 2:cannon, 3:spatula, 4:lighter 
     private int cannon_fire_count;
+    private int lighter_fire_count;
     private Vector3 spin_target;
 
 	// Use this for initialization
     void Start () {
+        boss_flame_L.SetActive(false);
+        boss_flame_R.SetActive(false);
         moving_L = false;
         moving_R = false;
         cannon_fire_count = 0;
@@ -116,7 +124,7 @@ public class boss_script : MonoBehaviour {
                 Debug.Log("CheckSpin()");
                 CheckSpin();
             }
-            else if(attack_choice == 3){
+            else if(attack_choice == 3 || attack_choice == 4){
                 Debug.Log("CheckSpatula()");
                 CheckSpatula();
             }
@@ -129,7 +137,18 @@ public class boss_script : MonoBehaviour {
             if (transform.position.x > spatula_r.transform.position.x - 0.3f)
             {
                 myRigidbody.velocity = Vector2.zero;
-                r_anim.Play("Post-Attack3");
+                if(attack_choice == 3){
+                    attack_choice = 0;
+
+                    r_anim.Play("Post-Attack3");
+                }
+                else if(attack_choice == 4){
+                    attack_choice = 0;
+
+                    Debug.Log("oh shoot");
+                    boss_flame_L.SetActive(false);
+                    r_anim.Play("Post-Attack4_1");
+                }
             }
         }
         else if (on_right)
@@ -138,7 +157,20 @@ public class boss_script : MonoBehaviour {
             if (transform.position.x < spatula_l.transform.position.x + 0.3f)
             {
                 myRigidbody.velocity = Vector2.zero;
-                r_anim.Play("Post-Attack3");
+                if (attack_choice == 3)
+                {
+                    attack_choice = 0;
+
+                    r_anim.Play("Post-Attack3");
+                }
+                else if (attack_choice == 4)
+                {
+                    Debug.Log("oh shit");
+                    attack_choice = 0;
+
+                    boss_flame_R.SetActive(false);
+                    r_anim.Play("Post-Attack4_1");
+                }
             }
         }
     }
@@ -171,10 +203,14 @@ public class boss_script : MonoBehaviour {
             myRigidbody.velocity = new Vector2(0, -1.0f * attack_3_drop_spd);
         }
         else if(attack_choice == 4){
-            
+            //guess it's the same as cannon attack, since it's a variation 
+            //of the cannon attack
+            Debug.Log("boss moves down (lighter)");
+            Debug.Log("attack_choice: " + attack_choice);
+            myRigidbody.velocity = new Vector2(0, -1.0f * attack_3_drop_spd);
         }
         attacking = true;
-        if(attack_choice != 3){
+        if(attack_choice != 3 && attack_choice != 4){
             Attack();
         }
     }
@@ -339,7 +375,69 @@ public class boss_script : MonoBehaviour {
         }
         else if (attack_choice == 4)
         {
-            
+            /*
+            System.Random rng = new System.Random();
+            lighter_fire_count = rng.Next(30, 46);
+            StartCoroutine(FireLighter());
+            */
+            moving = true;
+            if (on_left)
+            {
+                boss_flame_L.SetActive(true);
+                myRigidbody.velocity = new Vector2(attack_3_move_spd, 0.0f);
+            }
+            else if (on_right)
+            {
+                boss_flame_R.SetActive(true);
+                myRigidbody.velocity = new Vector2(-1.0f * attack_3_move_spd, 0.0f);
+            }
+        }
+    }
+    private Vector2 RotateVector(Vector2 v, float angle)
+    {
+        float radian = angle * Mathf.Deg2Rad;
+        float _x = v.x * Mathf.Cos(radian) - v.y * Mathf.Sin(radian);
+        float _y = v.x * Mathf.Sin(radian) + v.y * Mathf.Cos(radian);
+        return new Vector2(_x,_y);
+    } 
+    private IEnumerator FireLighter(){
+        System.Random rng = new System.Random();
+        Vector3 cannon_target = player.transform.position;
+        yield return new WaitForSeconds((float)rng.NextDouble()/3.0f);
+        if (!r_sr.flipX)
+        {
+            Vector3 dir = cannon_target - lighter_spawn_L.transform.position;
+            dir.Normalize();
+            dir *= cannonball_spd;
+            GameObject cannon_clone = Instantiate(lighter_projectile, lighter_spawn_L.transform.position, transform.rotation);
+            float angle = (float)rng.Next(20);
+            if(rng.Next(101) > 50){
+                angle *= -1.0f;
+            }
+            cannon_clone.GetComponent<Rigidbody2D>().velocity = RotateVector(new Vector2(dir.x, dir.y), angle);
+        }
+        else
+        {
+            Vector3 dir = cannon_target - lighter_spawn_R.transform.position;
+            dir.Normalize();
+            dir *= cannonball_spd;
+            GameObject cannon_clone = Instantiate(lighter_projectile, lighter_spawn_R.transform.position, transform.rotation);
+            float angle = (float)rng.Next(20);
+            if (rng.Next(101) > 50)
+            {
+                angle *= -1.0f;
+            }
+            cannon_clone.GetComponent<Rigidbody2D>().velocity = RotateVector(new Vector2(dir.x, dir.y), angle);
+        }
+        Debug.Log("lighter_fire_count: " + lighter_fire_count);
+        if (lighter_fire_count > 0)
+        {
+            lighter_fire_count -= 1;
+            StartCoroutine(FireLighter());
+        }
+        else{
+            Debug.Log("attack 4 ends");
+            r_anim.Play("Post-Attack4_1");
         }
     }
     private void AttackPrep(){
@@ -383,8 +481,8 @@ public class boss_script : MonoBehaviour {
             //int temp = rng.Next(1, 3);
             //Debug.Log("boss idle for " + temp + " seconds");
             //yield return new WaitForSeconds(temp);
-            //int temp = rng.Next(0, 4);
-            int temp = 2;
+            int temp = rng.Next(0, 4);
+            //int temp = 3;
             if (temp == 0)
             {
                 //spin
@@ -409,6 +507,9 @@ public class boss_script : MonoBehaviour {
             else if (temp == 3)
             {
                 //candle lighter
+                Debug.Log("playing pre-attack anim (lighter)");
+                r_anim.Play("Pre-Attack4");
+                attack_choice = 4;
             }
         }
         else

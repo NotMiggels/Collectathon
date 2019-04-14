@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other Scripts/DialogueManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/Scr_PlayerControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="373" Column="79" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="389" Column="12" />
+      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="95" Column="39" />
+      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="481" Column="15" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="382" Column="49" />
       <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
-      <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="30" Column="59" />
+      <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="30" Column="48" />
       <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="34" Column="59" />
       <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="124" Column="65" />
       <File FileName="Assets/Scripts/Other Scripts/Dialogue.cs" Line="1" Column="1" />
@@ -16,19 +16,24 @@
       <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="32" Column="38" />
       <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="38" Column="73" />
       <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Item Scripts/cannonball_script.cs" Line="27" Column="28" />
+      <File FileName="Assets/Scripts/Item Scripts/cannonball_script.cs" Line="28" Column="92" />
       <File FileName="Assets/Scripts/Scene Scripts/JungleScript.cs" Line="118" Column="11" />
       <File FileName="Assets/Scripts/Scene Scripts/Vol_pt1_script.cs" Line="107" Column="10" />
       <File FileName="Assets/Scripts/Other Scripts/pepper_flame_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/MovingPlatformScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/door.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/banana_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/tomato_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/tomato_script.cs" Line="227" Column="26" />
       <File FileName="Assets/Scripts/Character scripts/squash_script.cs" Line="200" Column="29" />
       <File FileName="Assets/Scripts/Character scripts/pepper_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/boss_floor_detection.cs" Line="24" Column="50" />
       <File FileName="Assets/Scripts/Other Scripts/volcano_entrance.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/squash_sprite_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/deity_scr.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/seed_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/monolith_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/boss_floor_detection.cs" Line="51" Column="36" />
+      <File FileName="Assets/Scripts/Character scripts/TalkToCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets/boss_flame_script.cs" Line="30" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

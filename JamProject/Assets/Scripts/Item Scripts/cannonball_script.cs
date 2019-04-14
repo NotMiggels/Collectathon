@@ -5,6 +5,7 @@ using UnityEngine;
 public class cannonball_script : MonoBehaviour{
     
     private Rigidbody2D myrb;
+    public int dmg;
     // Use this for initialization
     void Start()
     {
@@ -24,7 +25,7 @@ public class cannonball_script : MonoBehaviour{
             Debug.Log(collision.collider.gameObject);
             if(collision.collider.gameObject.GetComponent<Scr_PlayerControl>() != null){
                 Debug.Log("player takes damage from cannonball");
-                collision.collider.gameObject.GetComponent<Scr_PlayerControl>().TakeDMG(10);
+                collision.collider.gameObject.GetComponent<Scr_PlayerControl>().TakeDMG(dmg);
             }
             Destroy(gameObject);
         }
