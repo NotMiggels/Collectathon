@@ -7708,6 +7708,18 @@ Prefab:
       propertyPath: m_Name
       value: clogghole (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 212519974981751838, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 98116f4a42fa422459f0b9bfa0434710,
+        type: 3}
+    - target: {fileID: 212151222686857028, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c0e78e05e4ecc4408565f1364c1f327,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
   m_IsPrefabAsset: 0
@@ -9768,6 +9780,41 @@ Prefab:
       propertyPath: m_Name
       value: clogghole (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212519974981751838, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 98116f4a42fa422459f0b9bfa0434710,
+        type: 3}
+    - target: {fileID: 212151222686857028, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c0e78e05e4ecc4408565f1364c1f327,
+        type: 3}
+    - target: {fileID: 4261282626748614, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261282626748614, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4.8597546
+      objectReference: {fileID: 0}
+    - target: {fileID: 61089555810599568, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.010660589
+      objectReference: {fileID: 0}
+    - target: {fileID: 61089555810599568, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -1.1896892
+      objectReference: {fileID: 0}
+    - target: {fileID: 61089555810599568, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2.8079357
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
   m_IsPrefabAsset: 0
@@ -10040,6 +10087,18 @@ Prefab:
       propertyPath: m_Name
       value: clogghole (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 212519974981751838, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 98116f4a42fa422459f0b9bfa0434710,
+        type: 3}
+    - target: {fileID: 212151222686857028, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c0e78e05e4ecc4408565f1364c1f327,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
   m_IsPrefabAsset: 0
@@ -16361,6 +16420,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 212519974981751838, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 98116f4a42fa422459f0b9bfa0434710,
+        type: 3}
+    - target: {fileID: 212151222686857028, guid: f945d75099b305e4e9c0f8b5ddd2e422,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c0e78e05e4ecc4408565f1364c1f327,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
   m_IsPrefabAsset: 0
