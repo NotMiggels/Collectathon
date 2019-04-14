@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject dialogue_indicator;
     public Text nameText;
     public Text dialogueText;
+    public GameObject talking;
     private float delay;
     private Queue<string> sentences;
     private Queue<string> names;
@@ -39,12 +41,13 @@ public class DialogueManager : MonoBehaviour {
             }
         }
     }
-  
+
 
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
         dialogue_indicator.SetActive(false);
         npc = da_npc;
+        talking.GetComponent<changeIcon>().changeBackground();
         if(npc.GetComponent<DialogueTrigger>() != null){
             skippable = npc.GetComponent<DialogueTrigger>().talkedTo;
         }
@@ -66,7 +69,6 @@ public class DialogueManager : MonoBehaviour {
             names.Enqueue(name);
         }
         DisplayNextSentence();
-        Debug.Log(UIElement.Length);
         foreach(GameObject UI in UIElement) {
           UI.SetActive(false);
         }
@@ -95,9 +97,11 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogueText.text = "";
         nameText.text = name;
+        talking.GetComponent<changeIcon>().changeTalking(name, npc);
+        //changeImage(name);
         foreach (char letter in sentence.ToCharArray())
         {
-          Debug.Log(delay);
+          //Debug.Log(delay);
           dialogueText.text += letter;
           if (Input.GetKey(KeyCode.Space)) {
             continue;
