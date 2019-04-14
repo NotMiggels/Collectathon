@@ -289,7 +289,8 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Jelly fling
              */
-            if (Input.GetKeyDown(KeyCode.L)){
+            if (Input.GetKeyDown(KeyCode.J) && !shielding && health == 100.0f)
+            {
                 JellyFling();
             }
             /*
