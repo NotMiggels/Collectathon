@@ -220,7 +220,8 @@ public class tomato_script : MonoBehaviour
                 double temp2 = random.NextDouble();
                 float temp_y = (float)(seed_velo_y * temp2);
                 int temp3 = random.Next(101);
-                if(temp3 > 50){
+                if (temp3 > 50)
+                {
                     temp_y *= -1.0f;
                 }
                 Vector2 vec = new Vector2(seed_velo_x * -1.0f, temp_y);
