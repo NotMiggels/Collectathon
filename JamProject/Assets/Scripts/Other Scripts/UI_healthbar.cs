@@ -12,6 +12,7 @@ public class UI_healthbar : MonoBehaviour {
     public Text ability_text;
     public Text CT_count;
     public GameObject passive_icon1;
+    public GameObject passive_icon2;
     private GameObject player;
     private Scr_PlayerControl player_script;
     private Slider actual_bar;
@@ -25,6 +26,9 @@ public class UI_healthbar : MonoBehaviour {
         if (passive_icon1 != null)
         {
             passive_icon1.SetActive(false);
+        }
+        if (passive_icon2 != null){
+            passive_icon2.SetActive(false);
         }
         player = GameObject.FindGameObjectWithTag("Player");
         player_script = player.GetComponent<Scr_PlayerControl>();
@@ -83,5 +87,11 @@ public class UI_healthbar : MonoBehaviour {
     }
     public void ShowPassive1(){
         passive_icon1.SetActive(true);
+    }
+    public void HidePassive2(){
+        passive_icon2.SetActive(false);
+    }
+    public void ShowPassive2(){
+        passive_icon2.SetActive(true);
     }
 }

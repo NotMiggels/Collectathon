@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/boss_flame_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/Scr_PlayerControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="395" Column="40" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="110" Column="11" />
+      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="95" Column="39" />
+      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="481" Column="15" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="382" Column="49" />
       <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
       <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="30" Column="48" />
       <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="34" Column="59" />
@@ -31,9 +31,9 @@
       <File FileName="Assets/Scripts/Character scripts/deity_scr.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/seed_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/monolith_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/boss_floor_detection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/boss_floor_detection.cs" Line="51" Column="36" />
       <File FileName="Assets/Scripts/Character scripts/TalkToCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets/boss_flame_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/boss_flame_script.cs" Line="30" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

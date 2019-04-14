@@ -66,7 +66,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     private SpriteRenderer sr;
     private bool control_disabled;
     private float jump_boost;
-
+    public float dmg_multiplier;
+    private float dmg_mult;
     // Use this for initialization
     void Start () {
         block_cd = false;
@@ -96,6 +97,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         attacking = false;
         selected_ability = 0;
         UI_manager = GameObject.FindGameObjectWithTag("UIManager");
+        dmg_mult = 1.0f;
         if (ms.get_definedSpawn())
         {
             myRigidbody.transform.position = ms.getSpawnLocation();
@@ -360,7 +362,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     public void TakeDMG(int dmg){
         if (!shielding && !dmg_cooling)
         {
-            health -= dmg;
+            health -= (float)dmg * dmg_mult;
             dmg_cooling = true;
             audio.clip = ouch;
             audio.Play();
@@ -375,6 +377,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             UI_manager.SendMessage("HidePassive1");
             jump_boost = 0;
+        }
+        else if(selected_ability == 2){
+            UI_manager.SendMessage("HidePassive2");
+            dmg_mult = 1.0f;
         }
         ability_active = false;
     }
@@ -443,6 +449,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             UI_manager.SendMessage("ShowPassive1");
             jump_boost = jump_boost_max;
+        }
+        if (selected_ability == 2){
+            UI_manager.SendMessage("ShowPassive2");
+            dmg_mult = dmg_multiplier;
         }
     }
     private void ActivateActive(){
