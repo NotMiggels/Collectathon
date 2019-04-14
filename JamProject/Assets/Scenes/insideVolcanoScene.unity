@@ -5203,30 +5203,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
     type: 2}
   m_PrefabInternal: {fileID: 535737084}
---- !u!1 &535737086 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
-    type: 2}
-  m_PrefabInternal: {fileID: 535737084}
---- !u!114 &535737087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 535737086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 747517bde5c134f44908ecb4d80a7dea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - Good thing I went all the way down here. Who knew there'd be a Crispy Toast
-      here?
-    - Whew. Sure is hot down here, though. I'd better find a way out soon.
-    names:
-    - Jelly
-    - Jelly
 --- !u!1001 &547637430
 Prefab:
   m_ObjectHideFlags: 0
@@ -18088,7 +18064,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4842963607673754, guid: 0ec2d21133bc2124b9704b59c2582c96, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.67
+      value: -15.775
       objectReference: {fileID: 0}
     - target: {fileID: 4842963607673754, guid: 0ec2d21133bc2124b9704b59c2582c96, type: 2}
       propertyPath: m_LocalPosition.y
@@ -18124,7 +18100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4554101578903336, guid: 0ec2d21133bc2124b9704b59c2582c96, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 28.66
+      value: 29.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec2d21133bc2124b9704b59c2582c96, type: 2}

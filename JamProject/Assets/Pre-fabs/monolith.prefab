@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 61590618840566940}
   - component: {fileID: 50508258366143588}
   - component: {fileID: 114713323945914388}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: monolith
   m_TagString: Untagged
   m_Icon: {fileID: 0}
