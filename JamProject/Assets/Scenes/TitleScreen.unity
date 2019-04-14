@@ -120,6 +120,36 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogue_CT_count.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].names.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].names.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1208.0425
@@ -151,6 +181,102 @@ Prefab:
     - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogue_CT_count.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogue_CT_count.Array.data[1]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
+      value: Jelly, can you hear me? Your deity calls to you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
+      value: "It seems you\u2019ve collected two Crispy Toasts. Your efforts are most
+        commendable, my friend."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
+      value: When you return to me, I may be able to open a portal to a planet with
+        Crispy Toast on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
+      value: I can also grant you a special power to make your quest easier. For now,
+        good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].names.Array.data[0]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].names.Array.data[1]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].names.Array.data[2]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[0].names.Array.data[3]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].names.Array.data[0]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].names.Array.data[1]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].names.Array.data[2]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].names.Array.data[3]
+      value: Deity
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
+      value: Jelly, your deity speaks to you. Can you hear me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
+      value: "Spectacular work! You\u2019ve collected eight Crispy Toasts. I can feel
+        power surging through me!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[2]
+      value: "Please, return to the temple as soon as you can! I can open a portal
+        to the monsters\u2019 base."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
+        type: 2}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
+      value: For such a threatening destination, I will bestow upon you the greatest
+        ability of our history. Until then, farewell!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
