@@ -46,7 +46,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     private bool ability_active;
     private int selected_ability; // a flag that represents the selected ability
                                   // 0 = none
-    public int ability_count; //the number of abilities Jelly has,
+    private int ability_count; //the number of abilities Jelly has,
                               //excluding the default state (as ability #0)
     private Vector2 lastMove;
     private master_script ms;
@@ -102,6 +102,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         cf.SetLayerMask(LayerMask.GetMask("Enemy", "Boss"));
         attacking = false;
         selected_ability = 0;
+        ability_count = ms.GetAbilityCount();
         UI_manager = GameObject.FindGameObjectWithTag("UIManager");
         dmg_mult = 1.0f;
         if (ms.get_definedSpawn())

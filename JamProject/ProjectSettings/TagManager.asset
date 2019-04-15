@@ -45,6 +45,7 @@ TagManager:
   - Boss
   - Locdata
   - j
+  - Portal Controls
   layers:
   - Default
   - TransparentFX

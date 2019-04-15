@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/morbier_script.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other Scripts/trigger_script.cs">
     <Files>
-      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="61" Column="26" />
-      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="152" Column="41" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="171" Column="46" />
+      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="91" Column="25" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="97" Column="37" />
       <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
       <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="48" Column="41" />
-      <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="34" Column="59" />
-      <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="28" Column="34" />
+      <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="134" Column="121" />
       <File FileName="Assets/Scripts/Other Scripts/Dialogue.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/DialogueTrigger.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/pepper_sprite_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/banana_sprite_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="32" Column="38" />
+      <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="23" Column="28" />
       <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="38" Column="73" />
       <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="60" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/cannonball_script.cs" Line="28" Column="92" />
@@ -22,7 +22,7 @@
       <File FileName="Assets/Scripts/Other Scripts/pepper_flame_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/MovingPlatformScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/door.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Character scripts/banana_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/banana_script.cs" Line="304" Column="16" />
       <File FileName="Assets/Scripts/Character scripts/tomato_script.cs" Line="227" Column="26" />
       <File FileName="Assets/Scripts/Character scripts/squash_script.cs" Line="200" Column="29" />
       <File FileName="Assets/Scripts/Character scripts/pepper_script.cs" Line="169" Column="16" />
@@ -40,7 +40,13 @@
       <File FileName="Assets/jelly_sprite_script.cs" Line="17" Column="42" />
       <File FileName="Assets/Scripts/Other Scripts/health_bar_script.cs" Line="140" Column="14" />
       <File FileName="Assets/boss_fight_area_script.cs" Line="12" Column="68" />
-      <File FileName="Assets/morbier_script.cs" Line="6" Column="5" />
+      <File FileName="Assets/morbier_script.cs" Line="23" Column="36" />
+      <File FileName="Assets/Scripts/Scene Scripts/master_script.cs" Line="274" Column="31" />
+      <File FileName="Assets/Scripts/Scene Scripts/triggereventlist.cs" Line="44" Column="57" />
+      <File FileName="Assets/Scripts/Other Scripts/changeIcon.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/ability_gauge_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/cam_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/trigger_script.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

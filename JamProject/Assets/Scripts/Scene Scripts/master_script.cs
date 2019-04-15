@@ -8,6 +8,7 @@ public class master_script : MonoBehaviour {
     public float jelly_init_gauge;
     public Dialogue[] dialogues;
     public int[] dialogue_CT_count;
+    private int jelly_ability_count;
     private int dialogue_index;
     private int dialogue_index_max;
     private bool predefined_spawn;
@@ -18,8 +19,8 @@ public class master_script : MonoBehaviour {
     private float jelly_gauge; //ability gauge
     private static master_script ms;
     private UI_healthbar UI_manager;
-
-    //Data structures for Checkpoints
+    private int[] temple_portals;
+     //Data structures for Checkpoints
     public int[][] checkpoints;
     //What scene to load from
     public int sceneid;
@@ -45,6 +46,11 @@ public class master_script : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
+        temple_portals = new int[3];
+        for (int a = 0; a < temple_portals.Length; a++){
+            temple_portals[a] = 0;
+        }
+        jelly_ability_count = 0;
         jelly_health = jelly_init_health;
         jelly_gauge = jelly_init_gauge;
         ct_count = 0;
@@ -254,5 +260,17 @@ public class master_script : MonoBehaviour {
     public void StartGame()
     {
         SceneManager.LoadScene("CutScene1");
+    }
+    public void JellyAbilityCountPlus(){
+        jelly_ability_count += 1;
+    }
+    public int GetAbilityCount(){
+        return jelly_ability_count;
+    }
+    public void ActivatePortal(int a){
+        temple_portals[a] = 1;
+    } 
+    public int[] GetPortalStatus(){
+        return temple_portals;
     }
 }

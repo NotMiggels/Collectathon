@@ -127,6 +127,21 @@ public class DialogueManager : MonoBehaviour {
         if(npc.GetComponent<DialogueTrigger>() != null){
             npc.GetComponent<DialogueTrigger>().talkedTo = true;
         }
+        if(npc.GetComponent<auto_dialogue_trigger>() != null){
+            if(npc.GetComponent<auto_dialogue_trigger>().is_deity){
+                int CT_req = npc.GetComponent<auto_dialogue_trigger>().required_CT;
+                if(CT_req == 0){
+                    GameObject.FindGameObjectWithTag("Portal Controls").GetComponent<triggereventlist>().Unlockjungle();
+                }
+                else if(CT_req == 2){
+                    GameObject.FindGameObjectWithTag("Portal Controls").GetComponent<triggereventlist>().Unlockspicyvolcano();
+
+                }
+                else if(CT_req == 8){
+                    GameObject.FindGameObjectWithTag("Portal Controls").GetComponent<triggereventlist>().Unlockcheesemoon();
+                }
+            }
+        }
         npc = null;
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);
