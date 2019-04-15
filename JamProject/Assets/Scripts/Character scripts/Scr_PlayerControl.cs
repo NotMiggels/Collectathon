@@ -115,6 +115,8 @@ public class Scr_PlayerControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+    if (!control_disabled)
+    {
         /*
          * A block of code that prevents Jelly
          * from taking too much damage from an attack
@@ -226,36 +228,33 @@ public class Scr_PlayerControl : MonoBehaviour {
 
             //Debug.Log(in_air);
 
-            if (!control_disabled)
-            {
-                /*
-                * Jump
-                */
-                if (Input.GetKey(KeyCode.Space) && !in_air && !W_pressed && !shielding)
-                {
-                    W_pressed = true;
-                    myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
-                    audio.clip = jump;
-                    audio.Play();
-                }
-                /*
-                * Go left
-                */
-                if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd * -1.0f && !shielding)
-                {
-                    myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
-                }
-                /*
-                * Go right
-                */
-                if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd && !shielding)
-                {
-                    myRigidbody.AddForce(new Vector2(accel, 0.0f));
-                }
-                /*
-                * Brake
-                */
-            }
+              /*
+              * Jump
+              */
+              if (Input.GetKey(KeyCode.Space) && !in_air && !W_pressed && !shielding)
+              {
+                  W_pressed = true;
+                  myRigidbody.AddForce(new Vector2(0.0f, jump_velo * (1.0f + jump_boost)));
+                  audio.clip = jump;
+                  audio.Play();
+              }
+              /*
+              * Go left
+              */
+              if (Input.GetKey(KeyCode.A) && (myRigidbody.velocity.x) > top_spd * -1.0f && !shielding)
+              {
+                  myRigidbody.AddForce(new Vector2(accel * -1.0f, 0.0f));
+              }
+              /*
+              * Go right
+              */
+              if (Input.GetKey(KeyCode.D) && (myRigidbody.velocity.x) < top_spd && !shielding)
+              {
+                  myRigidbody.AddForce(new Vector2(accel, 0.0f));
+              }
+              /*
+              * Brake
+              */
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
@@ -382,6 +381,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             anim.Play("Jelly death");
             StartCoroutine(EndGame());
         }
+      }
     }
     public void TakeDMG(int dmg){
         if (!shielding && !dmg_cooling)
@@ -424,8 +424,9 @@ public class Scr_PlayerControl : MonoBehaviour {
     {
         return ability_gauge;
     }
-    public void DiasbleControl()
+    public void DisableControl()
     {
+        anim.Play("Jelly idle");
         control_disabled = true;
     }
     public void EnableControl()

@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour {
         //animator.SetBool("IsOpen", true);
 
         if (!skippable) {
-          player.GetComponent<Scr_PlayerControl>().DiasbleControl();
+          player.GetComponent<Scr_PlayerControl>().DisableControl();
         }
 
         names.Clear();
