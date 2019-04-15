@@ -4219,31 +4219,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114700549086386820, guid: 2007f47a44e1f4a369e70681d9831ec3,
-        type: 2}
-      propertyPath: swamp_drag
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624263160813782, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101568962857494, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4356918005822342, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4942212514252268, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4448719505740338, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
   m_IsPrefabAsset: 0

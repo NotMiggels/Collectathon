@@ -61,6 +61,7 @@ public class crispy_toast : MonoBehaviour {
             {
                 ms.AddCT();
                 collected = true;
+                GameObject.FindGameObjectWithTag("Player").SendMessage("CelebrateOnToast");
                 //this.gameObject.SetActive(false);
             }
         }

@@ -68,8 +68,11 @@ public class Scr_PlayerControl : MonoBehaviour {
     private float jump_boost;
     public float dmg_multiplier;
     private float dmg_mult;
+    private bool celebrating;
+    private bool dead;
     // Use this for initialization
     void Start () {
+        dead = false;
         block_cd = false;
         block_cooldown = -1.0f;
         control_disabled = false;
@@ -103,6 +106,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             myRigidbody.transform.position = ms.getSpawnLocation();
         }
         jump_boost = 0.0f;
+        celebrating = false;
     }
 
 	// Update is called once per frame
@@ -131,7 +135,8 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Check animation status
              */
-            health_percentage = health / max_health;
+            if (!celebrating){
+                health_percentage = health / max_health;
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack") ||
                 anim.GetCurrentAnimatorStateInfo(0).IsName("Jelly attack2"))
             {
@@ -290,12 +295,12 @@ public class Scr_PlayerControl : MonoBehaviour {
                 ActivatePassive();
             }
             //gauge refilling by time
-            else if(ability_gauge < 1.0f)
+            else if (ability_gauge < 1.0f)
             {
                 ability_gauge += Time.deltaTime * (1.0f / gauge_recover_time);
             }
             //disable ability if gauge depleted
-            if(ability_gauge < 0.0f)
+            if (ability_gauge < 0.0f)
             {
                 ability_active = false;
                 RestorePassive();
@@ -323,11 +328,13 @@ public class Scr_PlayerControl : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing && !shielding)
             {
                 attacking = false;
-                if(shielding){
+                if (shielding)
+                {
                     anim.Play("Jelly attack2");
                     shielding = false;
                 }
-                else{
+                else
+                {
                     anim.Play("Jelly attack");
                 }
                 shielding = false;
@@ -355,8 +362,11 @@ public class Scr_PlayerControl : MonoBehaviour {
                 anim.Play("Jelly idle");
             }
         }
-        else{
-            GameObject.FindGameObjectWithTag("MainCamera").SendMessage("EndGame");
+        }
+        else if(!dead){
+            dead = true;
+            anim.Play("Jelly death");
+            StartCoroutine(EndGame());
         }
     }
     public void TakeDMG(int dmg){
@@ -367,6 +377,10 @@ public class Scr_PlayerControl : MonoBehaviour {
             audio.clip = ouch;
             audio.Play();
         }
+    }
+    private IEnumerator EndGame(){
+        yield return new WaitForSeconds(2);
+        GameObject.FindGameObjectWithTag("MainCamera").SendMessage("EndGame");
     }
     void Knocked(Vector2 v)
     {
@@ -493,5 +507,19 @@ public class Scr_PlayerControl : MonoBehaviour {
                 Instantiate(monolith, temp, transform.rotation);
             }
         }
+    }
+    public void CelebrateOnToast(){
+        celebrating = true;
+        Debug.Log("enter celebration");
+        control_disabled = true;
+        myRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+        anim.Play("Jelly celebrating");
+    }
+    public void EndCelebration(){
+        celebrating = false;
+        Debug.Log("exit celebration");
+        control_disabled = false;
+        myRigidbody.constraints = RigidbodyConstraints2D.None;
+        myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }
