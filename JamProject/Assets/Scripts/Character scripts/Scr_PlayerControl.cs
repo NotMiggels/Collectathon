@@ -549,4 +549,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     public void ExitDialogue(){
         dmg_mult = 1.0f;
     }
+    public void SetAbility(int a){
+        ability_count = a;
+    }
 }
