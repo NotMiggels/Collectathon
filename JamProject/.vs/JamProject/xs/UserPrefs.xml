@@ -1,5 +1,6 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scene Scripts/scr_levelselection.cs">
     <Files>
       <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
@@ -9,13 +10,24 @@
       <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="48" Column="41" />
       <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="28" Column="34" />
       <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="147" Column="44" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other Scripts/DialogueManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="91" Column="25" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="558" Column="6" />
+      <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
+      <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="48" Column="41" />
+      <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="32" Column="44" />
+      <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="58" Column="53" />
+>>>>>>> Stashed changes
       <File FileName="Assets/Scripts/Other Scripts/Dialogue.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/DialogueTrigger.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/pepper_sprite_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/banana_sprite_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="23" Column="28" />
       <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="38" Column="73" />
-      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/cannonball_script.cs" Line="28" Column="92" />
       <File FileName="Assets/Scripts/Scene Scripts/JungleScript.cs" Line="118" Column="11" />
       <File FileName="Assets/Scripts/Scene Scripts/Vol_pt1_script.cs" Line="107" Column="10" />
@@ -42,8 +54,13 @@
       <File FileName="Assets/boss_fight_area_script.cs" Line="12" Column="68" />
       <File FileName="Assets/morbier_script.cs" Line="23" Column="36" />
       <File FileName="Assets/Scripts/Scene Scripts/master_script.cs" Line="267" Column="34" />
+<<<<<<< Updated upstream
       <File FileName="Assets/Scripts/Scene Scripts/triggereventlist.cs" Line="45" Column="50" />
       <File FileName="Assets/Scripts/Other Scripts/changeIcon.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets/Scripts/Scene Scripts/triggereventlist.cs" Line="54" Column="64" />
+      <File FileName="Assets/Scripts/Other Scripts/changeIcon.cs" Line="44" Column="3" />
+>>>>>>> Stashed changes
       <File FileName="Assets/Scripts/Other Scripts/ability_gauge_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/cam_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/trigger_script.cs" Line="1" Column="1" />
