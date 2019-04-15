@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: b1967a597c8f75c4892c461723d36a86
+guid: 5ebbf57ae3c292b4184da62c6f8c7de8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: pic_lavaflow_0
-    21300002: pic_lavaflow_1
-    21300004: pic_lavaflow_2
-    21300006: pic_lavaflow_3
+    21300000: pic_finallevelportal_0
+    21300002: pic_finallevelportal_1
+    21300004: pic_finallevelportal_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -67,7 +66,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -78,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,47 +87,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pic_lavaflow_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0edfb723b9043ce4fab6862c6f075fcf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pic_lavaflow_1
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62f284ced1c86604494cc5cfd918ca92
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pic_lavaflow_2
+      name: pic_finallevelportal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,13 +101,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48a2099f43a99314fa23b3c6d0149dfc
+      spriteID: 011cc2289938f6348a3b404ffc0b55c0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pic_lavaflow_3
+      name: pic_finallevelportal_1
       rect:
         serializedVersion: 2
         x: 1000
@@ -162,7 +121,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3019e7de92b2ec4a8723e20aaed75f6
+      spriteID: 7718ad6864bfddd48a00a5744b79ab18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pic_finallevelportal_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac44a96cb48775849928a8d73868ef39
       vertices: []
       indices: 
       edges: []
@@ -170,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 10c7532049dd8c4449cf57ccf09b429e
+    spriteID: 8490d15af6f81d14ab1fb31d2a7b2e59
     vertices: []
     indices: 
     edges: []
