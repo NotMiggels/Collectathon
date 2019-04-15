@@ -99,7 +99,6 @@ public class UI_healthbar : MonoBehaviour
         ability.GetComponent<Image>().sprite = abilitylist[num];
 
     }
-
     
     public void ShowConvIndicator()
     {
