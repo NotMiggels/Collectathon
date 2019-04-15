@@ -447,6 +447,7 @@ MonoBehaviour:
   fling: {fileID: 8300000, guid: 97116df1717664f47ae5b4b7b58b8d91, type: 3}
   ability_count: 2
   dmg_multiplier: 0.7
+  fling_cd: 1.5
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1
