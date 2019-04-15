@@ -132,6 +132,10 @@ public class Scr_PlayerControl : MonoBehaviour {
          */
         if (health > 0.0f)
         {
+            if(!shielding && (health < max_health)){
+                Debug.Log("jelly healing: " + Time.deltaTime * 0.5f);
+                health += Time.deltaTime * 0.5f;
+            }
             /*
              * Check animation status
              */
@@ -263,7 +267,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Jelly fling
              */
-            if (Input.GetKeyDown(KeyCode.J) && !shielding && health == 100.0f)
+            if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f)
             {
                 JellyFling();
             }
@@ -419,25 +423,27 @@ public class Scr_PlayerControl : MonoBehaviour {
         control_disabled = false;
     }
     private void JellyFling(){
-        
-        if (sr.flipX == true)
-        {
-            Vector3 temp = new Vector3(transform.position.x - 0.35f,
-                                      transform.position.y,
-                                       transform.position.z);
-            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jelloL, temp, transform.rotation);
-            jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
+        if(true){
+            if (sr.flipX == true)
+            {
+                Vector3 temp = new Vector3(transform.position.x - 0.35f,
+                                          transform.position.y,
+                                           transform.position.z);
+                Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jelloL, temp, transform.rotation);
+                jelloclone.velocity = (new Vector2(-1.0f * fling_spd, fling_spd_up));
+            }
+            else
+            {
+                Vector3 temp = new Vector3(transform.position.x + 0.35f,
+                                         transform.position.y,
+                                          transform.position.z);
+                Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jelloR, temp, transform.rotation);
+                jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
+            }
+            audio.clip = fling;
+            audio.Play();
         }
-        else
-        {
-            Vector3 temp = new Vector3(transform.position.x + 0.35f,
-                                     transform.position.y,
-                                      transform.position.z);
-            Rigidbody2D jelloclone = (Rigidbody2D)Instantiate(jelloR, temp, transform.rotation);
-            jelloclone.velocity = (new Vector2(1.0f * fling_spd, fling_spd_up));
-        }
-        audio.clip = fling;
-        audio.Play();
+
     }
     private void AbilitySelectL(){
         selected_ability -= 1;
