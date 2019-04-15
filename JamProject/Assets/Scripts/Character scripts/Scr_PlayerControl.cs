@@ -461,6 +461,8 @@ public class Scr_PlayerControl : MonoBehaviour {
             selected_ability = ability_count;
         }
         UI_manager.SendMessage("SetAbilityText", selected_ability);
+        UI_manager.SendMessage("SetAbilityBar", selected_ability);
+
         Debug.Log("current ability#:" + selected_ability);
     }
     private void AbilitySelectR(){
@@ -470,6 +472,8 @@ public class Scr_PlayerControl : MonoBehaviour {
             selected_ability = 0;
         }
         UI_manager.SendMessage("SetAbilityText", selected_ability);
+        UI_manager.SendMessage("SetAbilityBar", selected_ability);
+
         Debug.Log("current ability#:" + selected_ability);
     }
     private void ActivatePassive(){
