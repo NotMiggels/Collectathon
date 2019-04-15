@@ -25,6 +25,13 @@ public class enemyportal_scr : MonoBehaviour {
 	{
 		Debug.Log("start spawn coroutine");
 		yield return new WaitForSeconds(delay);
+		for(int i = 0; i < enemylist.Count; i++)
+			{
+				if(enemylist[i] == null)
+				{
+					enemylist.Remove(enemylist[i]);
+				}
+			}
 		if(enemylist.Count < spawnsize)
 		{
 			Debug.Log("try to spawn");
@@ -39,6 +46,7 @@ public class enemyportal_scr : MonoBehaviour {
 			stateofportal[0].SetActive(true);
 			stateofportal[1].SetActive(false);
 		}
+		
 		coroutine = spawnenemy(delay);
 		StartCoroutine(coroutine);
 	}
