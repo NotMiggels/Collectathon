@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4101568962857494}
   - component: {fileID: 212808252837341452}
   - component: {fileID: 95883892267629984}
+  - component: {fileID: 114309099835318996}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -119,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1591077065774056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.32, y: 0.494, z: 0}
+  m_LocalPosition: {x: -0.32, y: 0.441, z: 0}
   m_LocalScale: {x: 0.25, y: 0.2748531, z: 0.1}
   m_Children:
   - {fileID: 4101568962857494}
@@ -394,6 +395,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114309099835318996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519853476951486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8b5a064b65f42a0875b3e4c84bd9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jelly: {fileID: 1591077065774056}
 --- !u!114 &114700549086386820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,6 +446,7 @@ MonoBehaviour:
   swing: {fileID: 8300000, guid: 46a2a9dfbd2274cc99258e7805848330, type: 3}
   fling: {fileID: 8300000, guid: 97116df1717664f47ae5b4b7b58b8d91, type: 3}
   ability_count: 2
+  dmg_multiplier: 0.7
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1
