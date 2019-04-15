@@ -445,9 +445,8 @@ MonoBehaviour:
   ouch: {fileID: 8300000, guid: cc69276e4ba134e7e8bd849f5ef293a6, type: 3}
   swing: {fileID: 8300000, guid: 46a2a9dfbd2274cc99258e7805848330, type: 3}
   fling: {fileID: 8300000, guid: 97116df1717664f47ae5b4b7b58b8d91, type: 3}
-  ability_count: 2
   dmg_multiplier: 0.7
-  fling_cd: 1.5
+  fling_cd: 0.53
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1
