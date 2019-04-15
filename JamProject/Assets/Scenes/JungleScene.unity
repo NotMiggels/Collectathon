@@ -2491,17 +2491,17 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.data[0]
-      value: Jar Women
+      value: Jar Woman
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.data[1]
-      value: Jar Women
+      value: Jar Woman
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.data[2]
-      value: Jar Women
+      value: Jar Woman
       objectReference: {fileID: 0}
     - target: {fileID: 58018762597143308, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
@@ -6885,6 +6885,8 @@ MonoBehaviour:
     - Jelly
     - Squasher
     - Squasher
+  required_CT: 0
+  is_deity: 0
 --- !u!4 &608908494
 Transform:
   m_ObjectHideFlags: 0
@@ -10602,6 +10604,8 @@ MonoBehaviour:
     - Deity
     - Jelly
     - Jelly
+  required_CT: 0
+  is_deity: 0
 --- !u!4 &970516715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4565366542675542, guid: fe3eb3770ce4ed74ba4246a85115940e,
@@ -15760,6 +15764,8 @@ MonoBehaviour:
   dialogue:
     sentences: []
     names: []
+  required_CT: 0
+  is_deity: 0
 --- !u!61 &1475766054
 BoxCollider2D:
   m_ObjectHideFlags: 0
