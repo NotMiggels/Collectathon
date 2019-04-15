@@ -42,7 +42,7 @@ public class triggereventlist : MonoBehaviour {
 	{
 		portals[1].SetActive(true);
         ms.GetComponent<master_script>().ActivatePortal(1);
-
+        player.GetComponent<Scr_PlayerControl>().SetAbility(1);
         ms.GetComponent<master_script>().JellyAbilityCountPlus();
 	}
 
@@ -51,7 +51,7 @@ public class triggereventlist : MonoBehaviour {
 	{
 		portals[2].SetActive(true);
         ms.GetComponent<master_script>().ActivatePortal(2);
-
+        player.GetComponent<Scr_PlayerControl>().SetAbility(2);
         ms.GetComponent<master_script>().JellyAbilityCountPlus();
 	}
 

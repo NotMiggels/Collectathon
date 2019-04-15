@@ -142,7 +142,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 fling_cooldown -= Time.deltaTime;
             }
             if(!shielding && (health < max_health)){
-                Debug.Log("jelly healing: " + Time.deltaTime * 0.5f);
+//                Debug.Log("jelly healing: " + Time.deltaTime * 0.5f);
                 health += Time.deltaTime * 0.5f;
             }
             /*
@@ -548,5 +548,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     }
     public void ExitDialogue(){
         dmg_mult = 1.0f;
+    }
+    public void SetAbility(int a){
+        ability_count = a;
     }
 }

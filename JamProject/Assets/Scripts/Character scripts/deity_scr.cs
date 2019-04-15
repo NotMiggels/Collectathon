@@ -21,7 +21,7 @@ public class deity_scr : MonoBehaviour {
 		
 	}
 
-	
+	 
 
 
 	

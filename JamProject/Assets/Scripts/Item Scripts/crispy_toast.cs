@@ -62,6 +62,12 @@ public class crispy_toast : MonoBehaviour {
                 ms.AddCT();
                 collected = true;
                 GameObject.FindGameObjectWithTag("Player").SendMessage("CelebrateOnToast");
+                if(bc.tag == "VolcanoToast5")
+                {
+                    Debug.Log("HELLLOOOOOOOOOOO");
+                    IEnumerator coroutine = delayincutscene();
+		            StartCoroutine(coroutine);;
+                }
                 //this.gameObject.SetActive(false);
             }
         }
@@ -72,5 +78,17 @@ public class crispy_toast : MonoBehaviour {
     public bool Collected()
     {
         return collected;
+    }
+
+    void specialvtoast()
+    {
+        Debug.Log("HJEEEEELO 2");
+        SceneManager.LoadScene("CutScene2");
+    }
+    private IEnumerator delayincutscene()
+    {
+        yield return new WaitForSeconds(1f);
+        Debug.Log("HJEEEEELO 3");
+        specialvtoast();
     }
 }
