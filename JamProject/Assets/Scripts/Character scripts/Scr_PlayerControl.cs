@@ -96,7 +96,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         shielding = false;
         trig_l = atk_trigger_l.GetComponent<BoxCollider2D>();
         trig_r = atk_trigger_r.GetComponent<BoxCollider2D>();
-        cf.SetLayerMask(LayerMask.GetMask("Enemy"));
+        cf.SetLayerMask(LayerMask.GetMask("Enemy", "Boss"));
         attacking = false;
         selected_ability = 0;
         UI_manager = GameObject.FindGameObjectWithTag("UIManager");
@@ -167,18 +167,18 @@ public class Scr_PlayerControl : MonoBehaviour {
                 //facing left
                 if (sr.flipX)
                 {
-                    BoxCollider2D[] boxColliders = new BoxCollider2D[10];
+                    Collider2D[] boxColliders = new Collider2D[10];
                     int temp = trig_l.OverlapCollider(cf, boxColliders);
                     for (int a = 0; a < temp; a++)
                     {
-                        boxColliders[a].gameObject.SendMessage("Knocked", new Vector2(-100.0f, 100.0f));
+                            boxColliders[a].gameObject.SendMessage("Knocked", new Vector2(-100.0f, 100.0f));
                         boxColliders[a].gameObject.SendMessage("TakingDMG", 25);
                     }
                 }
                 //facing right
                 else
                 {
-                    BoxCollider2D[] boxColliders = new BoxCollider2D[10];
+                    Collider2D[] boxColliders = new Collider2D[10];
                     int temp = trig_r.OverlapCollider(cf, boxColliders);
                     for (int a = 0; a < temp; a++)
                     {

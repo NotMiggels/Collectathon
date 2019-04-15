@@ -15,6 +15,7 @@ public class boss_script : MonoBehaviour {
     public float max_health;
     public float attack_3_drop_spd;
     public float attack_3_move_spd;
+    public float attack_4_move_spd;
     public GameObject cannon_projectile;
     public GameObject lighter_projectile;
     public GameObject spatula_hitbox_L;
@@ -39,7 +40,7 @@ public class boss_script : MonoBehaviour {
     private SpriteRenderer r_sr;
     private Animator m_anim;
     private Animator r_anim;
-    private float health;
+    public float health;
     private bool attacking;
     private bool moving;
     private bool in_position;
@@ -51,6 +52,9 @@ public class boss_script : MonoBehaviour {
     private int cannon_fire_count;
     private int lighter_fire_count;
     private Vector3 spin_target;
+    //private float health;
+    //public float max_health;
+    public float health_percentage;
 
 	// Use this for initialization
     void Start () {
@@ -384,12 +388,12 @@ public class boss_script : MonoBehaviour {
             if (on_left)
             {
                 boss_flame_L.SetActive(true);
-                myRigidbody.velocity = new Vector2(attack_3_move_spd, 0.0f);
+                myRigidbody.velocity = new Vector2(attack_4_move_spd, 0.0f);
             }
             else if (on_right)
             {
                 boss_flame_R.SetActive(true);
-                myRigidbody.velocity = new Vector2(-1.0f * attack_3_move_spd, 0.0f);
+                myRigidbody.velocity = new Vector2(-1.0f * attack_4_move_spd, 0.0f);
             }
         }
     }
@@ -535,4 +539,8 @@ public class boss_script : MonoBehaviour {
     {
         return on_right;
     }
+    void TakingDMG(int dmg){
+        health -= dmg;
+    }
+    void Knocked(){}
 }
