@@ -70,8 +70,11 @@ public class Scr_PlayerControl : MonoBehaviour {
     private float dmg_mult;
     private bool celebrating;
     private bool dead;
+    public float fling_cd;
+    private float fling_cooldown;
     // Use this for initialization
     void Start () {
+        fling_cooldown = fling_cd;
         dead = false;
         block_cd = false;
         block_cooldown = -1.0f;
@@ -115,6 +118,7 @@ public class Scr_PlayerControl : MonoBehaviour {
          * A block of code that prevents Jelly
          * from taking too much damage from an attack
          */
+
         if (dmg_cooling)
         {
             dmg_cd -= Time.deltaTime;
@@ -132,6 +136,10 @@ public class Scr_PlayerControl : MonoBehaviour {
          */
         if (health > 0.0f)
         {
+            if (fling_cooldown > 0.0f)
+            {
+                fling_cooldown -= Time.deltaTime;
+            }
             if(!shielding && (health < max_health)){
                 Debug.Log("jelly healing: " + Time.deltaTime * 0.5f);
                 health += Time.deltaTime * 0.5f;
@@ -267,8 +275,9 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Jelly fling
              */
-            if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f)
+                if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f && fling_cooldown < 0.0f)
             {
+                    fling_cooldown = fling_cd;
                 JellyFling();
             }
             /*
