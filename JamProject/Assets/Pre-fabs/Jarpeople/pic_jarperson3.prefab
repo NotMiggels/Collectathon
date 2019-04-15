@@ -102,6 +102,7 @@ MonoBehaviour:
   dialogue:
     sentences: []
     names: []
+  talkedTo: 0
 --- !u!212 &212982513939572714
 SpriteRenderer:
   m_ObjectHideFlags: 1

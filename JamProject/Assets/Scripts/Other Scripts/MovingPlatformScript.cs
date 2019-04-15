@@ -36,7 +36,6 @@ public class MovingPlatformScript : MonoBehaviour {
 		body.velocity = new Vector2(0.0f,0.0f);
 		yield return new WaitForSeconds(staytime);
 		whichdirect = whichdirect *-1;
-		print(whichdirect);
 		coroutine = movingtime(whichdirect, movetime);
 		StartCoroutine(coroutine);
 		
