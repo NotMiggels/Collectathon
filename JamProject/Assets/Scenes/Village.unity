@@ -523,7 +523,7 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.data[0]
-      value: Jar Women
+      value: Jar Woman
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
@@ -533,7 +533,7 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.data[2]
-      value: Jar Women
+      value: Jar Woman
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
@@ -543,7 +543,7 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.data[4]
-      value: Jar Women
+      value: Jar Woman
       objectReference: {fileID: 0}
     - target: {fileID: 212982513939572714, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
