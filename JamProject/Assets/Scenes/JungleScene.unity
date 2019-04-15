@@ -6885,6 +6885,8 @@ MonoBehaviour:
     - Jelly
     - Squasher
     - Squasher
+  required_CT: 0
+  is_deity: 0
 --- !u!4 &608908494
 Transform:
   m_ObjectHideFlags: 0
@@ -10602,6 +10604,8 @@ MonoBehaviour:
     - Deity
     - Jelly
     - Jelly
+  required_CT: 0
+  is_deity: 0
 --- !u!4 &970516715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4565366542675542, guid: fe3eb3770ce4ed74ba4246a85115940e,
@@ -15760,6 +15764,8 @@ MonoBehaviour:
   dialogue:
     sentences: []
     names: []
+  required_CT: 0
+  is_deity: 0
 --- !u!61 &1475766054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22163,6 +22169,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: 273.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114810113237503392, guid: c91d653a1004d1147800212f3dbd806c,
+        type: 2}
+      propertyPath: sceneid
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
