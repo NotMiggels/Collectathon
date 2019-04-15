@@ -24,6 +24,14 @@ public class UI_healthbar : MonoBehaviour
     public Text Crouton_count;
     public int sceneid;
 
+    public Sprite[] abilitylist;
+    public Sprite[] abilityfilllist;
+    public GameObject ability;
+    public GameObject abilityfill;
+
+    public GameObject panel;
+
+   
     private master_script ms;
     // Use this for initialization
     void Start()
@@ -48,6 +56,11 @@ public class UI_healthbar : MonoBehaviour
         conversation_indicator.SetActive(false);
         interIndicator.color = Color.clear;
         interIndicator.text = "Press S to enter";
+
+        abilityfill.SetActive(false);
+        panel.SetActive(false);
+
+     
     }
 
     // Update is called once per frame
@@ -71,6 +84,23 @@ public class UI_healthbar : MonoBehaviour
     {
         ability_text.text = "Ability #" + num;
     }
+
+    public void SetAbilityBar(int num)
+    {
+        if(num == 0)
+        {
+            abilityfill.SetActive(false);
+        }
+        else
+        {
+            abilityfill.SetActive(true);
+        }
+        abilityfill.GetComponent<Image>().sprite = abilityfilllist[num];
+        ability.GetComponent<Image>().sprite = abilitylist[num];
+
+    }
+
+    
     public void ShowConvIndicator()
     {
         conversation_indicator.SetActive(true);
