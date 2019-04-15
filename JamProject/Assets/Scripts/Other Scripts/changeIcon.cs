@@ -16,7 +16,7 @@ public class changeIcon : MonoBehaviour {
 
 	void Start () {
 		jp1names = new string[] {"Jar Guy", "Jar Boy"};
-		jp2names = new string[] {"Jar Gal"};
+		jp2names = new string[] {"Jar Gal", "Jar Girl"};
 		jp3names = new string[] {"Jar Women", "Jar Woman"};
 	}
 
@@ -40,6 +40,9 @@ public class changeIcon : MonoBehaviour {
 		if (name == "Badnana") {
 			talkingTex = (Texture)Resources.Load("CharIcon/Badnana_icon");
 		}
+		if (name == "Deity") {
+			talkingTex = (Texture)Resources.Load("CharIcon/Deity_icon");
+		}
 		else{
 			Debug.Log(name);
 		}
@@ -50,6 +53,9 @@ public class changeIcon : MonoBehaviour {
 		int bgnum = Random.Range(1,6);
 		if(SceneManager.GetActiveScene().name == "Village"){
 			bgTex = (Texture)Resources.Load("Backgrounds/Village" + bgnum);
+		}
+		if(SceneManager.GetActiveScene().name == "Temple 1"){
+			bgTex = (Texture)Resources.Load("Backgrounds/Temple");
 		}
 		if(SceneManager.GetActiveScene().name == "JungleScene"){
 			bgTex = (Texture)Resources.Load("Backgrounds/Jungle" + bgnum);
