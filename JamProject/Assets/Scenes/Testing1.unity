@@ -1110,7 +1110,7 @@ Prefab:
       objectReference: {fileID: 496621363}
     - target: {fileID: 1029954261806314, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}
       propertyPath: m_Name
-      value: Morbid Morbier (1)
+      value: Morbid Morbier Armor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}

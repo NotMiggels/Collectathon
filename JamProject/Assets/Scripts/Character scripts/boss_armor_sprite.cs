@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class boss_armor_sprite : MonoBehaviour
 {
+    public GameObject morbid_morbier;
     public GameObject boss;
     public GameObject spatula_L;
     public GameObject spatula_R;
@@ -42,5 +43,8 @@ public class boss_armor_sprite : MonoBehaviour
         {
             spatula_L.SendMessage("InflictDamage");
         }
+    }
+    public void BossFall(){
+        morbid_morbier.SendMessage("Fall");
     }
 }

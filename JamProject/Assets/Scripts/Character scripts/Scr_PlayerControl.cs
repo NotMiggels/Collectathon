@@ -419,6 +419,7 @@ public class Scr_PlayerControl : MonoBehaviour {
         control_disabled = false;
     }
     private void JellyFling(){
+        
         if (sr.flipX == true)
         {
             Vector3 temp = new Vector3(transform.position.x - 0.35f,

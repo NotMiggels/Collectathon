@@ -55,9 +55,11 @@ public class boss_script : MonoBehaviour {
     //private float health;
     //public float max_health;
     public float health_percentage;
+    private bool dead;
 
 	// Use this for initialization
     void Start () {
+        dead = false;
         boss_flame_L.SetActive(false);
         boss_flame_R.SetActive(false);
         moving_L = false;
@@ -83,55 +85,76 @@ public class boss_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(myRigidbody.velocity.x > 1){
-            m_sr.flipX = true;
-            r_sr.flipX = true;
-        }
-        else if(myRigidbody.velocity.x < -1){
-            m_sr.flipX = false;
-            r_sr.flipX = false;
-        }
-        if(myCollider.IsTouchingLayers(LayerMask.GetMask("Player"))){
-            if (attack_choice == 1)
+        if(health > 0.0f){
+            if (myRigidbody.velocity.x > 1)
             {
-                player.SendMessage("TakeDMG", spin_dmg);
+                m_sr.flipX = true;
+                r_sr.flipX = true;
             }
-        }
-		/*
-		 * if boss is not in position, not attacking, and not moving, move to either L or R position
-		 */
-        if(!in_position && !attacking && !moving && !preparing_atk){
-            MoveToStandbyLocation();
-        }
-        /*
-         * if boss is moving, but not in position or attacking, then it's on its way to the position.
-         */ 
-        else if(moving && !in_position && !attacking && !preparing_atk){
-            //if it has reached the position, or even passing it
-            Moving();
-        }
-        /*
-         * if boss is not moving or attacking, but in position, then it's prepared to attack
-         */
-        else if(!moving && !attacking && in_position && !preparing_atk){
-            AttackPrep();
-        }
-        /*
-         * attacking
-         */ 
+            else if (myRigidbody.velocity.x < -1)
+            {
+                m_sr.flipX = false;
+                r_sr.flipX = false;
+            }
+            if (myCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+            {
+                if (attack_choice == 1)
+                {
+                    player.SendMessage("TakeDMG", spin_dmg);
+                }
+            }
+            /*
+             * if boss is not in position, not attacking, and not moving, move to either L or R position
+             */
+            if (!in_position && !attacking && !moving && !preparing_atk)
+            {
+                MoveToStandbyLocation();
+            }
+            /*
+             * if boss is moving, but not in position or attacking, then it's on its way to the position.
+             */
+            else if (moving && !in_position && !attacking && !preparing_atk)
+            {
+                //if it has reached the position, or even passing it
+                Moving();
+            }
+            /*
+             * if boss is not moving or attacking, but in position, then it's prepared to attack
+             */
+            else if (!moving && !attacking && in_position && !preparing_atk)
+            {
+                AttackPrep();
+            }
+            /*
+             * attacking
+             */
 
-        /*
-         * check if it has gone past the player (spin attack)
-         */ 
-        else if(moving && attacking && !in_position && !preparing_atk){
-            if(attack_choice == 1){
-                Debug.Log("CheckSpin()");
-                CheckSpin();
+            /*
+             * check if it has gone past the player (spin attack)
+             */
+            else if (moving && attacking && !in_position && !preparing_atk)
+            {
+                if (attack_choice == 1)
+                {
+                    Debug.Log("CheckSpin()");
+                    CheckSpin();
+                }
+                else if (attack_choice == 3 || attack_choice == 4)
+                {
+                    Debug.Log("CheckSpatula()");
+                    CheckSpatula();
+                }
             }
-            else if(attack_choice == 3 || attack_choice == 4){
-                Debug.Log("CheckSpatula()");
-                CheckSpatula();
-            }
+        }
+        else if(!dead){
+            dead = true;
+            r_anim.Play("Armor Break");
+            //myRigidbody.gravityScale = 1.0f;
+            myRigidbody.velocity = Vector2.zero;
+            myRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            myCollider.isTrigger = true;
+            boss_flame_L.SetActive(false);
+            boss_flame_R.SetActive(false);
         }
 	}
     private void CheckSpatula(){

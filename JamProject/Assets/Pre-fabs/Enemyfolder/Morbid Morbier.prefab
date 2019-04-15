@@ -121,6 +121,9 @@ GameObject:
   - component: {fileID: 4072082905600670}
   - component: {fileID: 212495769645131168}
   - component: {fileID: 95409684000210570}
+  - component: {fileID: 50644754292084912}
+  - component: {fileID: 61809895194112724}
+  - component: {fileID: 114123412148300280}
   m_Layer: 0
   m_Name: Morbier sprite
   m_TagString: Untagged
@@ -409,6 +412,26 @@ Transform:
   m_Father: {fileID: 4021331535673294}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50644754292084912
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640866671025216}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!50 &50698841173758748
 Rigidbody2D:
   serializedVersion: 4
@@ -594,6 +617,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3410473, y: 1.0496402}
   m_EdgeRadius: 0
+--- !u!61 &61809895194112724
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640866671025216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.490476, y: 0.9135188}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 17.5, y: 17.5}
+    newSize: {x: 17.5, y: 17.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1800044, y: 3.29189}
+  m_EdgeRadius: 0
 --- !u!95 &95409684000210570
 Animator:
   serializedVersion: 3
@@ -630,6 +678,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114123412148300280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640866671025216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2894bf8d61354c1c939144ed73f5923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114180667493699408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,7 +722,7 @@ MonoBehaviour:
   floor_detection_lighter: {fileID: 1097500390787474}
   spatula_l: {fileID: 0}
   spatula_r: {fileID: 0}
-  max_health: 800
+  max_health: 1
   attack_3_drop_spd: 1.3
   attack_3_move_spd: 1.3
   attack_4_move_spd: 1
@@ -755,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2849dcafe264f5d9e536e8786fdb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  morbid_morbier: {fileID: 1640866671025216}
   boss: {fileID: 1029954261806314}
   spatula_L: {fileID: 1844988848010080}
   spatula_R: {fileID: 1509229573802824}
