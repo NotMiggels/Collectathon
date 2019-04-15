@@ -9,46 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1857252897742078}
+  m_RootGameObject: {fileID: 1606541953925554}
   m_IsPrefabAsset: 1
---- !u!1 &1857252897742078
+--- !u!1 &1606541953925554
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4233874338332372}
-  - component: {fileID: 212782833858257976}
-  - component: {fileID: 58743792677548238}
-  - component: {fileID: 114700039472855924}
-  - component: {fileID: 114423370548524200}
+  - component: {fileID: 4875872433200850}
+  - component: {fileID: 212982513939572714}
+  - component: {fileID: 58018762597143308}
+  - component: {fileID: 114909583888212430}
+  - component: {fileID: 114288288478532478}
+  - component: {fileID: 95973840376872470}
   m_Layer: 0
-  m_Name: pic_jarperson1
-  m_TagString: interObject
+  m_Name: pic_jarperson3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4233874338332372
+--- !u!4 &4875872433200850
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1857252897742078}
+  m_GameObject: {fileID: 1606541953925554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.156, y: 0.385, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalPosition: {x: -11.458, y: 13.667, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15596}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58743792677548238
+--- !u!58 &58018762597143308
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1857252897742078}
+  m_GameObject: {fileID: 1606541953925554}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,40 +58,57 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
---- !u!114 &114423370548524200
+  m_Radius: 1.4999999
+--- !u!95 &95973840376872470
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606541953925554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114288288478532478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1857252897742078}
+  m_GameObject: {fileID: 1606541953925554}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00e13e7a320aa0f4ba731b1852fbd83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114700039472855924
+--- !u!114 &114909583888212430
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1857252897742078}
+  m_GameObject: {fileID: 1606541953925554}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4949d11f2dd7cc42b81d6e1475159a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - 
-    names:
-    - Jar Guy
---- !u!212 &212782833858257976
+    sentences: []
+    names: []
+  talkedTo: 0
+--- !u!212 &212982513939572714
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1857252897742078}
+  m_GameObject: {fileID: 1606541953925554}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -120,7 +138,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b1692b94841f0ef46a81c10c5febea67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f18cc64be8467644fa65727454bb5d5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
