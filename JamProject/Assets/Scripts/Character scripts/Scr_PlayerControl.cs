@@ -543,4 +543,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         myRigidbody.constraints = RigidbodyConstraints2D.None;
         myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
+    public void InDialogue(){
+        dmg_mult = 0.0f;
+    }
+    public void ExitDialogue(){
+        dmg_mult = 1.0f;
+    }
 }

@@ -45,6 +45,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue, GameObject da_npc)
     {
+        player.SendMessage("InDialogue");
         dialogue_indicator.SetActive(false);
         npc = da_npc;
         talking.GetComponent<changeIcon>().changeBackground();
@@ -143,6 +144,7 @@ public class DialogueManager : MonoBehaviour {
             }
         }
         npc = null;
+        player.SendMessage("ExitDialogue");
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);
     }
