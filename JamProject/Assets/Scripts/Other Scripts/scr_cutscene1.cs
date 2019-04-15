@@ -25,9 +25,13 @@ public class scr_cutscene1 : MonoBehaviour {
 			index +=1;
 			if(index == comic.Length)
 			{
-				 SceneManager.LoadScene(scenetransition);
+				SceneManager.LoadScene(scenetransition);
 			}
-			comic[index].SetActive(true);
+			else
+			{
+				comic[index].SetActive(true);
+			}
+			
 		}
 	}
 }
