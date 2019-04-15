@@ -24,10 +24,15 @@ public class enemyportal_scr : MonoBehaviour {
 		yield return new WaitForSeconds(delay);
 		if(enemylist.Count < spawnsize)
 		{
+			stateofportal[0].SetActive(false);
+			stateofportal[1].SetActive(true);
 			int enemyrng =  (int)Random.Range(0, 3);
 			GameObject enemy;
 			enemy = Instantiate(enemyid[enemyrng], gameObject.transform.position, transform.rotation);
 			enemylist.Add(enemy);
+			yield return new WaitForSeconds(2.0f);
+			stateofportal[0].SetActive(true);
+			stateofportal[1].SetActive(false);
 		}
 		coroutine = spawnenemy(delay);
 		StartCoroutine(coroutine);
