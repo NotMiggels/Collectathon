@@ -18,10 +18,16 @@ public class DialogueManager : MonoBehaviour {
     private GameObject player;
     private bool skippable;
     private GameObject[] UIElement;
+
+    private bool skippy;
+    private float time1;
+    private float time2;
+    private bool doubletap = false;
    //public Animator animator;
 
 
 	void Start () {
+        skippy = false;
         sentences = new Queue<string>();
         names = new Queue<string>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -38,6 +44,33 @@ public class DialogueManager : MonoBehaviour {
                 {
                     EndDialogue();
                 }
+            }
+        }
+        if(Input.GetKeyUp(KeyCode.S))
+        {
+            if(skippy == true)
+            {
+                time1 = Time.time;
+                skippy = false;
+
+                if(time1 - time2 < 0.4f)
+                {
+                    doubletap = true;
+                    Debug.Log("double TAP");
+                    time1 = 0;
+                    time2 = 0;
+                }
+                else
+                {
+                    doubletap = false;
+                }
+            }
+        }
+        else{
+            if(skippy == false)
+            {
+                time2 = Time.time;
+                skippy = true;
             }
         }
     }
@@ -91,6 +124,7 @@ public class DialogueManager : MonoBehaviour {
         string sentence = sentences.Dequeue();
         string name = names.Dequeue();
         StopAllCoroutines();
+        doubletap = false;
         StartCoroutine(TypeSentence(sentence, name));
     }
 
@@ -104,7 +138,7 @@ public class DialogueManager : MonoBehaviour {
         {
           //Debug.Log(delay);
           dialogueText.text += letter;
-          if (Input.GetKey(KeyCode.Space)) {
+          if (doubletap) {
             continue;
           }
           else{
