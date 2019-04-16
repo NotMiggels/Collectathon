@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/Scr_PlayerControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/toast_spawn.cs">
     <Files>
       <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="91" Column="25" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="432" Column="10" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="211" Column="90" />
       <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
       <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="48" Column="41" />
       <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="47" Column="1" />
@@ -15,10 +15,10 @@
       <File FileName="Assets/Scripts/Character scripts/banana_sprite_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Item Scripts/jello_script.cs" Line="23" Column="28" />
       <File FileName="Assets/Scripts/Item Scripts/jello2_script2.cs" Line="38" Column="73" />
-      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/crispy_toast.cs" Line="15" Column="7" />
       <File FileName="Assets/Scripts/Item Scripts/cannonball_script.cs" Line="28" Column="92" />
-      <File FileName="Assets/Scripts/Scene Scripts/JungleScript.cs" Line="118" Column="11" />
-      <File FileName="Assets/Scripts/Scene Scripts/Vol_pt1_script.cs" Line="107" Column="10" />
+      <File FileName="Assets/Scripts/Scene Scripts/JungleScript.cs" Line="82" Column="27" />
+      <File FileName="Assets/Scripts/Scene Scripts/Vol_pt1_script.cs" Line="56" Column="14" />
       <File FileName="Assets/Scripts/Other Scripts/pepper_flame_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/MovingPlatformScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/door.cs" Line="1" Column="1" />
@@ -37,7 +37,7 @@
       <File FileName="Assets/Scripts/Item Scripts/crouton_scr.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/tomato_sprite_script.cs" Line="1" Column="1" />
       <File FileName="Assets/spatula_hitbox.cs" Line="1" Column="1" />
-      <File FileName="Assets/jelly_sprite_script.cs" Line="17" Column="42" />
+      <File FileName="Assets/jelly_sprite_script.cs" Line="14" Column="3" />
       <File FileName="Assets/Scripts/Other Scripts/health_bar_script.cs" Line="140" Column="14" />
       <File FileName="Assets/boss_fight_area_script.cs" Line="12" Column="68" />
       <File FileName="Assets/morbier_script.cs" Line="23" Column="36" />
@@ -47,7 +47,15 @@
       <File FileName="Assets/Scripts/Other Scripts/ability_gauge_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/cam_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/trigger_script.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Scene Scripts/scr_levelselection.cs" Line="64" Column="52" />
+      <File FileName="Assets/Scripts/Scene Scripts/scr_levelselection.cs" Line="32" Column="27" />
+      <File FileName="Assets/Scripts/Scene Scripts/Vol_pt2_script.cs" Line="87" Column="18" />
+      <File FileName="Assets/Scripts/Scene Scripts/final_level_script.cs" Line="86" Column="44" />
+      <File FileName="Assets/Scripts/Scene Scripts/scr_checkpoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Scene Scripts/main_menu_script.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/enemyportal_scr.cs" Line="32" Column="35" />
+      <File FileName="Assets/Scripts/Item Scripts/slowdown_jello2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item Scripts/jampack_scr.cs" Line="1" Column="1" />
+      <File FileName="Assets/toast_spawn.cs" Line="6" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

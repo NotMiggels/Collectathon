@@ -50,7 +50,10 @@ public class Vol_pt2_script : MonoBehaviour
         Debug.Log(ct_Scripts.Length);
         foreach (crispy_toast ct in ct_Scripts)
         {
-            ct.gameObject.SetActive(true);
+            if (!ct.show_on_defeating_enemy)
+            {
+                ct.gameObject.SetActive(true);
+            }
         }
         if (portal != null)
         {
@@ -78,7 +81,10 @@ public class Vol_pt2_script : MonoBehaviour
             Debug.Log(ct_Scripts.Length);
             foreach (crispy_toast ct in ct_Scripts)
             {
-                ct.gameObject.SetActive(true);
+                if (!ct.show_on_defeating_enemy)
+                {
+                    ct.gameObject.SetActive(true);
+                }
             }
             scene_confirmed = true;
         }

@@ -47,10 +47,15 @@ public class JungleScript : MonoBehaviour {
         primaryCTsCollected = true;
         ct_Scripts = crispys.GetComponentsInChildren<crispy_toast>();
         Debug.Log(ct_Scripts.Length);
+        int count = 0;
         foreach (crispy_toast ct in ct_Scripts)
         {
-            ct.gameObject.SetActive(true);
+            if(!ct.show_on_defeating_enemy){
+                count += 1;
+                ct.gameObject.SetActive(true);
+            }
         }
+        Debug.Log("pre-activate CTs: " + count);
         if (portal != null)
         {
             portal_activate = false;
@@ -74,10 +79,16 @@ public class JungleScript : MonoBehaviour {
         if (!scene_confirmed && SceneManager.GetActiveScene().name == own_scene)
         {
             Debug.Log(ct_Scripts.Length);
+            int count = 0;
             foreach (crispy_toast ct in ct_Scripts)
             {
-                ct.gameObject.SetActive(true);
+                if (!ct.show_on_defeating_enemy)
+                {
+                    count += 1;
+                    ct.gameObject.SetActive(true);
+                }
             }
+            Debug.Log("pre-activate CTs: " + count);
             scene_confirmed = true;
         }
         //primaryCTsCollected = true;

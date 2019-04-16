@@ -786,6 +786,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 53414979}
+--- !u!1 &53414981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 53414979}
 --- !u!1 &53616302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1591077065774056, guid: 2007f47a44e1f4a369e70681d9831ec3,
@@ -1712,6 +1717,11 @@ Prefab:
 --- !u!4 &151335283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 151335282}
+--- !u!1 &151335284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 151335282}
 --- !u!1001 &157578621
@@ -6043,6 +6053,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 548994913}
+--- !u!1 &548994915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 548994913}
 --- !u!4 &551835376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105952574920906, guid: 7685e33d9f5dd9a4685478f0707193ca,
@@ -6552,6 +6567,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1285726296}
     m_Modifications:
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 34.80691
@@ -6596,12 +6616,72 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.06426479
       objectReference: {fileID: 0}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: show_on_defeating_enemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 53414981}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 1851565755}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 548994915}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 151335284}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 2060646794}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: 1460877114}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[6]
+      value: 
+      objectReference: {fileID: 1900743674}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[7]
+      value: 
+      objectReference: {fileID: 881027947}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[8]
+      value: 
+      objectReference: {fileID: 1129592886}
+    - target: {fileID: 114375241611339464, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+        type: 2}
+      propertyPath: enemies.Array.data[9]
+      value: 
+      objectReference: {fileID: 1869244896}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5b1c8c47aa6ef94e94d1be7100d625b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &587277302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4175602108517628, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
+    type: 2}
+  m_PrefabInternal: {fileID: 587277301}
+--- !u!1 &587277303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1114343327429016, guid: a5b1c8c47aa6ef94e94d1be7100d625b,
     type: 2}
   m_PrefabInternal: {fileID: 587277301}
 --- !u!1001 &590337898
@@ -7541,6 +7621,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4424421730764274, guid: 16af1f825116f2e4d959f4fd537f3b6f,
     type: 2}
   m_PrefabInternal: {fileID: 689085152}
+--- !u!1 &695749772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695749774}
+  - component: {fileID: 695749773}
+  m_Layer: 0
+  m_Name: ToastController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &695749773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695749772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6827adde9a42848a88212e39702bcc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 1900743674}
+  - {fileID: 1460877114}
+  - {fileID: 2060646794}
+  - {fileID: 151335284}
+  - {fileID: 548994915}
+  - {fileID: 1851565755}
+  - {fileID: 53414981}
+  - {fileID: 1869244896}
+  - {fileID: 1129592886}
+  - {fileID: 881027947}
+  toast: {fileID: 587277303}
+--- !u!4 &695749774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695749772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56.988773, y: 8.339656, z: 3.6373703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 62
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &704333604
 Prefab:
   m_ObjectHideFlags: 0
@@ -9516,6 +9648,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c8e0973b0f14844a06edc93452e1ed, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &881027947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882994887445588, guid: 23c8e0973b0f14844a06edc93452e1ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 881027946}
 --- !u!4 &882027295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4438515807632268, guid: be81528025c28b64db0b1707881d1f13,
@@ -12521,6 +12658,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c8e0973b0f14844a06edc93452e1ed, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1129592886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882994887445588, guid: 23c8e0973b0f14844a06edc93452e1ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1129592885}
 --- !u!1001 &1135800931
 Prefab:
   m_ObjectHideFlags: 0
@@ -15627,6 +15769,11 @@ Prefab:
 --- !u!4 &1460877113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 1460877112}
+--- !u!1 &1460877114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 1460877112}
 --- !u!1001 &1463680605
@@ -18998,6 +19145,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 1851565753}
+--- !u!1 &1851565755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 1851565753}
 --- !u!1001 &1864396223
 Prefab:
   m_ObjectHideFlags: 0
@@ -19235,6 +19387,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c8e0973b0f14844a06edc93452e1ed, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1869244896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1882994887445588, guid: 23c8e0973b0f14844a06edc93452e1ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1869244895}
 --- !u!4 &1869758976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4592319480553916, guid: 371f698d3f3fa5f43b5964365bee238a,
@@ -19745,12 +19902,21 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: -0.27423748
       objectReference: {fileID: 0}
+    - target: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738, type: 2}
+      propertyPath: m_Name
+      value: Squash Prefab in ruin
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bee7008ac38fa4d229aa14c17a5ae738, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1900743673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 1900743672}
+--- !u!1 &1900743674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 1900743672}
 --- !u!1001 &1918203815
@@ -21402,6 +21568,11 @@ Prefab:
 --- !u!4 &2060646793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4488733963844238, guid: bee7008ac38fa4d229aa14c17a5ae738,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060646792}
+--- !u!1 &2060646794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828732482691842, guid: bee7008ac38fa4d229aa14c17a5ae738,
     type: 2}
   m_PrefabInternal: {fileID: 2060646792}
 --- !u!1001 &2065710284
