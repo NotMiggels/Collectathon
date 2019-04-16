@@ -131,9 +131,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 dmg_cooling = false;
             }
         }
-            if(dmg_mult < 0.1f){
-                myRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            }
+           
         if(block_cd){
             block_cooldown -= Time.deltaTime;
         }
@@ -429,7 +427,9 @@ public class Scr_PlayerControl : MonoBehaviour {
     }
     public void DisableControl()
     {
-        //anim.Play("Jelly idle");
+        if(!celebrating){
+            anim.Play("Jelly idle");
+        }
         control_disabled = true;
     }
     public void EnableControl()
