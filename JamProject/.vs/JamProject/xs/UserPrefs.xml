@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{ED102287-D15F-A923-CD20-85F495894E98}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Other Scripts/changeIcon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character scripts/Scr_PlayerControl.cs">
     <Files>
       <File FileName="Assets/Scripts/Other Scripts/UI_healthbar.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Character scripts/boss_script.cs" Line="91" Column="25" />
-      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character scripts/Scr_PlayerControl.cs" Line="432" Column="10" />
       <File FileName="Assets/Scripts/Item Scripts/portal_script.cs" Line="28" Column="61" />
       <File FileName="Assets/Scripts/Character scripts/boss_armor_sprite.cs" Line="48" Column="41" />
-      <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="32" Column="44" />
+      <File FileName="Assets/Scripts/Other Scripts/auto_dialogue_trigger.cs" Line="47" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/DialogueManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/Dialogue.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/DialogueTrigger.cs" Line="1" Column="1" />
@@ -43,7 +43,7 @@
       <File FileName="Assets/morbier_script.cs" Line="23" Column="36" />
       <File FileName="Assets/Scripts/Scene Scripts/master_script.cs" Line="267" Column="34" />
       <File FileName="Assets/Scripts/Scene Scripts/triggereventlist.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Other Scripts/changeIcon.cs" Line="47" Column="1" />
+      <File FileName="Assets/Scripts/Other Scripts/changeIcon.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/ability_gauge_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/cam_script.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Other Scripts/trigger_script.cs" Line="1" Column="1" />
