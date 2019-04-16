@@ -216,8 +216,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Block of code that checks if Jelly is in mid air
              */
-            in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles")) ||
-                myCollider.IsTouchingLayers(LayerMask.GetMask("Platform")));
+            in_air = !(myCollider.IsTouchingLayers(LayerMask.GetMask("Obstacles", "Platform", "Enemy", "Boss")));
             //Jelly would be able to keep jumping in swamp
             if (myCollider.IsTouchingLayers(LayerMask.GetMask("Swamp")))
             {

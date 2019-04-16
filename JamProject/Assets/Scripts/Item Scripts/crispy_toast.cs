@@ -10,6 +10,9 @@ public class crispy_toast : MonoBehaviour {
     private bool collected;
     private int self_count;
     private string own_scene;
+    public bool ready;
+    public bool show_on_defeating_enemy;
+    //public GameObject[] enemies;
     //private GameObject ct;
     void Awake()
     {
@@ -31,6 +34,8 @@ public class crispy_toast : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
+        Debug.Log("show on defeat: " + show_on_defeating_enemy);
+        ready = false;
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         DontDestroyOnLoad(this.gameObject);
         bc = GetComponent<BoxCollider2D>();
@@ -39,7 +44,6 @@ public class crispy_toast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         if (collected)
         {
             this.gameObject.SetActive(false);
@@ -50,9 +54,21 @@ public class crispy_toast : MonoBehaviour {
             {
                 this.gameObject.SetActive(false);
             }
+            else if(show_on_defeating_enemy && !ready){
+                this.gameObject.SetActive(false);
+            }
             else
             {
-                this.gameObject.SetActive(true);
+                if(show_on_defeating_enemy){
+                    Debug.Log("CT ready: " + ready);
+                    if(ready){
+                        Debug.Log("ruin CT activaed");
+                        this.gameObject.SetActive(true);
+                    }
+                }
+                else{
+                    this.gameObject.SetActive(true);
+                }
             }
             /*
              * if player touches it
@@ -79,7 +95,7 @@ public class crispy_toast : MonoBehaviour {
     {
         return collected;
     }
-
+    //public bool 
     void specialvtoast()
     {
         Debug.Log("HJEEEEELO 2");
