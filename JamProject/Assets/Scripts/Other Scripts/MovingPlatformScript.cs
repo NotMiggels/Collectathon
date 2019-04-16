@@ -41,7 +41,7 @@ public class MovingPlatformScript : MonoBehaviour {
 		
 	}
 
-	private IEnumerator movingtime(int cond, float movetime)
+	public IEnumerator movingtime(int cond, float movetime)
 	{
 		if(cond == -1)
 		{
