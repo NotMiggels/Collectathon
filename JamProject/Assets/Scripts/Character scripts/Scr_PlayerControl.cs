@@ -394,6 +394,11 @@ public class Scr_PlayerControl : MonoBehaviour {
             audio.Play();
         }
     }
+
+    public void healup()
+    {
+        health = 100.0f;
+    }
     private IEnumerator EndGame(){
         yield return new WaitForSeconds(2);
         GameObject.FindGameObjectWithTag("MainCamera").SendMessage("EndGame");

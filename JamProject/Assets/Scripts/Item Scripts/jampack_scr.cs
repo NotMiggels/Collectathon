@@ -18,7 +18,8 @@ public class jampack_scr : MonoBehaviour {
 	{
 		if(collision.gameObject.tag == "Player")
 		{
-		
+			player.SendMessage("healup");
+
 			Destroy(gameObject);
 		}
 	}
