@@ -289,18 +289,18 @@ Prefab:
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: If those villains tap into the power of the Crispy Toast, there's no
-        telling what they'll be able to do.
+      value: If those villains tap into the power of the Crispy Toast, there's be
+        no telling what they'll be able to do.
       objectReference: {fileID: 0}
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: There won't?
+      value: You mean we don't even know what they could do with the Crispy Toast?
       objectReference: {fileID: 0}
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Afraid not, my boy. Nobody knows the full potential of the Crispy Toast.
+      value: Afraid not, my boy. Nobody knows the full potential of those things.
         Not even I do.
       objectReference: {fileID: 0}
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
