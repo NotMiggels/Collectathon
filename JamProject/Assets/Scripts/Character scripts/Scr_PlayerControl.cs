@@ -73,8 +73,11 @@ public class Scr_PlayerControl : MonoBehaviour {
     public float fling_cd;
     private float fling_cooldown;
     private bool talking;
+
+    private bool pause;
     // Use this for initialization
     void Start () {
+        pause = false;
         talking = false;
         fling_cooldown = fling_cd;
         dead = false;
@@ -233,6 +236,19 @@ public class Scr_PlayerControl : MonoBehaviour {
               /*
               * Jump
               */
+              if(Input.GetKey(KeyCode.P) && !in_air)
+              { 
+                pause =!pause; 
+                
+                if(pause)
+                { 
+                    Time.timeScale=0; 
+                } 
+                if(!pause)
+                { 
+                    Time.timeScale=1; 
+                }
+              }
               if (Input.GetKey(KeyCode.Space) && !in_air && !W_pressed && !shielding)
               {
                   W_pressed = true;
