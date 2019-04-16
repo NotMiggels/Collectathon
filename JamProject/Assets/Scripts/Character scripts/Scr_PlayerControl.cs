@@ -131,6 +131,9 @@ public class Scr_PlayerControl : MonoBehaviour {
                 dmg_cooling = false;
             }
         }
+            if(dmg_mult < 0.1f){
+                myRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
         if(block_cd){
             block_cooldown -= Time.deltaTime;
         }
@@ -275,7 +278,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Jelly fling
              */
-                if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f && fling_cooldown < 0.0f)
+                    if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f && fling_cooldown < 0.0f && !celebrating)
             {
                     fling_cooldown = fling_cd;
                 JellyFling();
@@ -338,7 +341,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 //moving_anim_playing = false;
                 anim.Play("Jelly idle");
             }
-            if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing && !shielding)
+            if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing && !shielding && !celebrating)
             {
                 attacking = false;
                 if (shielding)
@@ -426,7 +429,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     }
     public void DisableControl()
     {
-        anim.Play("Jelly idle");
+        //anim.Play("Jelly idle");
         control_disabled = true;
     }
     public void EnableControl()
@@ -549,6 +552,8 @@ public class Scr_PlayerControl : MonoBehaviour {
     }
     public void ExitDialogue(){
         dmg_mult = 1.0f;
+        myRigidbody.constraints = RigidbodyConstraints2D.None;
+        myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     public void SetAbility(int a){
         ability_count = a;
