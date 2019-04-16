@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 980f8ee6311324578aac124c61c48410
+guid: dc766d117366c47e6add8cecb6852ecd
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Hand Boys
+  fontName: sage sans
   fontNames:
-  - Hand Boys
+  - sage sans
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
