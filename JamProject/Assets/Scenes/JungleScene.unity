@@ -2489,12 +2489,12 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.names.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.sentences.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4875872433200850, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2563,6 +2563,27 @@ Prefab:
         type: 2}
       propertyPath: m_Offset.x
       value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[3]
+      value: Jar Woman
+      objectReference: {fileID: 0}
+    - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
+        type: 2}
+      propertyPath: dialogue.names.Array.data[4]
+      value: Jar Woman
+      objectReference: {fileID: 0}
+    - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: And when you see one, make sure you pick up a purple Jampack.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: They're jam-packed with revitalizing food that's sure to help you when
+        your battle wounds are getting to you.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9, type: 2}
@@ -7039,7 +7060,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &608908495
 BoxCollider2D:
@@ -7722,7 +7743,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &704333604
 Prefab:
