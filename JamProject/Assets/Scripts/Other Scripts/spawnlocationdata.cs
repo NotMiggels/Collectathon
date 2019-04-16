@@ -42,7 +42,7 @@ public class spawnlocationdata : MonoBehaviour {
 		locdata[3][0] = new Vector2(-0.32f,0.295f);
 		locdata[3][1] = new Vector2(-2.044f, 8.473f);
 		locdata[3][2] = new Vector2(-2.054245f,13.684f);
-		locdata[3][2] = new Vector2(12.109f, 38.518f);
+		locdata[3][3] = new Vector2(12.109f, 38.518f);
 
 	}
 
