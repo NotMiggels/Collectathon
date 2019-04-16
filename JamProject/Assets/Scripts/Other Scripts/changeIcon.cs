@@ -63,6 +63,9 @@ public class changeIcon : MonoBehaviour {
 		if(SceneManager.GetActiveScene().name == "VolcanoScene"){
 			bgTex = (Texture)Resources.Load("Backgrounds/Volcano" + bgnum);
 		}
+		if(SceneManager.GetActiveScene().name == "InsideVolcanoScene"){
+			bgTex = (Texture)Resources.Load("Backgrounds/VolcIn" + bgnum);
+		}
 		background.GetComponent<RawImage>().texture = bgTex;
 	}
 }
