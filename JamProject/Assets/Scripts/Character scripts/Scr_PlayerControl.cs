@@ -72,8 +72,10 @@ public class Scr_PlayerControl : MonoBehaviour {
     private bool dead;
     public float fling_cd;
     private float fling_cooldown;
+    private bool talking;
     // Use this for initialization
     void Start () {
+        talking = false;
         fling_cooldown = fling_cd;
         dead = false;
         block_cd = false;
@@ -276,7 +278,7 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Jelly fling
              */
-                    if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f && fling_cooldown < 0.0f && !celebrating)
+                    if (Input.GetKeyDown(KeyCode.J) && !shielding && health > 99.0f && fling_cooldown < 0.0f && !celebrating && !talking)
             {
                     fling_cooldown = fling_cd;
                 JellyFling();
@@ -339,7 +341,7 @@ public class Scr_PlayerControl : MonoBehaviour {
                 //moving_anim_playing = false;
                 anim.Play("Jelly idle");
             }
-            if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing && !shielding && !celebrating)
+            if (Input.GetKeyDown(KeyCode.J) && !attack_anim_playing && !shielding && !celebrating && !talking)
             {
                 attacking = false;
                 if (shielding)
@@ -548,9 +550,11 @@ public class Scr_PlayerControl : MonoBehaviour {
         myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     public void InDialogue(){
+        talking = true;
         dmg_mult = 0.0f;
     }
     public void ExitDialogue(){
+        talking = false;
         dmg_mult = 1.0f;
         myRigidbody.constraints = RigidbodyConstraints2D.None;
         myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
