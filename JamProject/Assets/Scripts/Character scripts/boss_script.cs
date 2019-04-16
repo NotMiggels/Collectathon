@@ -147,7 +147,14 @@ public class boss_script : MonoBehaviour {
             }
         }
         else if(!dead){
+            //StopCoroutine(FireCannon());
+            //StopCoroutine(FireCannon());
+            //StopCoroutine(FireCannon());
+            //StopCoroutine(FireCannon());
+            //StopCoroutine(FireCannon());
+            //StopCoroutine(FireCannon());
             dead = true;
+            StopAllCoroutines();
             r_anim.Play("Armor Break");
             //myRigidbody.gravityScale = 1.0f;
             myRigidbody.velocity = Vector2.zero;
@@ -492,7 +499,10 @@ public class boss_script : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
         if(cannon_fire_count > 0){
             cannon_fire_count -= 1;
-            StartCoroutine(FireCannon());
+            if(!dead){
+                cannon_fire_count = 0;
+                StartCoroutine(FireCannon());
+            }
         }
         else{
             r_anim.Play("Post-Attack2");

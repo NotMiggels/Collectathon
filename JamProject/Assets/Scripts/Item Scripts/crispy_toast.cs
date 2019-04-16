@@ -81,8 +81,9 @@ public class crispy_toast : MonoBehaviour {
                 if(bc.tag == "VolcanoToast5")
                 {
                     Debug.Log("HELLLOOOOOOOOOOO");
-                    IEnumerator coroutine = delayincutscene();
-		            StartCoroutine(coroutine);;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Scr_PlayerControl>().CS2();
+                    //IEnumerator coroutine = delayincutscene();
+		            //StartCoroutine(coroutine);;
                 }
                 //this.gameObject.SetActive(false);
             }

@@ -375,7 +375,7 @@ MonoBehaviour:
   - {fileID: 2031416623}
   - {fileID: 637198624}
   - {fileID: 2046763383}
-  scenetransition: insideVolcanoScene
+  scenetransition: Credits
 --- !u!4 &794051255
 Transform:
   m_ObjectHideFlags: 0

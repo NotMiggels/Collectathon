@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scr_PlayerControl : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     private GameObject UI_manager;
     public float gauge_time; //how long would the gauge last
                              //from a full charge (w/o) using active ability
+
     public float dmg_cd;
     public float health;
     public float health_percentage;
@@ -74,9 +76,13 @@ public class Scr_PlayerControl : MonoBehaviour {
     private float fling_cooldown;
     private bool talking;
 
+    private bool going_to_cutscene_2;
+
+
     private bool pause;
     // Use this for initialization
     void Start () {
+        going_to_cutscene_2 = false;
         pause = false;
         talking = false;
         fling_cooldown = fling_cd;
@@ -106,8 +112,12 @@ public class Scr_PlayerControl : MonoBehaviour {
         trig_r = atk_trigger_r.GetComponent<BoxCollider2D>();
         cf.SetLayerMask(LayerMask.GetMask("Enemy", "Boss"));
         attacking = false;
-        selected_ability = 0;
         ability_count = ms.GetAbilityCount();
+
+        if(ability_count > 0){
+            selected_ability = 1;
+        }
+        selected_ability = 0;
         UI_manager = GameObject.FindGameObjectWithTag("UIManager");
         dmg_mult = 1.0f;
         if (ms.get_definedSpawn())
@@ -120,6 +130,10 @@ public class Scr_PlayerControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        if(ability_count > 0 && selected_ability == 0){
+            selected_ability = 1;
+            UI_manager.SendMessage("SetAbilityBar", selected_ability);
+        }
     if(pause)
     { 
         Time.timeScale=0; 
@@ -311,24 +325,24 @@ public class Scr_PlayerControl : MonoBehaviour {
             {
                 AbilitySelectR();
             }
-            if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && !ability_active)
+                    if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && !ability_active && ability_gauge >= 0.99f)
             {
                 Debug.Log("ability active");
                 ability_active = true;
             }
             //restore passive effectors
-            else if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && ability_active)
-            {
-                Debug.Log("ability inactive");
-                RestorePassive();
-            }
+            //else if (Input.GetKeyDown(KeyCode.U) && selected_ability != 0 && ability_active)
+            //{
+             //   Debug.Log("ability inactive");
+              //  RestorePassive();
+            //}
             //passive abilities
             if (ability_active)
             {
                 ActivatePassive();
             }
             //gauge refilling by time
-            else if (ability_gauge < 1.0f)
+            else if (ability_gauge <= 1.0f)
             {
                 ability_gauge += Time.deltaTime * (1.0f / gauge_recover_time);
             }
@@ -489,6 +503,9 @@ public class Scr_PlayerControl : MonoBehaviour {
         {
             selected_ability = ability_count;
         }
+        if(ability_count > 0 && selected_ability == 0){
+            selected_ability = ability_count;
+        }
         UI_manager.SendMessage("SetAbilityText", selected_ability);
         UI_manager.SendMessage("SetAbilityBar", selected_ability);
 
@@ -499,6 +516,10 @@ public class Scr_PlayerControl : MonoBehaviour {
         if (selected_ability > ability_count)
         {
             selected_ability = 0;
+        }
+        if (ability_count > 0 && selected_ability == 0)
+        {
+            selected_ability = 1;
         }
         UI_manager.SendMessage("SetAbilityText", selected_ability);
         UI_manager.SendMessage("SetAbilityBar", selected_ability);
@@ -570,6 +591,9 @@ public class Scr_PlayerControl : MonoBehaviour {
         control_disabled = false;
         myRigidbody.constraints = RigidbodyConstraints2D.None;
         myRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        if(going_to_cutscene_2){
+            SceneManager.LoadScene("CutScene2");
+        }
     }
     public void InDialogue(){
         talking = true;
@@ -583,5 +607,9 @@ public class Scr_PlayerControl : MonoBehaviour {
     }
     public void SetAbility(int a){
         ability_count = a;
+    }
+    public void CS2()
+    {
+        going_to_cutscene_2 = true;
     }
 }
