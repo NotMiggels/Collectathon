@@ -203,6 +203,7 @@ public class pepper_script : MonoBehaviour {
     public void EndAttack(){
         attacking = false;
 
+        Debug.Log("pepper lel");
         anim.Play("Pepper_post_attack");
     }
 }

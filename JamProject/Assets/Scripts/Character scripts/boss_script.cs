@@ -57,9 +57,10 @@ public class boss_script : MonoBehaviour {
     //public float max_health;
     public float health_percentage;
     private bool dead;
-
+    private bool done_talking;
 	// Use this for initialization
     void Start () {
+        done_talking = false;
         dead = false;
         boss_flame_L.SetActive(false);
         boss_flame_R.SetActive(false);
@@ -109,7 +110,10 @@ public class boss_script : MonoBehaviour {
              */
             if (!in_position && !attacking && !moving && !preparing_atk)
             {
-                MoveToStandbyLocation();
+                Debug.Log("boss luuuuul");
+                if(done_talking){
+                    MoveToStandbyLocation();
+                }
             }
             /*
              * if boss is moving, but not in position or attacking, then it's on its way to the position.
@@ -577,4 +581,7 @@ public class boss_script : MonoBehaviour {
         health -= dmg;
     }
     void Knocked(){}
+    public void DoneTalking(){
+        done_talking = true;
+    }
 }

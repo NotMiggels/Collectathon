@@ -181,6 +181,9 @@ public class DialogueManager : MonoBehaviour {
             }
         }
         npc = null;
+        if(GameObject.FindGameObjectWithTag("Boss") != null){
+            GameObject.FindGameObjectWithTag("Boss").GetComponent<boss_script>().DoneTalking();
+        }
         player.SendMessage("ExitDialogue");
         //gameObject.SetActive(false);
         //animator.SetBool("IsOpen", false);

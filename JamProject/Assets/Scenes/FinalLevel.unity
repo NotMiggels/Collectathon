@@ -21101,6 +21101,16 @@ Prefab:
       propertyPath: minimum_height
       value: 
       objectReference: {fileID: 2021548962}
+    - target: {fileID: 212495769645131168, guid: f176806de8f50c44c9dbb66c395e36b7,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212670724292829892, guid: f176806de8f50c44c9dbb66c395e36b7,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f176806de8f50c44c9dbb66c395e36b7, type: 2}
   m_IsPrefabAsset: 0
