@@ -32,6 +32,7 @@ public class boss_script : MonoBehaviour {
     public GameObject lighter_spawn_R;
     public GameObject boss_flame_R;
     public GameObject boss_flame_L;
+    public GameObject minimum_height;
     private bool moving_L;
     private bool moving_R;
     private CircleCollider2D myCollider;
@@ -513,7 +514,7 @@ public class boss_script : MonoBehaviour {
         int pause_time = rng.Next(attack_interval_lower_bound, attack_interval_upper_bound);
         yield return new WaitForSeconds(pause_time);
         if ((player.transform.position.x < default_pos_R.transform.position.x
-            && player.transform.position.x > default_pos_L.transform.position.x))
+             && player.transform.position.x > default_pos_L.transform.position.x) && player.transform.position.y > minimum_height.transform.position.y)
         {
             //int temp = rng.Next(1, 3);
             //Debug.Log("boss idle for " + temp + " seconds");
@@ -551,8 +552,8 @@ public class boss_script : MonoBehaviour {
         }
         else
         {
-            Debug.Log("player not in range, suspend");
-            StartCoroutine(Prep());
+            Debug.Log("player not in range");
+            MoveToOppositeStandbyLocation();
         }
     }
     private void SpatulaAttack(){
