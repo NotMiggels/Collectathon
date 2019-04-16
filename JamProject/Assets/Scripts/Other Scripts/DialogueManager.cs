@@ -132,8 +132,7 @@ public class DialogueManager : MonoBehaviour {
     {
         dialogueText.text = "";
         nameText.text = name;
-        talking.GetComponent<changeIcon>().changeTalking(name, npc);
-        //changeImage(name);
+        talking.GetComponent<changeIcon>().changeTalking(name);
         foreach (char letter in sentence.ToCharArray())
         {
           //Debug.Log(delay);
