@@ -22,6 +22,8 @@ public class UI_healthbar : MonoBehaviour
     private Slider actual_boss_HP_bar;
     private Slider actual_gauge;
     public Text Crouton_count;
+    public GameObject gobacktovillage;
+    public GameObject pausebt;
     public int sceneid;
 
     public Sprite[] abilitylist;
@@ -36,6 +38,9 @@ public class UI_healthbar : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        gobacktovillage.SetActive(false);
+        pausebt.SetActive(false);
+
         if (passive_icon1 != null)
         {
             passive_icon1.SetActive(false);
@@ -59,7 +64,6 @@ public class UI_healthbar : MonoBehaviour
         abilityfill.SetActive(false);
         panel.SetActive(false);
 
-
     }
 
     // Update is called once per frame
@@ -77,6 +81,19 @@ public class UI_healthbar : MonoBehaviour
         actual_gauge.value = player_script.Ability_gauge();
         CT_count.text = ms.getCT().ToString();
         Crouton_count.text = ms.getCrouton(sceneid).ToString() + ms.gettotcrouton(sceneid);
+
+        if(player_script.pause == true)
+        {
+            gobacktovillage.SetActive(true);
+            pausebt.SetActive(true);
+
+        }
+        else
+        {
+            gobacktovillage.SetActive(false);
+            pausebt.SetActive(false);
+
+        }
 
     }
     public void SetAbilityText(int num)

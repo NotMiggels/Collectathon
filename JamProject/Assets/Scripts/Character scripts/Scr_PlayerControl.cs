@@ -79,7 +79,7 @@ public class Scr_PlayerControl : MonoBehaviour {
     private bool going_to_cutscene_2;
 
 
-    private bool pause;
+    public bool pause;
     // Use this for initialization
     void Start () {
         going_to_cutscene_2 = false;

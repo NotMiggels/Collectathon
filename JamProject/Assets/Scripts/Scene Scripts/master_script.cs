@@ -261,6 +261,10 @@ public class master_script : MonoBehaviour {
     {
         SceneManager.LoadScene("CutScene1");
     }
+      public void goback()
+    {
+        SceneManager.LoadScene("Village");
+    }
     public void JellyAbilityCountPlus(){
         jelly_ability_count += 1;
     }
