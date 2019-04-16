@@ -993,7 +993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: Jarvis'sHouse
   spawn_x: -1.543
-  spawn_y: 0.315
+  spawn_y: 0.036
   pre_defined_spawn_location: 1
 --- !u!61 &1033904035
 BoxCollider2D:
