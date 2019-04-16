@@ -68,8 +68,7 @@ public class gameover_scr : MonoBehaviour {
 		ms.setJellyHealth(100);
 		ms.setJellyGauge(1);
 		ms.set_definedSpawn(true);
-		ms.set_definedSpawn(pre_defined_spawn_location);
-		ms.setSpawnLocation(spawn_x, spawn_y);
+		ms.setSpawnLocation(-11.89f,.454f);
         SceneManager.LoadScene("Village");
     }
 

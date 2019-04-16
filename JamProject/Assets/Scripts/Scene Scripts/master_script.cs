@@ -263,6 +263,8 @@ public class master_script : MonoBehaviour {
     }
       public void goback()
     {
+        ms.set_definedSpawn(true);
+		ms.setSpawnLocation(-11.89f,.454f);
         SceneManager.LoadScene("Village");
     }
     public void JellyAbilityCountPlus(){
