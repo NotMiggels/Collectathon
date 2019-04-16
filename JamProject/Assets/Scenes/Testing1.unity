@@ -1594,6 +1594,8 @@ MonoBehaviour:
     names:
     - Crispy Toast
     - Cirspy Toast
+  required_CT: 0
+  is_deity: 0
 --- !u!1001 &1744006625
 Prefab:
   m_ObjectHideFlags: 0
