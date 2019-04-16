@@ -542,6 +542,10 @@ Prefab:
       propertyPath: m_UsedByComposite
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1359144248266998, guid: be81528025c28b64db0b1707881d1f13, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 251765620840133950, guid: be81528025c28b64db0b1707881d1f13, type: 2}
     - {fileID: 61528631451867162, guid: be81528025c28b64db0b1707881d1f13, type: 2}
