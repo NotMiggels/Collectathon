@@ -7,10 +7,10 @@ public class UI_healthbar : MonoBehaviour
 
     public GameObject dialogue_box;
     public GameObject conversation_indicator;
+    public GameObject interaction_indicator;
     public GameObject health_bar;
     public GameObject boss_health_bar;
     public GameObject gauge_bar;
-    public Text interIndicator;
     public Text ability_text;
     public Text CT_count;
     public GameObject passive_icon1;
@@ -31,7 +31,7 @@ public class UI_healthbar : MonoBehaviour
 
     public GameObject panel;
 
-   
+
     private master_script ms;
     // Use this for initialization
     void Start()
@@ -54,13 +54,11 @@ public class UI_healthbar : MonoBehaviour
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         dialogue_box.SetActive(false);
         conversation_indicator.SetActive(false);
-        interIndicator.color = Color.clear;
-        interIndicator.text = "Press S to enter";
 
         abilityfill.SetActive(false);
         panel.SetActive(false);
 
-     
+
     }
 
     // Update is called once per frame
@@ -99,7 +97,7 @@ public class UI_healthbar : MonoBehaviour
         ability.GetComponent<Image>().sprite = abilitylist[num];
 
     }
-    
+
     public void ShowConvIndicator()
     {
         conversation_indicator.SetActive(true);
@@ -118,11 +116,11 @@ public class UI_healthbar : MonoBehaviour
     }
     public void ShowInterIndicator()
     {
-        interIndicator.color = Color.black;
+        interaction_indicator.SetActive(true);
     }
     public void HideInterIndicator()
     {
-        interIndicator.color = Color.clear;
+        interaction_indicator.SetActive(false);
     }
     public void HidePassive1()
     {
