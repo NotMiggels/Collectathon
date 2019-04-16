@@ -851,6 +851,13 @@ MonoBehaviour:
     - 'Now I will open the portal to this unknown planet. Remember, Jelly: if you
       defeat the monsters, we will no longer have to worry about them. Good luck!'
     names:
+    - Jelly
+    - Deity
+    - Deity
+    - Deity
+    - Deity
+    - Deity
+    - Deity
     - Deity
   required_CT: 8
   is_deity: 1
