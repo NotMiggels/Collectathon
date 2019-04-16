@@ -34,6 +34,9 @@ public class changeIcon : MonoBehaviour {
 		if(jp3names.Contains(name)){
 			talkingTex = (Texture)Resources.Load("CharIcon/JP3_icon");
 		}
+		if (name == "Jarvis") {
+			talkingTex = (Texture)Resources.Load("CharIcon/Jarvis_icon");
+		}
 		if (name == "Squasher") {
 			talkingTex = (Texture)Resources.Load("CharIcon/Squasher_icon");
 		}
@@ -42,6 +45,9 @@ public class changeIcon : MonoBehaviour {
 		}
 		if (name == "Deity") {
 			talkingTex = (Texture)Resources.Load("CharIcon/Deity_icon");
+		}
+		if (name == "Morbid Morbier") {
+			talkingTex = (Texture)Resources.Load("CharIcon/MM_icon");
 		}
 		else{
 			Debug.Log(name);
