@@ -54,6 +54,7 @@ public class UI_healthbar : MonoBehaviour
         ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
         dialogue_box.SetActive(false);
         conversation_indicator.SetActive(false);
+        interaction_indicator.SetActive(false);
 
         abilityfill.SetActive(false);
         panel.SetActive(false);
