@@ -120,6 +120,20 @@ public class Scr_PlayerControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+    if(pause)
+    { 
+        Time.timeScale=0; 
+    } 
+    if(!pause)
+    { 
+        Time.timeScale=1; 
+    }
+    if(Input.GetKeyUp(KeyCode.P) && !in_air)
+        { 
+            pause =!pause; 
+            myRigidbody.velocity = new Vector2(0.0f, 0.0f);
+            control_disabled = !control_disabled;
+        }
     if (!control_disabled)
     {
         /*
@@ -236,19 +250,7 @@ public class Scr_PlayerControl : MonoBehaviour {
               /*
               * Jump
               */
-              if(Input.GetKey(KeyCode.P) && !in_air)
-              { 
-                pause =!pause; 
-                
-                if(pause)
-                { 
-                    Time.timeScale=0; 
-                } 
-                if(!pause)
-                { 
-                    Time.timeScale=1; 
-                }
-              }
+              
               if (Input.GetKey(KeyCode.Space) && !in_air && !W_pressed && !shielding)
               {
                   W_pressed = true;
