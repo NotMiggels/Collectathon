@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour {
                     doubletap = true;
                     Debug.Log("double TAP");
                     time1 = 0;
-                    time2 = 0;
+                    time2 = 1;
                 }
                 else
                 {
@@ -142,6 +142,10 @@ public class DialogueManager : MonoBehaviour {
             continue;
           }
           else{
+            if(doubletap == true)
+            {
+                continue;
+            }
             yield return new WaitForSeconds(delay);
           }
         }
