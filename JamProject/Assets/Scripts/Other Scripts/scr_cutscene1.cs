@@ -8,9 +8,12 @@ public class scr_cutscene1 : MonoBehaviour {
 	private int sprite_count;
 	private int index = 0;
 	public string scenetransition;
+	public int fire;
+	private master_script ms;
 	// Use this for initialization
 	void Start () {
 		sprite_count = comic.Length;
+		ms = GameObject.FindGameObjectWithTag("MasterScript").GetComponent<master_script>();
 		foreach (GameObject panel in comic){
             panel.SetActive(false);
         }
@@ -25,6 +28,11 @@ public class scr_cutscene1 : MonoBehaviour {
 			index +=1;
 			if(index == comic.Length)
 			{
+				if(fire == 1)
+				{
+					ms.set_definedSpawn(true);
+					ms.setSpawnLocation(0.846f,30.737f);
+				}
 				SceneManager.LoadScene(scenetransition);
 			}
 			else

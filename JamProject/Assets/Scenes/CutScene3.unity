@@ -338,6 +338,48 @@ Transform:
   m_Father: {fileID: 794051255}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &734570964
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 30.554718
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 604.6974
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.9594603
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602353924233328, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &794051253
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +418,7 @@ MonoBehaviour:
   - {fileID: 637198624}
   - {fileID: 2046763383}
   scenetransition: Credits
+  fire: 0
 --- !u!4 &794051255
 Transform:
   m_ObjectHideFlags: 0
@@ -396,7 +439,7 @@ Transform:
   - {fileID: 637198626}
   - {fileID: 2046763384}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018261478
 GameObject:
