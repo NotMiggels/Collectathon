@@ -1385,7 +1385,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
       value: But never mind my story. The volcano on this planet is unforgiving, man!
-        Smoke won't stop comin' out of it, it's sure to erupt soon.
+        All the smoke makes just breathing hard to do.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -1396,8 +1396,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: If you do go up there, though, make sure not to fall in! I'm no scientist,
-        but ya usually can't get out of a volcano once you fall in.
+      value: But if you do, make sure not to fall in! I'm no scientist, but ya usually
+        can't get out of a volcano once you fall in.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -8800,8 +8800,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: But watch out for those fire geysers. You'll have to avoid touching them
-        if you want to make it out safely.
+      value: But I don't wanna get burned by those fire geysers. You should probably
+        steer clear of them, too.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -8816,8 +8816,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: I don't understand why we even get hurt by fire. We're made of glass,
-        after all.
+      value: I don't understand why we even get hurt by fire. It's not like we have
+        skin, or anything.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}

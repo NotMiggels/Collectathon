@@ -200,13 +200,13 @@ Prefab:
     - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
-      value: "It seems you\u2019ve collected two Crispy Toasts. Your efforts are most
-        commendable, my friend."
+      value: It seems your efforts are already proving their worth, my friend. Thank
+        you!
       objectReference: {fileID: 0}
     - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
         type: 2}
       propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
-      value: When you return to me, I may be able to open a portal to a planet with
+      value: When you return, I may be able to open a portal to a planet with more
         Crispy Toast on it.
       objectReference: {fileID: 0}
     - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
@@ -263,8 +263,8 @@ Prefab:
     - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
-      value: "Spectacular work! You\u2019ve collected eight Crispy Toasts. I can feel
-        power surging through me!"
+      value: "Spectacular work! You\u2019ve collected eight Crispy Toasts, and power
+        once again courses through me."
       objectReference: {fileID: 0}
     - target: {fileID: 114648739083121498, guid: d63bf32a7adb8f648a492c98b2ada0ff,
         type: 2}
@@ -276,7 +276,7 @@ Prefab:
         type: 2}
       propertyPath: dialogues.Array.data[1].sentences.Array.data[3]
       value: For such a threatening destination, I will bestow upon you the greatest
-        ability of our history. Until then, farewell!
+        ability of jar-kind. Until then, farewell!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63bf32a7adb8f648a492c98b2ada0ff, type: 2}

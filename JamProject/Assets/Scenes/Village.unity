@@ -511,14 +511,14 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Great, keep it up! Remember that all you have to do is swing your knife.
-        You probably already knew that, right?
+      value: Great, keep it up! It must be a good means of attacking, and all you
+        need to do is swing your knife, right?
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Yeah, I did. I can't use it all the time, though. I need to be healthy
-        to use it.
+      value: Yep, that's all it takes. I can't use it all the time, though. I need
+        to be healthy first.
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
@@ -661,7 +661,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
       value: But hey, if you press the Spacebar, you can jump as high as you would
-        when someone screams like I just did.
+        have just then, when I just screamed.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -743,12 +743,12 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.names.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4233874338332372, guid: af83feda0fbcbd9439395f595851b488, type: 2}
       propertyPath: m_LocalPosition.x
@@ -823,8 +823,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Nice to meet you, little guy! I can't stay long, though. I have to save
-        the deity and protect the village.
+      value: Nice to meet you, little guy! I can't stay long, though. The deity and
+        the village both need me.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -834,18 +834,17 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Wow, that's so cool! Are you gonna fight those weird mean things, too?
+      value: Are you gonna go on an adventure and fight those weird mean things, too?
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: That is the plan. Just know that everything's gonna be okay.
+      value: You betcha! Just know that everything's gonna be okay.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Thank you, Mr. Jelly! You're the best! I wish I had a knife like yours.
-        Then I could help you fight the monsters!
+      value: That's so cool, Mr. Jelly! You're really awesome!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -855,18 +854,18 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.names.Array.data[7]
-      value: Jar Guy
+      value: Jar Boy
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: I saw a toy knife on TV once. The guy said "Press J to swing a knife,"
-        and that's all I rememberred.
+      value: I wish I had a knife like yours, then I could help you!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[6]
-      value: Hopefully I can be just like you when I'm older, Jelly!
+      value: I saw a toy knife on TV once. The guy said "Press J to swing a knife,"
+        and that's all I rememberred.
       objectReference: {fileID: 0}
     - target: {fileID: 58743792677548238, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -877,6 +876,11 @@ Prefab:
         type: 2}
       propertyPath: m_Radius
       value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: Hopefully I can be just like you when I'm older, Jelly!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
@@ -1140,7 +1144,7 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Sounds tedious... but hey, at least they're easy to use!
+      value: Sounds tedious... but hey, at least it's easy to use!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}

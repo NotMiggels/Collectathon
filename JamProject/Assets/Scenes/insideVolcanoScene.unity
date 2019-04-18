@@ -960,13 +960,13 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: See if you can find a way around it. Who knows, you might find lava flowing
-        just like it is over here.
+      value: See if you can find a way around it. Who knows, you might reach the source.
+        Then you can block it off.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Okay. I'll see if I can find a way around.
+      value: Okay, I'll get to looking.
       objectReference: {fileID: 0}
     - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -1520,7 +1520,7 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: '... well, you''ve got a point there.'
+      value: '... Well, you''ve got a point there.'
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -3774,7 +3774,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 31.16
+      value: 31.609
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9035,7 +9035,7 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: I sure did! I've found a hide-and-seek master, haven't I?
+      value: I sure did! You're a hide-and-seek master, aren'tcha?
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -9197,7 +9197,7 @@ Transform:
   m_GameObject: {fileID: 964095627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.846, y: 30.737, z: 37.691406}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.56, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 60
@@ -12162,7 +12162,7 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Not yet, everyone's just kind of settling in right now. But I'm sure
+      value: Not yet. Everyone's just kind of settling in right now, but I'm sure
         we'll find some food once we start looking for it.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
@@ -19087,8 +19087,7 @@ Prefab:
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: You know, you all can still... you know what, I probably shouldn't look
-        into it any further.
+      value: You know, you all can still... you know what, never mind...
       objectReference: {fileID: 0}
     - target: {fileID: 114909583888212430, guid: 1ae1e6a9bb5b22a46baabaf2cf9ddce9,
         type: 2}

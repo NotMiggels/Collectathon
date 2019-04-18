@@ -1144,8 +1144,8 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: And listen to my parents yap about bein' safe all the time? No way! Besides,
-        it's actually nice and quiet up here.
+      value: And listen to my parents yap about bein' safe all the time? No way! I
+        need some peace and quiet.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -1170,7 +1170,7 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: If you're trying to navigate our jungle, especially to find those Crispy
+      value: If you're trying to get around our jungle, especially to find those Crispy
         Toasts, make sure to look here, there, and everywhere!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
@@ -7036,7 +7036,7 @@ MonoBehaviour:
     - Hold it! Who's the bozo with the goofy smile and see-through exterior?
     - Get outta our clubhouse, buster! We don't take kindly to unfamiliars.
     - You guys should be leaving; you don't even belong here!
-    - Besides, I know there's a Crispy Toast somewhere near here. So where is it??
+    - But first, why don't you spill the beans about the Crispy Toast you've taken?
     - Like we'd tell you anything. Who do you think we are, morons?
     - Come on, boys. Let's get 'em!
     names:
@@ -10835,7 +10835,7 @@ MonoBehaviour:
     - Yes, I'm sensing a piece at the far end of this section of the jungle.
     - But given its location, expect to run into a large number of foes... be careful!
     - Perfect! That's one less piece to worry about.
-    - '... but how could a piece have gotten up here, of all places?'
+    - '... But how could a piece have gotten up here, of all places?'
     names:
     - Deity
     - Deity
@@ -14559,12 +14559,12 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Well I'll be, our knife-holding friend Jelly is here!
+      value: Good day, Jelly! Fancy seeing you out here.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Good day, Jelly! You'll never guess what I saw on my daily stroll today!
+      value: You gotta hear about what I saw on my daily stroll today!
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -14575,20 +14575,18 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: Don't have a clue what it is, though. I'd go up there myself, but I can't
-        clear this gap.
+      value: Don't have a clue what it is, though. I'd go up there myself, but I it's
+        way too dangerous out here.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Wait, you said it's something shiny? Hmm, maybe it's a piece of Crispy
-        Toast.
+      value: Wait, it's something shiny? Hmm, maybe it's a piece of Crispy Toast.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Thanks for telling me. I'll climb the trees nearby in search of that
-        shiny thing.
+      value: Thanks for telling me. I'll make sure to check the trees.
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -18603,8 +18601,7 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Probably, but one thing's for sure is that they don't mess around on
-        land, either!
+      value: Probably, but they definitely don't mess around on land, boy I tell you.
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -18640,7 +18637,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[5]
       value: We couldn't run fast enough to get away from them, so he stayed back
-        and tried to fend them off to keep me safe. <3
+        to fend them off just to keep me safe. <3
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -19961,8 +19958,7 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: The monsters have started appearing closer and closer to our home! You've
-        gotta do something!
+      value: The monsters have just been everywhere recently! You've gotta do something!
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -19977,7 +19973,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: How close to the village are they now?
+      value: There were some in the village earlier today. Where are they all coming
+        from?
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -21870,7 +21867,7 @@ Prefab:
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
       value: It makes so much sense. All you have to do is repeatedly press the Spacebar
-        to resurface from the swamp. Then once your at the surface, you're home-free!
+        to resurface from the swamp. Then once you're at the surface, you're home-free!
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
@@ -21895,8 +21892,8 @@ Prefab:
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: But I've always wondered if there's anything below the swamps themselves.
-        Ya think there's anything cool?
+      value: But I've always wondered if there's anything below the swamps. Ya think
+        there's anything cool?
       objectReference: {fileID: 0}
     - target: {fileID: 114581926139477766, guid: ed06fbbc5c3dc054099a60d2e8aaaf76,
         type: 2}

@@ -597,8 +597,9 @@ MonoBehaviour:
     - So please, accept the ancient ability of Sticky Spill, the origins of which
       have been lost in the void of time.
     - You can press U to activate it, then again to spill sticky Jelly on the ground
-      that impedes enemy movement.
-    - It also allows you to jump higher while the ability is active.
+      that impedes enemy movement. You can also jump higher while you're using it.
+    - Though be advised that Stick Spill only lasts a little while, and to use it
+      again will require time.
     - "Now, I will open the portal to Planet Caliegeuse. Please return when you\u2019ve
       collected eight Crispy Toasts."
     names:
@@ -835,7 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Great Deity, I have returned with some Crispy Toast.
+    - Great Deity, I have returned with even more Crispy Toast.
     - "Very good, Jelly. Your quest is nearing its end. I finally have the power to
       send you to the enemy\u2019s planet."
     - Though I know nought exactly what this planet is, those wretched monsters are
@@ -845,13 +846,16 @@ MonoBehaviour:
     - With the power of Glass Monolith, you can press U to create a large jar in front
       of you. You can jump on it or even keep enemies away from you.
     - If they do manage to attack you, fear not! While the ability is running, it
-      grants you more resistance to damage than usual.
+      grants you more resistance to attacks than usual.
     - "Should you want to alternate between your abilities, you need only to press
       E while you\u2019re not using either one."
+    - But know that, since you lack training with these ancient powers, you are only
+      strong enough to use one of them at a time.
     - 'Now I will open the portal to this unknown planet. Remember, Jelly: if you
       defeat the monsters, we will no longer have to worry about them. Good luck!'
     names:
     - Jelly
+    - Deity
     - Deity
     - Deity
     - Deity
@@ -1149,8 +1153,8 @@ MonoBehaviour:
     sentences:
     - Great Deity, I have come to help you in your time of need.
     - Ahh, Jelly. It is good of you to see me, for your help will be paramount.
-    - Jarvis was wise to send you to my aid. Many of the villages people know nought
-      of my suffering.
+    - Jarvis was wise to send you here. Many of the village people know nought of
+      my suffering.
     - My power is limited, but I may be able to assist you before you embark on your
       quest.
     - Thank you, Great Deity. I plan to start looking for Crispy Toast in the deep
