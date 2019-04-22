@@ -280,19 +280,19 @@ Prefab:
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: If those villains tap into the power of the Crispy Toast, there's be
-        no telling what they'll be able to do.
+      value: If those villains tap into the power of the Crispy Toast, there's no
+        telling what they'll be able to do.
       objectReference: {fileID: 0}
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: You mean we don't even know what they could do with the Crispy Toast?
+      value: You mean we don't even know the Crispy Toast's full potential?
       objectReference: {fileID: 0}
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Afraid not, my boy. Nobody knows the full potential of those things.
-        Not even I do.
+      value: Afraid not, my boy. Nobody does, not even I do... and I've lived in this
+        village for over a hundred years!
       objectReference: {fileID: 0}
     - target: {fileID: 114725930480076436, guid: 372f71fd4e8325f45974dfefffb3894b,
         type: 2}
@@ -319,6 +319,11 @@ Prefab:
         type: 2}
       propertyPath: dialogue.names.Array.data[3]
       value: Jarvis
+      objectReference: {fileID: 0}
+    - target: {fileID: 212482814320164536, guid: 372f71fd4e8325f45974dfefffb3894b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 372f71fd4e8325f45974dfefffb3894b, type: 2}
@@ -705,6 +710,10 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 220
       objectReference: {fileID: 0}
+    - target: {fileID: 1494492679870174, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91d653a1004d1147800212f3dbd806c, type: 2}
   m_IsPrefabAsset: 0
@@ -744,13 +753,12 @@ MonoBehaviour:
     - "The temple was raided by those monsters, and they removed the deity\u2019s
       Crispy Toast!"
     - "That can\u2019t be! Are you sure of this?"
-    - Yes. I assure you that my old age has yet to betray my perceptual capabilities.
-    - What about the deity? Is it okay?
-    - "From what it said to me when I visited it, I\u2019m afraid not, my boy. However,
-      there\u2019s still some Crispy Toast left in our jungle."
-    - You must retrieve the Crispy Toast, Jelly! Without it, who knows what may transpire?
-    - "Now, go to the Temple of the Deity. Go to his aid at once, before it\u2019s
-      too late!"
+    - Indeed I am. I may be old, but I can still see straight.
+    - Wait a minute, if that's really true, that must mean... oh, no.
+    - "Afraid so, my boy. The deity won't get better, either. However, there\u2019s
+      still some Crispy Toast left in our jungle."
+    - You must retrieve that Crispy Toast, Jelly! Without it, who knows what may transpire?
+    - "Now, go to the Temple of the Deity. Help the deity before it\u2019s too late!"
     names:
     - Jelly
     - Jarvis
