@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour {
     private GameObject player;
     private bool skippable;
     private GameObject[] UIElement;
-
+    //public bool boss_trigger;
     private bool skippy;
     private float time1;
     private float time2;
@@ -181,7 +181,7 @@ public class DialogueManager : MonoBehaviour {
             }
         }
         npc = null;
-        if(GameObject.FindGameObjectWithTag("Boss") != null){
+        if(GameObject.FindGameObjectWithTag("Boss") != null && GameObject.FindGameObjectWithTag("boss trigger").GetComponent<auto_dialogue_trigger>().Get_triggered()){
             GameObject.FindGameObjectWithTag("Boss").GetComponent<boss_script>().DoneTalking();
         }
         player.SendMessage("ExitDialogue");

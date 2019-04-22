@@ -25039,7 +25039,7 @@ GameObject:
   - component: {fileID: 1536104987}
   m_Layer: 0
   m_Name: FBDialogueTrigger
-  m_TagString: Untagged
+  m_TagString: boss trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

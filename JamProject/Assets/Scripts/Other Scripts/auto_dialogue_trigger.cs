@@ -49,5 +49,8 @@ public class auto_dialogue_trigger : MonoBehaviour
         //check if jelly is celebrating for CT too
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue, gameObject);
     }
+    public bool Get_triggered(){
+        return triggered;
+    }
 
 }
