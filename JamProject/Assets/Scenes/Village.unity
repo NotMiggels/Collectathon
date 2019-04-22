@@ -882,6 +882,11 @@ Prefab:
       propertyPath: dialogue.sentences.Array.data[7]
       value: Hopefully I can be just like you when I'm older, Jelly!
       objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
   m_IsPrefabAsset: 0
@@ -1151,6 +1156,11 @@ Prefab:
       propertyPath: dialogue.sentences.Array.data[4]
       value: Just press K to hold it in front of youself. Beats having to swab yourself
         down, am I right?
+      objectReference: {fileID: 0}
+    - target: {fileID: 212782833858257976, guid: af83feda0fbcbd9439395f595851b488,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af83feda0fbcbd9439395f595851b488, type: 2}
