@@ -774,6 +774,11 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61799390861665062, guid: b6d7265d692df274d94484857908ecf7,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 251246591838227158, guid: b6d7265d692df274d94484857908ecf7, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b6d7265d692df274d94484857908ecf7, type: 2}
@@ -3774,7 +3779,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 31.609
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4000475617954256, guid: 2007f47a44e1f4a369e70681d9831ec3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4737,7 +4742,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 46dfc8eac5893b745927cb1fa7d6bb1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7945,7 +7950,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4493357599670552, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.91
+      value: 3.888
       objectReference: {fileID: 0}
     - target: {fileID: 4493357599670552, guid: f945d75099b305e4e9c0f8b5ddd2e422, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8334,6 +8339,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1266323495805424, guid: b6d7265d692df274d94484857908ecf7, type: 2}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61799390861665062, guid: b6d7265d692df274d94484857908ecf7,
+        type: 2}
+      propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -9156,8 +9166,8 @@ MonoBehaviour:
     sentences:
     - Well, that's just great. Never thought I'd get stuck in a volcano in my lifetime.
     - This'll be an interesting story to bring back home with me.
-    - I guess while I'm here, I should extend my search for Crispy Toasts to the insides
-      of this volcano...
+    - I guess while I'm here, I should look for Crispy Toast... some of it may have
+      ended up in here.
     names:
     - Jelly
     - Jelly
@@ -9176,7 +9186,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.024129137, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9187,7 +9197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.44040605, y: 0.2}
   m_EdgeRadius: 0
 --- !u!4 &964095630
 Transform:
@@ -9196,7 +9206,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 964095627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.846, y: 30.737, z: 37.691406}
+  m_LocalPosition: {x: 0.846, y: 30.632, z: 37.691406}
   m_LocalScale: {x: 8.56, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10010,6 +10020,11 @@ Prefab:
       propertyPath: m_Name
       value: pre_vol4_3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 61799390861665062, guid: b6d7265d692df274d94484857908ecf7,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 251246591838227158, guid: b6d7265d692df274d94484857908ecf7, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b6d7265d692df274d94484857908ecf7, type: 2}
@@ -10061,6 +10076,11 @@ Prefab:
     - target: {fileID: 4004393617818788, guid: e5fdce80e0e2f60448022e0ae2e13e97, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.06327073
+      objectReference: {fileID: 0}
+    - target: {fileID: 212880585387595428, guid: e5fdce80e0e2f60448022e0ae2e13e97,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fdce80e0e2f60448022e0ae2e13e97, type: 2}
@@ -10231,7 +10251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: cb751ada9d9958d4ba33f4310a5a4e26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13336,7 +13356,7 @@ Prefab:
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
       propertyPath: dialogue.names.Array.data[7]
-      value: Jar guy
+      value: Jar Guy
       objectReference: {fileID: 0}
     - target: {fileID: 114700039472855924, guid: af83feda0fbcbd9439395f595851b488,
         type: 2}
@@ -13802,7 +13822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4004393617818788, guid: e5fdce80e0e2f60448022e0ae2e13e97, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -275.983
+      value: -275.987
       objectReference: {fileID: 0}
     - target: {fileID: 4004393617818788, guid: e5fdce80e0e2f60448022e0ae2e13e97, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13839,6 +13859,11 @@ Prefab:
     - target: {fileID: 1077219873842558, guid: e5fdce80e0e2f60448022e0ae2e13e97, type: 2}
       propertyPath: m_Name
       value: lava5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212880585387595428, guid: e5fdce80e0e2f60448022e0ae2e13e97,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5fdce80e0e2f60448022e0ae2e13e97, type: 2}
@@ -16695,7 +16720,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 83b8203a0c93f664d9f0d808236ab232, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

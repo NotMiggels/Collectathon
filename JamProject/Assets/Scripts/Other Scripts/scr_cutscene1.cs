@@ -31,7 +31,7 @@ public class scr_cutscene1 : MonoBehaviour {
 				if(fire == 1)
 				{
 					ms.set_definedSpawn(true);
-					ms.setSpawnLocation(0.846f,30.737f);
+					ms.setSpawnLocation(0.846f,33f);
 				}
 				SceneManager.LoadScene(scenetransition);
 			}
