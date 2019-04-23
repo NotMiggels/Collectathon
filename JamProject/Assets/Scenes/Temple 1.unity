@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Great Deity, I have returned with some Crispy Toast.
+    - I have returned with some Crispy Toast, Great Deity.
     - Thank you, Jelly. You have done well, but your search is far from over.
     - "Some of the monsters have ended up on Planet Caliegeuse\u2019s Spicy Pepper
       Volcano. The environment is ruthless compared to that of our jungle."
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Great Deity, I have returned with even more Crispy Toast.
+    - Great Deity, please accept this abundance of Crispy Toast.
     - "Very good, Jelly. Your quest is nearing its end. I finally have the power to
       send you to the enemy\u2019s planet."
     - Though I know nought exactly what this planet is, those wretched monsters are

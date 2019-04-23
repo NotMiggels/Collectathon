@@ -436,7 +436,7 @@ MonoBehaviour:
   jello_spd: 1.6
   fling_spd_up: 0.05
   jello_spd_up: 0.1
-  gauge_recover_time: 35
+  gauge_recover_time: 22
   block_cooldown_max: 1
   jelloR: {fileID: 50086533116313196, guid: 83cd224299e6e43489345e157779e882, type: 2}
   jelloL: {fileID: 50431365290212682, guid: 7c6d9b03343364136b4a1133be0c5f4a, type: 2}
@@ -445,8 +445,9 @@ MonoBehaviour:
   ouch: {fileID: 8300000, guid: cc69276e4ba134e7e8bd849f5ef293a6, type: 3}
   swing: {fileID: 8300000, guid: 46a2a9dfbd2274cc99258e7805848330, type: 3}
   fling: {fileID: 8300000, guid: 97116df1717664f47ae5b4b7b58b8d91, type: 3}
-  dmg_multiplier: 0.7
+  dmg_multiplier: 0.57
   fling_cd: 0.53
+  pause: 0
 --- !u!114 &114988984917638772
 MonoBehaviour:
   m_ObjectHideFlags: 1

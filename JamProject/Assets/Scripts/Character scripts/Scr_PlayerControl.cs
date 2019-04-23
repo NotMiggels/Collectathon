@@ -317,10 +317,10 @@ public class Scr_PlayerControl : MonoBehaviour {
             /*
              * Switching between states (abilities)
              */
-            if (Input.GetKeyDown(KeyCode.Q) && !ability_active)
-            {
-                AbilitySelectL();
-            }
+            //if (Input.GetKeyDown(KeyCode.Q) && !ability_active)
+            //{
+                //AbilitySelectL();
+            //}
             if (Input.GetKeyDown(KeyCode.E) && !ability_active)
             {
                 AbilitySelectR();
