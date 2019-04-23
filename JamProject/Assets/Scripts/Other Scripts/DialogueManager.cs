@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour {
     private bool skippable;
     private GameObject[] UIElement;
     //public bool boss_trigger;
+    private int hitskip = 0;
     private bool skippy;
     private float time1;
     private float time2;
@@ -48,6 +49,12 @@ public class DialogueManager : MonoBehaviour {
         }
         if(Input.GetKeyUp(KeyCode.S))
         {
+            hitskip +=1;
+        }
+
+        /* 
+        if(Input.GetKeyUp(KeyCode.S))
+        {
             if(skippy == true)
             {
                 time1 = Time.time;
@@ -73,6 +80,7 @@ public class DialogueManager : MonoBehaviour {
                 skippy = true;
             }
         }
+        */
     }
 
 
@@ -130,6 +138,7 @@ public class DialogueManager : MonoBehaviour {
 
     IEnumerator TypeSentence (string sentence, string name)
     {
+        hitskip = 0;
         dialogueText.text = "";
         nameText.text = name;
         talking.GetComponent<changeIcon>().changeTalking(name);
@@ -137,12 +146,15 @@ public class DialogueManager : MonoBehaviour {
         {
           //Debug.Log(delay);
           dialogueText.text += letter;
-          if (doubletap) {
+          if (hitskip >= 2) {
+              Debug.Log("SKIP");
+             
             continue;
           }
           else{
-            if(doubletap == true)
+            if(hitskip >= 2)
             {
+                
                 continue;
             }
             yield return new WaitForSeconds(delay);
