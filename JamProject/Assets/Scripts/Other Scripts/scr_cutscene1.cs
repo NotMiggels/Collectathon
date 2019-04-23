@@ -35,7 +35,7 @@ public class scr_cutscene1 : MonoBehaviour {
 	private IEnumerator nextpanel()
 	{
 		
-		yield return new WaitForSeconds(1.75f);
+		yield return new WaitForSeconds(2f);
 		comic[index].SetActive(false);
 		index +=1;
 		if(index == comic.Length)
