@@ -420,6 +420,12 @@ public class Scr_PlayerControl : MonoBehaviour {
     public void TakeDMG(int dmg){
         if (!shielding && !dmg_cooling)
         {
+            Debug.Log(dmg);
+            if(dmg == 6f)
+            {
+                Debug.Log("Lava HURTS");
+                myRigidbody.AddForce(new Vector2(0.0f, 150f));
+            }
             health -= (float)dmg * dmg_mult;
             dmg_cooling = true;
             audio.clip = ouch;
@@ -612,4 +618,5 @@ public class Scr_PlayerControl : MonoBehaviour {
     {
         going_to_cutscene_2 = true;
     }
+
 }
