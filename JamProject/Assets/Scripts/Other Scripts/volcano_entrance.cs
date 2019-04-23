@@ -15,10 +15,12 @@ public class volcano_entrance : MonoBehaviour
 	private BoxCollider2D bc;
 
 	private UI_healthbar UI_manager;
+	private bool touching;
 
 	// Use this for initialization
 	void Start()
 	{
+			touching = false;
 			player = GameObject.FindGameObjectWithTag("Player");
 			player_script = player.GetComponent<Scr_PlayerControl>();
 			bc = GetComponent<BoxCollider2D>();
@@ -30,11 +32,20 @@ public class volcano_entrance : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (bc.IsTouchingLayers(LayerMask.GetMask("Player")))
+	
+		if (bc.IsTouchingLayers(LayerMask.GetMask("Player")) && !touching)
 		{
+			touching = true;
 			UI_manager.ShowInterIndicator();
-			//Debug.Log("Press S to enter");
-			if (Input.GetKeyDown(KeyCode.S))
+		}
+	    else if (!(bc.IsTouchingLayers(LayerMask.GetMask("Player"))) && touching)
+        {
+            touching = false;
+            UI_manager.HideInterIndicator();
+        }
+		if(touching)
+		{
+		if (Input.GetKeyDown(KeyCode.S))
 			{
 				ms.setJellyHealth(player_script.health);
 				ms.setJellyGauge(player_script.Ability_gauge());
@@ -43,10 +54,6 @@ public class volcano_entrance : MonoBehaviour
 				SceneManager.LoadScene(destination);
 
 			}
-		}
-		else
-		{
-			UI_manager.HideInterIndicator();
 		}
 	}
 }
