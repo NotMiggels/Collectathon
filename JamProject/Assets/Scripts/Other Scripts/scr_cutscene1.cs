@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class scr_cutscene1 : MonoBehaviour {
 	public GameObject[] comic;
 	private int sprite_count;
-	private int index = 0;
+	public int index = 0;
 	public string scenetransition;
 	public int fire;
 	private master_script ms;
+	private IEnumerator coroutine;
+
 	// Use this for initialization
 	void Start () {
 		sprite_count = comic.Length;
@@ -18,28 +20,38 @@ public class scr_cutscene1 : MonoBehaviour {
             panel.SetActive(false);
         }
 		comic[0].SetActive(true);
+		coroutine = nextpanel();
+    	StartCoroutine(coroutine);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyUp("space"))
 		{
-			comic[index].SetActive(false);
-			index +=1;
-			if(index == comic.Length)
-			{
-				if(fire == 1)
-				{
-					ms.set_definedSpawn(true);
-					ms.setSpawnLocation(0.846f,33f);
-				}
-				SceneManager.LoadScene(scenetransition);
-			}
-			else
-			{
-				comic[index].SetActive(true);
-			}
-			
+			StopCoroutine(coroutine);
+			StartCoroutine(coroutine);
 		}
+	}
+	private IEnumerator nextpanel()
+	{
+		
+		yield return new WaitForSeconds(1.75f);
+		comic[index].SetActive(false);
+		index +=1;
+		if(index == comic.Length)
+		{
+			if(fire == 1)
+			{
+				ms.set_definedSpawn(true);
+				ms.setSpawnLocation(0.846f,33f);
+			}
+			SceneManager.LoadScene(scenetransition);
+		}
+		else
+		{
+			comic[index].SetActive(true);
+		}
+		coroutine = nextpanel();
+    	StartCoroutine(coroutine);
 	}
 }
